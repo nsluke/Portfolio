@@ -20,7 +20,8 @@ class MainViewController: UIViewController {
     // Mark: - Functions
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        let result = RealmHelper.retrieveRealmObjects()
+
         for i in 1...10 {
             collectionViewArray.append("String")
         }

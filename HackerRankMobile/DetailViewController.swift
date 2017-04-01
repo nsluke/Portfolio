@@ -16,9 +16,11 @@ class DetailViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        self.title = classTitle
+        let result = RealmHelper.retrieveRealmObjects()
+        self.title = result[0].title
     }
 
+    
 
     /*
     // MARK: - Navigation

@@ -2305,7 +2305,7 @@
 			};
 			name = Release;
 		};
-		34D4F3A9670869D21D85355E2E112993 /* Release */ = {
+		27EE1D031F410DBCF307D066431C28FE /* Release */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 8B91C6E9B74889C53748CD8BA628D90F /* Pods-HackerRankMobile.release.xcconfig */;
 			buildSettings = {
@@ -2334,11 +2334,49 @@
 				PRODUCT_NAME = Pods_HackerRankMobile;
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 3.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
 			};
 			name = Release;
+		};
+		2B73467843DE52D9A8408022F34CAB86 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 10B67D6DDE05A480F73FF756A1B46E24 /* Pods-HackerRankMobile.debug.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				INFOPLIST_FILE = "Target Support Files/Pods-HackerRankMobile/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-HackerRankMobile/Pods-HackerRankMobile.modulemap";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = Pods_HackerRankMobile;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
 		};
 		5E0081EE0A91651FC52D0C71E69B1699 /* Release */ = {
 			isa = XCBuildConfiguration;
@@ -2606,42 +2644,6 @@
 			};
 			name = Release;
 		};
-		F518E657B970A07D5DE384E0F90D1F2F /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 10B67D6DDE05A480F73FF756A1B46E24 /* Pods-HackerRankMobile.debug.xcconfig */;
-			buildSettings = {
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEBUG_INFORMATION_FORMAT = dwarf;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				GCC_NO_COMMON_BLOCKS = YES;
-				INFOPLIST_FILE = "Target Support Files/Pods-HackerRankMobile/Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MACH_O_TYPE = staticlib;
-				MODULEMAP_FILE = "Target Support Files/Pods-HackerRankMobile/Pods-HackerRankMobile.modulemap";
-				MTL_ENABLE_DEBUG_INFO = YES;
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PODS_ROOT = "$(SRCROOT)";
-				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
-				PRODUCT_NAME = Pods_HackerRankMobile;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Debug;
-		};
 		FA704F789A0DAD0ECCAAE41A21318CC6 /* Release */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 960F9FD2CD8565152C1FAC94DBCF187A /* Charts.xcconfig */;
@@ -2725,8 +2727,8 @@
 		DD344985F91244BD11EE3FD93F7CA48D /* Build configuration list for PBXNativeTarget "Pods-HackerRankMobile" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				F518E657B970A07D5DE384E0F90D1F2F /* Debug */,
-				34D4F3A9670869D21D85355E2E112993 /* Release */,
+				2B73467843DE52D9A8408022F34CAB86 /* Debug */,
+				27EE1D031F410DBCF307D066431C28FE /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
