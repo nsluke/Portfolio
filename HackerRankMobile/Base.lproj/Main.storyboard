@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16E189a" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="WRs-B5-sAy">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Navigation Controller-->
+        <scene sceneID="dgO-lS-hRT">
+            <objects>
+                <navigationController id="WRs-B5-sAy" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="IZr-ro-ook">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="2Of-od-mCy" kind="relationship" relationship="rootViewController" id="gYS-wf-Sso"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="BAg-NJ-p7J" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-367" y="80"/>
+        </scene>
+        <!--Main View Controller-->
+        <scene sceneID="lb9-T1-WPC">
+            <objects>
+                <viewController id="2Of-od-mCy" customClass="MainViewController" customModule="HackerRankMobile" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="eH5-Sc-Hke"/>
+                        <viewControllerLayoutGuide type="bottom" id="adp-3t-2dQ"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Bxc-pJ-SaI">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="8HS-62-UXD">
+                                <rect key="frame" x="0.0" y="64" width="375" height="603"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="JQI-eW-sF6">
+                                    <size key="itemSize" width="100" height="100"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="ReuseID" id="EZQ-41-jTh" customClass="CustomCollectionViewCell" customModule="HackerRankMobile" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="0.0" width="100" height="100"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                                            <rect key="frame" x="0.0" y="0.0" width="100" height="100"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qCF-AK-a6t">
+                                                    <rect key="frame" x="27" y="40" width="46.5" height="20.5"/>
+                                                    <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="17"/>
+                                                    <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </view>
+                                        <color key="backgroundColor" red="0.0" green="0.50196081400000003" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        <constraints>
+                                            <constraint firstItem="qCF-AK-a6t" firstAttribute="centerY" secondItem="EZQ-41-jTh" secondAttribute="centerY" id="9NU-si-Qh6"/>
+                                            <constraint firstItem="qCF-AK-a6t" firstAttribute="centerX" secondItem="EZQ-41-jTh" secondAttribute="centerX" id="zBk-2R-aRH"/>
+                                        </constraints>
+                                        <connections>
+                                            <outlet property="mainLabel" destination="qCF-AK-a6t" id="v13-AQ-fDu"/>
+                                        </connections>
+                                    </collectionViewCell>
+                                </cells>
+                                <connections>
+                                    <outlet property="dataSource" destination="2Of-od-mCy" id="lKO-Z7-Yks"/>
+                                    <outlet property="delegate" destination="2Of-od-mCy" id="0Dq-Kp-6uM"/>
+                                </connections>
+                            </collectionView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="8HS-62-UXD" firstAttribute="leading" secondItem="Bxc-pJ-SaI" secondAttribute="leading" id="Ahf-st-ket"/>
+                            <constraint firstAttribute="trailing" secondItem="8HS-62-UXD" secondAttribute="trailing" id="OYS-Rm-uSh"/>
+                            <constraint firstItem="adp-3t-2dQ" firstAttribute="top" secondItem="8HS-62-UXD" secondAttribute="bottom" id="ZOj-7V-9Bx"/>
+                            <constraint firstItem="8HS-62-UXD" firstAttribute="top" secondItem="eH5-Sc-Hke" secondAttribute="bottom" id="jQT-bH-E4i"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="2Kk-6R-0JQ">
+                        <barButtonItem key="rightBarButtonItem" systemItem="compose" id="Na2-qp-ycW"/>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="collectionView" destination="8HS-62-UXD" id="Owm-nI-Mr3"/>
+                        <segue destination="ONQ-WF-Xvu" kind="show" identifier="transitionToDetail" id="tm1-mK-GGP"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="u7D-qi-IKL" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="437.60000000000002" y="79.610194902548727"/>
+        </scene>
+        <!--Title-->
+        <scene sceneID="NIV-7D-ght">
+            <objects>
+                <viewController id="ONQ-WF-Xvu" customClass="DetailViewController" customModule="HackerRankMobile" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Mqt-r0-Kee"/>
+                        <viewControllerLayoutGuide type="bottom" id="edP-ag-IMc"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="pgx-xY-v3I">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <toolbarItems/>
+                    <navigationItem key="navigationItem" title="Title" id="fpc-6n-d10">
+                        <barButtonItem key="rightBarButtonItem" title="Ayyy" id="VYT-HY-0in">
+                            <connections>
+                                <segue destination="FkT-dc-JAb" kind="unwind" unwindAction="unwindToCollectionViewWithSegue:" id="jX4-sh-xjJ"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="UQA-KB-pop" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="FkT-dc-JAb" userLabel="Exit" sceneMemberID="exit"/>
+            </objects>
+            <point key="canvasLocation" x="1262" y="80"/>
+        </scene>
+    </scenes>
+</document>
