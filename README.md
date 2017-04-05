@@ -43,9 +43,11 @@ As of this writing, the Steam iOS app is pretty awful. While it does allow you t
 Negativity aside, I absolutely love Steam. I've had a Steam account for almost 15 years, and I have over 300 games. Gaming has always been one of my passions, and seeing such a poorly put together app from a company I love just makes me sad.
 <br>
 <br>
+
 ## So their app sucks. What do you hope to do with yours?
 Well, originally my idea was to create a mobile app for the website TrueSteamAchievements, but because I'm not willing to hack their API just yet, I decided to pursue something with an open API. Basically, all I'm planning to do right now is to create an app that shows some cool statistics about a person's Steam profile, their achievements, and their recent playtime. Because I'm not totally sure about what their API will allow me to do, I'm keeping the scope fairly modest at the moment. Let it be know though that I have plans in the future to have this showcase more than just some Steam stats, which is why the current architecture is so weird.
 <br>
 <br>
-## Why is it called SlackerDank?
-That's really just what the repo was titled originally, and as far as I know I can't change it. Believe me, that's the top of the To-Do.
+
+## Why is it called HackerRankMobile?
+That's really just what the repo was titled originally - creating a mobile HackerRank app is on of the many ideas I have for this portfolio. I also really don't want to go through the effort of changing the repo's name right now.
