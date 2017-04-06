@@ -1,11 +1,6 @@
 # Luke Solomon's Official Portfolio Project
 
 <br>
-<br>
-<br>
-<br>
-<br>
-<br>
 
 # To Do:
 * Finish CollectionView & DetailView Transition
@@ -13,9 +8,6 @@
 * Integrate Steam API
 * Integrate iOS Charts API
 
-<br>
-<br>
-<br>
 <br>
 
 ## Why this project?
