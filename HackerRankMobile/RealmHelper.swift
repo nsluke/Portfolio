@@ -36,9 +36,11 @@ class RealmHelper: Object {
         }
     }
     
-    static func retrieveRealmObjects() -> Results<RealmHelper> {
+    static func retrieveRealmObjects() -> [String] {
         let realm = try! Realm()
-        return realm.objects(RealmHelper.self)
+        let arr = [String(describing: realm.objects(RealmHelper.self))]
+        
+        return arr
     }
     
 }

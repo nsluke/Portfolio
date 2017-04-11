@@ -17,6 +17,7 @@
 		D57FAA741E8F72CA009ECD77 /* CustomCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D57FAA731E8F72CA009ECD77 /* CustomCollectionViewCell.swift */; };
 		D57FAA761E8F740B009ECD77 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D57FAA751E8F740B009ECD77 /* DetailViewController.swift */; };
 		D59E7F8A1E8F926500DDB646 /* RealmHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = D59E7F891E8F926500DDB646 /* RealmHelper.swift */; };
+		D5DF90011E975A7C00369F1C /* mapstogpx20170407_052557.gpx in Resources */ = {isa = PBXBuildFile; fileRef = D5DF90001E975A7C00369F1C /* mapstogpx20170407_052557.gpx */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +33,7 @@
 		D57FAA731E8F72CA009ECD77 /* CustomCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomCollectionViewCell.swift; sourceTree = "<group>"; };
 		D57FAA751E8F740B009ECD77 /* DetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 		D59E7F891E8F926500DDB646 /* RealmHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RealmHelper.swift; sourceTree = "<group>"; };
+		D5DF90001E975A7C00369F1C /* mapstogpx20170407_052557.gpx */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = mapstogpx20170407_052557.gpx; sourceTree = "<group>"; };
 		ECD92EA6C22C6CD1C66A8260 /* Pods_HackerRankMobile.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_HackerRankMobile.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F971181F23CEB0498D817AA1 /* Pods-HackerRankMobile.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HackerRankMobile.release.xcconfig"; path = "Pods/Target Support Files/Pods-HackerRankMobile/Pods-HackerRankMobile.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -95,6 +97,7 @@
 				D53012AB1D075B070031E66E /* Assets.xcassets */,
 				D53012AD1D075B070031E66E /* LaunchScreen.storyboard */,
 				D53012B01D075B070031E66E /* Info.plist */,
+				D5DF90001E975A7C00369F1C /* mapstogpx20170407_052557.gpx */,
 			);
 			path = HackerRankMobile;
 			sourceTree = "<group>";
@@ -169,6 +172,7 @@
 						CreatedOnToolsVersion = 7.3;
 						DevelopmentTeam = 6TK8Q4KD6G;
 						LastSwiftMigration = 0800;
+						ProvisioningStyle = Automatic;
 					};
 				};
 			};
@@ -195,6 +199,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D5DF90011E975A7C00369F1C /* mapstogpx20170407_052557.gpx in Resources */,
 				D53012AF1D075B070031E66E /* LaunchScreen.storyboard in Resources */,
 				D53012AC1D075B070031E66E /* Assets.xcassets in Resources */,
 				D53012AA1D075B070031E66E /* Main.storyboard in Resources */,
@@ -380,11 +385,13 @@
 			baseConfigurationReference = 5E5D741C41C18C877A9CA261 /* Pods-HackerRankMobile.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				DEVELOPMENT_TEAM = 6TK8Q4KD6G;
 				INFOPLIST_FILE = HackerRankMobile/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.SolomonStuff.HackerRankMobile;
+				PRODUCT_BUNDLE_IDENTIFIER = com.SolomonStuff.HackerRankMobile.luke;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
@@ -394,11 +401,13 @@
 			baseConfigurationReference = F971181F23CEB0498D817AA1 /* Pods-HackerRankMobile.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				DEVELOPMENT_TEAM = 6TK8Q4KD6G;
 				INFOPLIST_FILE = HackerRankMobile/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.SolomonStuff.HackerRankMobile;
+				PRODUCT_BUNDLE_IDENTIFIER = com.SolomonStuff.HackerRankMobile.luke;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Release;

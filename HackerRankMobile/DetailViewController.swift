@@ -17,7 +17,7 @@ class DetailViewController: UIViewController {
         super.viewDidLoad()
         
         let result = RealmHelper.retrieveRealmObjects()
-        self.title = result[0].title
+//        self.title = result[0].title
     }
 
     
