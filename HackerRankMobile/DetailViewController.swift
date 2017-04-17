@@ -16,10 +16,19 @@ class DetailViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        let result = RealmHelper.retrieveRealmObjects()
-//        self.title = result[0].title
+//        let result = RealmHelper.retrieveRealmObjects()
     }
-
+    
+    func viewWillAppear(_ animated: Bool) {
+        
+    }
+    
+    func viewDidAppear(_ animated: Bool) {
+        self.navigationController?.isToolbarHidden = true
+                
+    }
+    
+    
     
     
     /*

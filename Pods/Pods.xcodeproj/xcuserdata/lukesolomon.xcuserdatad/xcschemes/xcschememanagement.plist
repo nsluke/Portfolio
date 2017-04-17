@@ -9,6 +9,11 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
+		<key>Alamofire.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 		<key>Charts.xcscheme</key>
 		<dict>
 			<key>isShown</key>
@@ -42,22 +47,27 @@
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>16E5A36B25243F74A80EBA30DD41A59F</key>
+		<key>32CD3625F473223BF08BD78439711728</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>2FD3633904C9A98CD7D52FDC54EC2F51</key>
+		<key>4F352ADB827D901E13258E62036A88F9</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>4224A1892980F569D96DAA2F5B485071</key>
+		<key>88E9EC28B8B46C3631E6B242B50F4442</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
 		<key>CF671F7E57B92905F1CC91D036D6B4A7</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>CFB73A284752E2FCB987D6C5FDF40CD7</key>
 		<dict>
 			<key>primary</key>
 			<true/>

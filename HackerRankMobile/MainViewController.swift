@@ -13,7 +13,7 @@ class MainViewController: UIViewController {
     // Mark: - Variables
     @IBOutlet weak var collectionView: UICollectionView!
     
-    var collectionViewArray:[String] = ["Luke", "Dion","Miki"]
+    var collectionViewArray:[String] = ["Steam", "HackerRank",""]
     
     
     // Mark: - Functions
@@ -34,7 +34,6 @@ class MainViewController: UIViewController {
             if identifier == "transitionToDetail" {
                 
             }
-
         }
         
         if segue.identifier == "transitionToDetail" {
@@ -44,10 +43,12 @@ class MainViewController: UIViewController {
     }
     
     @IBAction func unwindToCollectionView(segue: UIStoryboardSegue) {
-        
+        if let identifier = segue.identifier {
+            print("Identifier \(identifier)")
+        }
     }
+    
 }
-
 extension MainViewController: UICollectionViewDelegate, UICollectionViewDataSource {
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {

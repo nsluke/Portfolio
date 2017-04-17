@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16E189a" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="WRs-B5-sAy">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12118" systemVersion="16E189a" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="WRs-B5-sAy">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12086"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -96,7 +96,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="u7D-qi-IKL" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="437.60000000000002" y="79.610194902548727"/>
+            <point key="canvasLocation" x="438" y="80"/>
         </scene>
         <!--Title-->
         <scene sceneID="NIV-7D-ght">
@@ -109,22 +109,64 @@
                     <view key="view" contentMode="scaleToFill" id="pgx-xY-v3I">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="hgh-g3-T6t">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <subviews>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="bgs-ic-gls">
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="175"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="175" id="DbJ-0H-jJt"/>
+                                        </constraints>
+                                    </imageView>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="ykk-C6-4vZ">
+                                        <rect key="frame" x="127.5" y="111" width="120" height="120"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="120" id="0XA-VI-47W"/>
+                                            <constraint firstAttribute="width" constant="120" id="OCv-MD-zS6"/>
+                                        </constraints>
+                                    </imageView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bft-aN-Rrr">
+                                        <rect key="frame" x="166" y="239" width="42" height="21"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="ykk-C6-4vZ" firstAttribute="top" secondItem="bgs-ic-gls" secondAttribute="bottom" constant="-64" id="1xz-28-9y3"/>
+                                    <constraint firstAttribute="trailing" secondItem="bgs-ic-gls" secondAttribute="trailing" id="BUl-vM-PoQ"/>
+                                    <constraint firstItem="ykk-C6-4vZ" firstAttribute="centerX" secondItem="hgh-g3-T6t" secondAttribute="centerX" id="DIY-5G-ntn"/>
+                                    <constraint firstItem="bgs-ic-gls" firstAttribute="leading" secondItem="hgh-g3-T6t" secondAttribute="leading" id="FGB-iO-LLF"/>
+                                    <constraint firstItem="bft-aN-Rrr" firstAttribute="centerX" secondItem="hgh-g3-T6t" secondAttribute="centerX" id="LM7-S5-TdX"/>
+                                    <constraint firstItem="bgs-ic-gls" firstAttribute="top" secondItem="hgh-g3-T6t" secondAttribute="top" id="Ne9-Uc-VtU"/>
+                                    <constraint firstItem="bft-aN-Rrr" firstAttribute="top" secondItem="ykk-C6-4vZ" secondAttribute="bottom" constant="8" id="RQU-yK-sxV"/>
+                                </constraints>
+                            </scrollView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="hgh-g3-T6t" firstAttribute="leading" secondItem="pgx-xY-v3I" secondAttribute="leading" id="GHf-Rs-GEU"/>
+                            <constraint firstAttribute="bottom" secondItem="hgh-g3-T6t" secondAttribute="bottom" id="ISg-HW-Zze"/>
+                            <constraint firstItem="hgh-g3-T6t" firstAttribute="top" secondItem="pgx-xY-v3I" secondAttribute="top" id="LO7-Kh-DoI"/>
+                            <constraint firstItem="hgh-g3-T6t" firstAttribute="centerY" secondItem="pgx-xY-v3I" secondAttribute="centerY" id="bq3-GQ-nDy"/>
+                            <constraint firstItem="hgh-g3-T6t" firstAttribute="centerX" secondItem="pgx-xY-v3I" secondAttribute="centerX" id="dlX-kj-Tqh"/>
+                            <constraint firstAttribute="trailing" secondItem="hgh-g3-T6t" secondAttribute="trailing" id="jAo-Te-9gb"/>
+                        </constraints>
                     </view>
                     <toolbarItems/>
                     <navigationItem key="navigationItem" title="Title" id="fpc-6n-d10">
-                        <barButtonItem key="rightBarButtonItem" title="Ayyy" id="VYT-HY-0in">
-                            <connections>
-                                <segue destination="FkT-dc-JAb" kind="unwind" unwindAction="unwindToCollectionViewWithSegue:" id="jX4-sh-xjJ"/>
-                            </connections>
-                        </barButtonItem>
+                        <barButtonItem key="leftBarButtonItem" title="Back" id="5Xx-Ry-E5S"/>
                     </navigationItem>
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
+                    <connections>
+                        <segue destination="FkT-dc-JAb" kind="unwind" unwindAction="unwindToCollectionViewWithSegue:" id="cQ1-E7-jOd"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="UQA-KB-pop" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <exit id="FkT-dc-JAb" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="1262" y="80"/>
+            <point key="canvasLocation" x="1229.5999999999999" y="79.610194902548727"/>
         </scene>
     </scenes>
 </document>
