@@ -13,19 +13,16 @@ class MainViewController: UIViewController {
     // Mark: - Variables
     @IBOutlet weak var collectionView: UICollectionView!
     
-    var collectionViewArray:[String] = ["Steam", "HackerRank",""]
+    var collectionViewArray:[String] = ["Steam", "H R Mobile",""]
     
     
     // Mark: - Functions
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        let result = RealmHelper.retrieveRealmObjects()
-        collectionViewArray = result
+//        let result = RealmHelper.retrieveRealmObjects()
+//        collectionViewArray = result
         
-//        for i in 1...10 {
-//            collectionViewArray.append("String")
-//        }
     }
     
     // MARK: - Navigation
@@ -50,6 +47,10 @@ class MainViewController: UIViewController {
     
 }
 extension MainViewController: UICollectionViewDelegate, UICollectionViewDataSource {
+    
+    func collectionView(_ collectionView: UICollectionView, didDeselectItemAt indexPath: IndexPath) {
+        self.performSegue(withIdentifier: "transitionToDetail", sender: self)
+    }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell:CustomCollectionViewCell = collectionView.dequeueReusableCell(withReuseIdentifier: "ReuseID", for: indexPath) as! CustomCollectionViewCell

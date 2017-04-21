@@ -11,24 +11,38 @@ import UIKit
 class DetailViewController: UIViewController {
 
     var classTitle:String!
+    @IBOutlet weak var scrollView: UIScrollView!
+    @IBOutlet weak var coverPhotoImageView: UIImageView!
+    @IBOutlet weak var profilePhotoImageView: UIImageView!
+    @IBOutlet weak var nameLabel: UILabel!
     
 
     override func viewDidLoad() {
         super.viewDidLoad()
         
 //        let result = RealmHelper.retrieveRealmObjects()
+        NotificationCenter.default.addObserver(
+            self,
+            selector: #selector(self.setupView),
+            name: NSNotification.Name(rawValue: "setupView"),
+            object: nil)
+        
+        NetworkHelper.sharedInstance.getUserProfileInfo()
     }
     
-    func viewWillAppear(_ animated: Bool) {
+    override func viewWillAppear(_ animated: Bool) {
         
     }
     
-    func viewDidAppear(_ animated: Bool) {
+    override func viewDidAppear(_ animated: Bool) {
         self.navigationController?.isToolbarHidden = true
                 
     }
     
     
+    func setupView () {
+        
+    }
     
     
     /*

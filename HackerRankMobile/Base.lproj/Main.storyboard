@@ -110,17 +110,17 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="hgh-g3-T6t">
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hgh-g3-T6t">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                                 <subviews>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="bgs-ic-gls">
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="bgs-ic-gls">
                                         <rect key="frame" x="0.0" y="0.0" width="375" height="175"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="175" id="DbJ-0H-jJt"/>
                                         </constraints>
                                     </imageView>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="ykk-C6-4vZ">
-                                        <rect key="frame" x="127.5" y="111" width="120" height="120"/>
+                                        <rect key="frame" x="128" y="111" width="120" height="120"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="120" id="0XA-VI-47W"/>
                                             <constraint firstAttribute="width" constant="120" id="OCv-MD-zS6"/>
@@ -141,6 +141,8 @@
                                     <constraint firstItem="bft-aN-Rrr" firstAttribute="centerX" secondItem="hgh-g3-T6t" secondAttribute="centerX" id="LM7-S5-TdX"/>
                                     <constraint firstItem="bgs-ic-gls" firstAttribute="top" secondItem="hgh-g3-T6t" secondAttribute="top" id="Ne9-Uc-VtU"/>
                                     <constraint firstItem="bft-aN-Rrr" firstAttribute="top" secondItem="ykk-C6-4vZ" secondAttribute="bottom" constant="8" id="RQU-yK-sxV"/>
+                                    <constraint firstAttribute="bottom" secondItem="bgs-ic-gls" secondAttribute="bottom" constant="428" id="a88-Pp-qoJ"/>
+                                    <constraint firstItem="bgs-ic-gls" firstAttribute="centerX" secondItem="ykk-C6-4vZ" secondAttribute="centerX" id="mfC-jj-ox3"/>
                                 </constraints>
                             </scrollView>
                         </subviews>
@@ -160,7 +162,11 @@
                     </navigationItem>
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
-                        <segue destination="FkT-dc-JAb" kind="unwind" unwindAction="unwindToCollectionViewWithSegue:" id="cQ1-E7-jOd"/>
+                        <outlet property="coverPhotoImageView" destination="bgs-ic-gls" id="LLM-de-Hfh"/>
+                        <outlet property="nameLabel" destination="bft-aN-Rrr" id="GvA-1F-qnW"/>
+                        <outlet property="profilePhotoImageView" destination="ykk-C6-4vZ" id="9zc-pE-d6a"/>
+                        <outlet property="scrollView" destination="hgh-g3-T6t" id="nQT-Zn-8mV"/>
+                        <segue destination="FkT-dc-JAb" kind="unwind" identifier="unwindSegue" unwindAction="unwindToCollectionViewWithSegue:" id="cQ1-E7-jOd"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="UQA-KB-pop" userLabel="First Responder" sceneMemberID="firstResponder"/>
