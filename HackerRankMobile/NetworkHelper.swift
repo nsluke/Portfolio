@@ -15,9 +15,7 @@ class NetworkHelper {
 
     
     func getUserProfileInfo () {
-        
-        
-        Alamofire.request("http://api.steampowered.com/ISteamUser/GetPlayerSummaries/v0002/?key=662FAD1E88064DA3142482D9E452EBAE&steamids=76561197965805643").responseJSON { response in
+            Alamofire.request("https://api.steampowered.com/ISteamUser/GetPlayerSummaries/v0002/?key=662FAD1E88064DA3142482D9E452EBAE&steamids=76561197965805643").responseJSON { response in
 //            print(response.request)  // original URL request
 //            print(response.response) // HTTP URL response
 //            print(response.data ?? User) // server data

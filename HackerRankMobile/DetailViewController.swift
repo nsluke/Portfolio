@@ -23,25 +23,36 @@ class DetailViewController: UIViewController {
 //        let result = RealmHelper.retrieveRealmObjects()
         NotificationCenter.default.addObserver(
             self,
-            selector: #selector(self.setupView),
+            selector: #selector(self.setupView(notification:)),
             name: NSNotification.Name(rawValue: "setupView"),
             object: nil)
+        
         
         NetworkHelper.sharedInstance.getUserProfileInfo()
     }
     
     override func viewWillAppear(_ animated: Bool) {
-        
+//        nameLabel.text =
     }
     
     override func viewDidAppear(_ animated: Bool) {
-        self.navigationController?.isToolbarHidden = true
+        self.navigationController?.isToolbarHidden = false
                 
     }
     
     
-    func setupView () {
-        
+    func setupView(notification:NSNotification) {
+        if notification.userInfo != nil {
+            let response = notification.userInfo?["response"] as? [AnyHashable : Any]
+            let playerObject = response!["players"] as Optional<Any>
+
+            
+            let playerArray = playerObject![0]
+            
+            
+            nameLabel.text = playerObject!["realname"] as? String
+            
+        }
     }
     
     
