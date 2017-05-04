@@ -4,7 +4,6 @@
 
 # To Do:
 * Finish CollectionView & DetailView Transition
-* StoryBoards! Decide what the thing is actually going to do.
 * Integrate Steam API
 * Integrate iOS Charts API
 
