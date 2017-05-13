@@ -47,10 +47,10 @@ class DetailViewController: UIViewController {
             let playerObject = response!["players"] as Optional<Any>
 
             
-            let playerArray = playerObject![0]
-            
-            
-            nameLabel.text = playerObject!["realname"] as? String
+//            let playerArray = playerObject![0]
+//            
+//            
+//            nameLabel.text = playerObject!["realname"] as? String
             
         }
     }
