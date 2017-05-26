@@ -29,12 +29,8 @@ class MainViewController: UIViewController {
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if let identifier = segue.identifier {
             if identifier == "transitionToDetail" {
-                
+                NetworkHelper.sharedInstance.getUserProfileInfo()
             }
-        }
-        
-        if segue.identifier == "transitionToDetail" {
-            
         }
         // var detailVC:DetailViewController =
     }

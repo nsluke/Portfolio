@@ -7,10 +7,14 @@
 //
 
 import UIKit
+import CoreData
+//@class UIImageView+AFNetworking.h
 
 class DetailViewController: UIViewController {
 
-    var classTitle:String!
+    var classTitle:String?
+    var user:User?
+    
     @IBOutlet weak var scrollView: UIScrollView!
     @IBOutlet weak var coverPhotoImageView: UIImageView!
     @IBOutlet weak var profilePhotoImageView: UIImageView!
@@ -20,15 +24,15 @@ class DetailViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-//        let result = RealmHelper.retrieveRealmObjects()
-        NotificationCenter.default.addObserver(
-            self,
-            selector: #selector(self.setupView(notification:)),
-            name: NSNotification.Name(rawValue: "setupView"),
-            object: nil)
+//        NotificationCenter.default.addObserver(
+//            self,
+//            selector: #selector(self.setupView),
+//            name: NSNotification.Name(rawValue: "setupView"),
+//            object: nil)
         
-        
-        NetworkHelper.sharedInstance.getUserProfileInfo()
+        user = CoreDataHelper.retrieveUser()[0]
+        setupView()
+//
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -37,24 +41,19 @@ class DetailViewController: UIViewController {
     
     override func viewDidAppear(_ animated: Bool) {
         self.navigationController?.isToolbarHidden = false
-                
     }
     
-    
-    func setupView(notification:NSNotification) {
-        if notification.userInfo != nil {
-            let response = notification.userInfo?["response"] as? [AnyHashable : Any]
-            let playerObject = response!["players"] as Optional<Any>
-
-            
-//            let playerArray = playerObject![0]
-//            
-//            
-//            nameLabel.text = playerObject!["realname"] as? String
-            
+    func setupView() {
+        user = CoreDataHelper.retrieveUser()[0]
+        
+        if let user = user {
+            nameLabel.text = user.name
+        } else {
+            nameLabel.text = ""
         }
+        
+//        profilePhotoImageView.photo 
     }
-    
     
     /*
     // MARK: - Navigation
