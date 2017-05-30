@@ -29,12 +29,8 @@ class MainViewController: UIViewController {
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if let identifier = segue.identifier {
             if identifier == "transitionToDetail" {
-                
+                NetworkHelper.sharedInstance.getUserProfileInfo()
             }
-        }
-        
-        if segue.identifier == "transitionToDetail" {
-            
         }
         // var detailVC:DetailViewController =
     }
@@ -47,10 +43,6 @@ class MainViewController: UIViewController {
     
 }
 extension MainViewController: UICollectionViewDelegate, UICollectionViewDataSource {
-    
-    func collectionView(_ collectionView: UICollectionView, didDeselectItemAt indexPath: IndexPath) {
-        self.performSegue(withIdentifier: "transitionToDetail", sender: self)
-    }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell:CustomCollectionViewCell = collectionView.dequeueReusableCell(withReuseIdentifier: "ReuseID", for: indexPath) as! CustomCollectionViewCell

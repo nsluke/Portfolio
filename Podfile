@@ -10,7 +10,8 @@ def shared_target_pods
     pod 'Alamofire', '~> 4.4'
     pod 'Firebase/Core'
     pod 'Charts'
-    pod 'RealmSwift'
+    pod 'AppAuth'
+    pod 'SwiftyJSON'
 end
 
 target :’HackerRankMobile’ do
