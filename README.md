@@ -3,8 +3,7 @@
 <br>
 
 # To Do:
-* Finish CollectionView & DetailView Transition
-* Integrate Steam API
+* Integrate Steam OAuth
 * Integrate iOS Charts API
 
 <br>
