@@ -8,16 +8,18 @@
 
 /* Begin PBXBuildFile section */
 		24C7C7792C3F9F993B4906D2 /* Pods_HackerRankMobile.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4F9A4D1E7DB5448A7494FC5D /* Pods_HackerRankMobile.framework */; };
+		D528EC441EF0B164007D93D7 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = D528EC431EF0B164007D93D7 /* GoogleService-Info.plist */; };
+		D528EC461EF0B48E007D93D7 /* CustomCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D528EC451EF0B48E007D93D7 /* CustomCollectionViewCell.swift */; };
+		D528EC491EF0B4AD007D93D7 /* CoreDataHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = D528EC471EF0B4AD007D93D7 /* CoreDataHelper.swift */; };
+		D528EC4A1EF0B4AD007D93D7 /* NetworkHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = D528EC481EF0B4AD007D93D7 /* NetworkHelper.swift */; };
+		D528EC4E1EF0B4B7007D93D7 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D528EC4B1EF0B4B7007D93D7 /* DetailViewController.swift */; };
+		D528EC4F1EF0B4B7007D93D7 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D528EC4C1EF0B4B7007D93D7 /* MainViewController.swift */; };
+		D528EC501EF0B4B7007D93D7 /* MakestagramViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D528EC4D1EF0B4B7007D93D7 /* MakestagramViewController.swift */; };
+		D528EC531EF0B5CE007D93D7 /* HackerRankMobile.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = D528EC511EF0B5CE007D93D7 /* HackerRankMobile.xcdatamodeld */; };
 		D53012A51D075B070031E66E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D53012A41D075B070031E66E /* AppDelegate.swift */; };
 		D53012AA1D075B070031E66E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D53012A81D075B070031E66E /* Main.storyboard */; };
 		D53012AC1D075B070031E66E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D53012AB1D075B070031E66E /* Assets.xcassets */; };
 		D53012AF1D075B070031E66E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D53012AD1D075B070031E66E /* LaunchScreen.storyboard */; };
-		D57FAA681E8F68F5009ECD77 /* NetworkHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = D57FAA671E8F68F5009ECD77 /* NetworkHelper.swift */; };
-		D57FAA6A1E8F6925009ECD77 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D57FAA691E8F6925009ECD77 /* MainViewController.swift */; };
-		D57FAA741E8F72CA009ECD77 /* CustomCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D57FAA731E8F72CA009ECD77 /* CustomCollectionViewCell.swift */; };
-		D57FAA761E8F740B009ECD77 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D57FAA751E8F740B009ECD77 /* DetailViewController.swift */; };
-		D59E7F8A1E8F926500DDB646 /* CoreDataHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = D59E7F891E8F926500DDB646 /* CoreDataHelper.swift */; };
-		D5A500831ED867E700A528D6 /* HackerRankMobile.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = D5A500811ED867E700A528D6 /* HackerRankMobile.xcdatamodeld */; };
 		D5A500851ED8686900A528D6 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D5A500841ED8686900A528D6 /* CoreData.framework */; };
 		D5DF90011E975A7C00369F1C /* mapstogpx20170407_052557.gpx in Resources */ = {isa = PBXBuildFile; fileRef = D5DF90001E975A7C00369F1C /* mapstogpx20170407_052557.gpx */; };
 /* End PBXBuildFile section */
@@ -26,18 +28,20 @@
 		2CF2749EABA55217133D6C70 /* Pods-HackerRankMobile.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HackerRankMobile.release.xcconfig"; path = "Pods/Target Support Files/Pods-HackerRankMobile/Pods-HackerRankMobile.release.xcconfig"; sourceTree = "<group>"; };
 		3D0A9BF01FF424F9C73BA807 /* Pods-HackerRankMobile.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HackerRankMobile.debug.xcconfig"; path = "Pods/Target Support Files/Pods-HackerRankMobile/Pods-HackerRankMobile.debug.xcconfig"; sourceTree = "<group>"; };
 		4F9A4D1E7DB5448A7494FC5D /* Pods_HackerRankMobile.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_HackerRankMobile.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		D528EC431EF0B164007D93D7 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		D528EC451EF0B48E007D93D7 /* CustomCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CustomCollectionViewCell.swift; path = "Custom Views/CustomCollectionViewCell.swift"; sourceTree = "<group>"; };
+		D528EC471EF0B4AD007D93D7 /* CoreDataHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CoreDataHelper.swift; path = Helpers/CoreDataHelper.swift; sourceTree = "<group>"; };
+		D528EC481EF0B4AD007D93D7 /* NetworkHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = NetworkHelper.swift; path = Helpers/NetworkHelper.swift; sourceTree = "<group>"; };
+		D528EC4B1EF0B4B7007D93D7 /* DetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DetailViewController.swift; path = "View Controllers/DetailViewController.swift"; sourceTree = "<group>"; };
+		D528EC4C1EF0B4B7007D93D7 /* MainViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MainViewController.swift; path = "View Controllers/MainViewController.swift"; sourceTree = "<group>"; };
+		D528EC4D1EF0B4B7007D93D7 /* MakestagramViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MakestagramViewController.swift; path = "View Controllers/MakestagramViewController.swift"; sourceTree = "<group>"; };
+		D528EC521EF0B5CE007D93D7 /* HackerRankMobile.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = HackerRankMobile.xcdatamodel; sourceTree = "<group>"; };
 		D53012A11D075B070031E66E /* HackerRankMobile.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HackerRankMobile.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D53012A41D075B070031E66E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D53012A91D075B070031E66E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		D53012AB1D075B070031E66E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D53012AE1D075B070031E66E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		D53012B01D075B070031E66E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		D57FAA671E8F68F5009ECD77 /* NetworkHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkHelper.swift; sourceTree = "<group>"; };
-		D57FAA691E8F6925009ECD77 /* MainViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
-		D57FAA731E8F72CA009ECD77 /* CustomCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomCollectionViewCell.swift; sourceTree = "<group>"; };
-		D57FAA751E8F740B009ECD77 /* DetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
-		D59E7F891E8F926500DDB646 /* CoreDataHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CoreDataHelper.swift; sourceTree = "<group>"; };
-		D5A500821ED867E700A528D6 /* HackerRankMobile.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = HackerRankMobile.xcdatamodel; sourceTree = "<group>"; };
 		D5A500841ED8686900A528D6 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
 		D5DF90001E975A7C00369F1C /* mapstogpx20170407_052557.gpx */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = mapstogpx20170407_052557.gpx; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -103,6 +107,7 @@
 				D53012AB1D075B070031E66E /* Assets.xcassets */,
 				D53012AD1D075B070031E66E /* LaunchScreen.storyboard */,
 				D53012B01D075B070031E66E /* Info.plist */,
+				D528EC431EF0B164007D93D7 /* GoogleService-Info.plist */,
 				D5DF90001E975A7C00369F1C /* mapstogpx20170407_052557.gpx */,
 			);
 			path = HackerRankMobile;
@@ -111,8 +116,9 @@
 		D57FAA6B1E8F6959009ECD77 /* View Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				D57FAA691E8F6925009ECD77 /* MainViewController.swift */,
-				D57FAA751E8F740B009ECD77 /* DetailViewController.swift */,
+				D528EC4B1EF0B4B7007D93D7 /* DetailViewController.swift */,
+				D528EC4C1EF0B4B7007D93D7 /* MainViewController.swift */,
+				D528EC4D1EF0B4B7007D93D7 /* MakestagramViewController.swift */,
 			);
 			name = "View Controllers";
 			sourceTree = "<group>";
@@ -120,8 +126,8 @@
 		D57FAA6C1E8F6965009ECD77 /* Helpers */ = {
 			isa = PBXGroup;
 			children = (
-				D59E7F891E8F926500DDB646 /* CoreDataHelper.swift */,
-				D57FAA671E8F68F5009ECD77 /* NetworkHelper.swift */,
+				D528EC471EF0B4AD007D93D7 /* CoreDataHelper.swift */,
+				D528EC481EF0B4AD007D93D7 /* NetworkHelper.swift */,
 			);
 			name = Helpers;
 			sourceTree = "<group>";
@@ -129,7 +135,7 @@
 		D57FAA771E8F7414009ECD77 /* Custom Views */ = {
 			isa = PBXGroup;
 			children = (
-				D57FAA731E8F72CA009ECD77 /* CustomCollectionViewCell.swift */,
+				D528EC451EF0B48E007D93D7 /* CustomCollectionViewCell.swift */,
 			);
 			name = "Custom Views";
 			sourceTree = "<group>";
@@ -137,7 +143,7 @@
 		D59E7F8D1E8F92B800DDB646 /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				D5A500811ED867E700A528D6 /* HackerRankMobile.xcdatamodeld */,
+				D528EC511EF0B5CE007D93D7 /* HackerRankMobile.xcdatamodeld */,
 			);
 			name = Models;
 			sourceTree = "<group>";
@@ -208,6 +214,7 @@
 			files = (
 				D5DF90011E975A7C00369F1C /* mapstogpx20170407_052557.gpx in Resources */,
 				D53012AF1D075B070031E66E /* LaunchScreen.storyboard in Resources */,
+				D528EC441EF0B164007D93D7 /* GoogleService-Info.plist in Resources */,
 				D53012AC1D075B070031E66E /* Assets.xcassets in Resources */,
 				D53012AA1D075B070031E66E /* Main.storyboard in Resources */,
 			);
@@ -268,12 +275,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D57FAA6A1E8F6925009ECD77 /* MainViewController.swift in Sources */,
-				D5A500831ED867E700A528D6 /* HackerRankMobile.xcdatamodeld in Sources */,
-				D59E7F8A1E8F926500DDB646 /* CoreDataHelper.swift in Sources */,
-				D57FAA681E8F68F5009ECD77 /* NetworkHelper.swift in Sources */,
-				D57FAA761E8F740B009ECD77 /* DetailViewController.swift in Sources */,
-				D57FAA741E8F72CA009ECD77 /* CustomCollectionViewCell.swift in Sources */,
+				D528EC4F1EF0B4B7007D93D7 /* MainViewController.swift in Sources */,
+				D528EC461EF0B48E007D93D7 /* CustomCollectionViewCell.swift in Sources */,
+				D528EC4A1EF0B4AD007D93D7 /* NetworkHelper.swift in Sources */,
+				D528EC4E1EF0B4B7007D93D7 /* DetailViewController.swift in Sources */,
+				D528EC531EF0B5CE007D93D7 /* HackerRankMobile.xcdatamodeld in Sources */,
+				D528EC491EF0B4AD007D93D7 /* CoreDataHelper.swift in Sources */,
+				D528EC501EF0B4B7007D93D7 /* MakestagramViewController.swift in Sources */,
 				D53012A51D075B070031E66E /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -446,13 +454,14 @@
 /* End XCConfigurationList section */
 
 /* Begin XCVersionGroup section */
-		D5A500811ED867E700A528D6 /* HackerRankMobile.xcdatamodeld */ = {
+		D528EC511EF0B5CE007D93D7 /* HackerRankMobile.xcdatamodeld */ = {
 			isa = XCVersionGroup;
 			children = (
-				D5A500821ED867E700A528D6 /* HackerRankMobile.xcdatamodel */,
+				D528EC521EF0B5CE007D93D7 /* HackerRankMobile.xcdatamodel */,
 			);
-			currentVersion = D5A500821ED867E700A528D6 /* HackerRankMobile.xcdatamodel */;
-			path = HackerRankMobile.xcdatamodeld;
+			currentVersion = D528EC521EF0B5CE007D93D7 /* HackerRankMobile.xcdatamodel */;
+			name = HackerRankMobile.xcdatamodeld;
+			path = Models/HackerRankMobile.xcdatamodeld;
 			sourceTree = "<group>";
 			versionGroupType = wrapper.xcdatamodel;
 		};
