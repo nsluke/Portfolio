@@ -11,8 +11,6 @@
 		D528EC441EF0B164007D93D7 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = D528EC431EF0B164007D93D7 /* GoogleService-Info.plist */; };
 		D528EC461EF0B48E007D93D7 /* CustomCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D528EC451EF0B48E007D93D7 /* CustomCollectionViewCell.swift */; };
 		D528EC491EF0B4AD007D93D7 /* CoreDataHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = D528EC471EF0B4AD007D93D7 /* CoreDataHelper.swift */; };
-		D528EC4A1EF0B4AD007D93D7 /* NetworkHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = D528EC481EF0B4AD007D93D7 /* NetworkHelper.swift */; };
-		D528EC4E1EF0B4B7007D93D7 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D528EC4B1EF0B4B7007D93D7 /* DetailViewController.swift */; };
 		D528EC4F1EF0B4B7007D93D7 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D528EC4C1EF0B4B7007D93D7 /* MainViewController.swift */; };
 		D528EC501EF0B4B7007D93D7 /* MakestagramViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D528EC4D1EF0B4B7007D93D7 /* MakestagramViewController.swift */; };
 		D528EC531EF0B5CE007D93D7 /* HackerRankMobile.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = D528EC511EF0B5CE007D93D7 /* HackerRankMobile.xcdatamodeld */; };
@@ -20,6 +18,10 @@
 		D53012AA1D075B070031E66E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D53012A81D075B070031E66E /* Main.storyboard */; };
 		D53012AC1D075B070031E66E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D53012AB1D075B070031E66E /* Assets.xcassets */; };
 		D53012AF1D075B070031E66E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D53012AD1D075B070031E66E /* LaunchScreen.storyboard */; };
+		D548B4911EF9BB6A00D72A86 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D548B4901EF9BB6A00D72A86 /* DetailViewController.swift */; };
+		D548B4931EF9BB7A00D72A86 /* NetworkHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = D548B4921EF9BB7A00D72A86 /* NetworkHelper.swift */; };
+		D55BA54F1EF4DEA6003BF954 /* Login.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D55BA54D1EF4DEA6003BF954 /* Login.storyboard */; };
+		D55BA5521EF4DFB9003BF954 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D55BA5511EF4DFB9003BF954 /* LoginViewController.swift */; };
 		D5A500851ED8686900A528D6 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D5A500841ED8686900A528D6 /* CoreData.framework */; };
 		D5DF90011E975A7C00369F1C /* mapstogpx20170407_052557.gpx in Resources */ = {isa = PBXBuildFile; fileRef = D5DF90001E975A7C00369F1C /* mapstogpx20170407_052557.gpx */; };
 /* End PBXBuildFile section */
@@ -31,8 +33,6 @@
 		D528EC431EF0B164007D93D7 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		D528EC451EF0B48E007D93D7 /* CustomCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CustomCollectionViewCell.swift; path = "Custom Views/CustomCollectionViewCell.swift"; sourceTree = "<group>"; };
 		D528EC471EF0B4AD007D93D7 /* CoreDataHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CoreDataHelper.swift; path = Helpers/CoreDataHelper.swift; sourceTree = "<group>"; };
-		D528EC481EF0B4AD007D93D7 /* NetworkHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = NetworkHelper.swift; path = Helpers/NetworkHelper.swift; sourceTree = "<group>"; };
-		D528EC4B1EF0B4B7007D93D7 /* DetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DetailViewController.swift; path = "View Controllers/DetailViewController.swift"; sourceTree = "<group>"; };
 		D528EC4C1EF0B4B7007D93D7 /* MainViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MainViewController.swift; path = "View Controllers/MainViewController.swift"; sourceTree = "<group>"; };
 		D528EC4D1EF0B4B7007D93D7 /* MakestagramViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MakestagramViewController.swift; path = "View Controllers/MakestagramViewController.swift"; sourceTree = "<group>"; };
 		D528EC521EF0B5CE007D93D7 /* HackerRankMobile.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = HackerRankMobile.xcdatamodel; sourceTree = "<group>"; };
@@ -42,6 +42,10 @@
 		D53012AB1D075B070031E66E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D53012AE1D075B070031E66E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		D53012B01D075B070031E66E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D548B4901EF9BB6A00D72A86 /* DetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DetailViewController.swift; path = "View Controllers/DetailViewController.swift"; sourceTree = "<group>"; };
+		D548B4921EF9BB7A00D72A86 /* NetworkHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = NetworkHelper.swift; path = Helpers/NetworkHelper.swift; sourceTree = "<group>"; };
+		D55BA54E1EF4DEA6003BF954 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Login.storyboard; sourceTree = "<group>"; };
+		D55BA5511EF4DFB9003BF954 /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = LoginViewController.swift; path = "View Controllers/LoginViewController.swift"; sourceTree = "<group>"; };
 		D5A500841ED8686900A528D6 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
 		D5DF90001E975A7C00369F1C /* mapstogpx20170407_052557.gpx */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = mapstogpx20170407_052557.gpx; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -98,7 +102,7 @@
 		D53012A31D075B070031E66E /* HackerRankMobile */ = {
 			isa = PBXGroup;
 			children = (
-				D53012A81D075B070031E66E /* Main.storyboard */,
+				D55BA5501EF4DEAD003BF954 /* Storyboards */,
 				D57FAA6B1E8F6959009ECD77 /* View Controllers */,
 				D57FAA771E8F7414009ECD77 /* Custom Views */,
 				D57FAA6C1E8F6965009ECD77 /* Helpers */,
@@ -113,10 +117,20 @@
 			path = HackerRankMobile;
 			sourceTree = "<group>";
 		};
+		D55BA5501EF4DEAD003BF954 /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				D53012A81D075B070031E66E /* Main.storyboard */,
+				D55BA54D1EF4DEA6003BF954 /* Login.storyboard */,
+			);
+			name = Storyboards;
+			sourceTree = "<group>";
+		};
 		D57FAA6B1E8F6959009ECD77 /* View Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				D528EC4B1EF0B4B7007D93D7 /* DetailViewController.swift */,
+				D548B4901EF9BB6A00D72A86 /* DetailViewController.swift */,
+				D55BA5511EF4DFB9003BF954 /* LoginViewController.swift */,
 				D528EC4C1EF0B4B7007D93D7 /* MainViewController.swift */,
 				D528EC4D1EF0B4B7007D93D7 /* MakestagramViewController.swift */,
 			);
@@ -126,8 +140,8 @@
 		D57FAA6C1E8F6965009ECD77 /* Helpers */ = {
 			isa = PBXGroup;
 			children = (
+				D548B4921EF9BB7A00D72A86 /* NetworkHelper.swift */,
 				D528EC471EF0B4AD007D93D7 /* CoreDataHelper.swift */,
-				D528EC481EF0B4AD007D93D7 /* NetworkHelper.swift */,
 			);
 			name = Helpers;
 			sourceTree = "<group>";
@@ -214,6 +228,7 @@
 			files = (
 				D5DF90011E975A7C00369F1C /* mapstogpx20170407_052557.gpx in Resources */,
 				D53012AF1D075B070031E66E /* LaunchScreen.storyboard in Resources */,
+				D55BA54F1EF4DEA6003BF954 /* Login.storyboard in Resources */,
 				D528EC441EF0B164007D93D7 /* GoogleService-Info.plist in Resources */,
 				D53012AC1D075B070031E66E /* Assets.xcassets in Resources */,
 				D53012AA1D075B070031E66E /* Main.storyboard in Resources */,
@@ -275,12 +290,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D55BA5521EF4DFB9003BF954 /* LoginViewController.swift in Sources */,
 				D528EC4F1EF0B4B7007D93D7 /* MainViewController.swift in Sources */,
+				D548B4931EF9BB7A00D72A86 /* NetworkHelper.swift in Sources */,
 				D528EC461EF0B48E007D93D7 /* CustomCollectionViewCell.swift in Sources */,
-				D528EC4A1EF0B4AD007D93D7 /* NetworkHelper.swift in Sources */,
-				D528EC4E1EF0B4B7007D93D7 /* DetailViewController.swift in Sources */,
 				D528EC531EF0B5CE007D93D7 /* HackerRankMobile.xcdatamodeld in Sources */,
 				D528EC491EF0B4AD007D93D7 /* CoreDataHelper.swift in Sources */,
+				D548B4911EF9BB6A00D72A86 /* DetailViewController.swift in Sources */,
 				D528EC501EF0B4B7007D93D7 /* MakestagramViewController.swift in Sources */,
 				D53012A51D075B070031E66E /* AppDelegate.swift in Sources */,
 			);
@@ -303,6 +319,14 @@
 				D53012AE1D075B070031E66E /* Base */,
 			);
 			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		D55BA54D1EF4DEA6003BF954 /* Login.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				D55BA54E1EF4DEA6003BF954 /* Base */,
+			);
+			name = Login.storyboard;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */

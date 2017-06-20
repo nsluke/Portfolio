@@ -24,6 +24,11 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
+		<key>FirebaseUI-FirebaseAuthUI.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 		<key>GTMSessionFetcher.xcscheme</key>
 		<dict>
 			<key>isShown</key>
@@ -52,22 +57,27 @@
 			<key>primary</key>
 			<true/>
 		</dict>
+		<key>3380590F973AFAFA30255D504B7DEDAC</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>4D880288D9D274D2E4C6071FAE72E28F</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>5BE757D8D21A7F6E31E3FC7A197486F7</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
 		<key>842F72DCDC6161BB37D6B901E9301ED8</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
 		<key>88E9EC28B8B46C3631E6B242B50F4442</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>9879CAFE4E47544D39D93AFCF73433F0</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>B9E1CCFF9F7445D0A44D46125004AF24</key>
 		<dict>
 			<key>primary</key>
 			<true/>

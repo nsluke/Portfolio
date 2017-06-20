@@ -14,11 +14,13 @@ PODS:
   - AFNetworking/Serialization (3.1.0)
   - AFNetworking/UIKit (3.1.0):
     - AFNetworking/NSURLSession
-  - Alamofire (4.4.0)
+  - Alamofire (4.5.0)
   - AppAuth (0.9.1)
   - Charts (3.0.2):
     - Charts/Core (= 3.0.2)
   - Charts/Core (3.0.2)
+  - Firebase (4.0.2):
+    - Firebase/Core (= 4.0.2)
   - Firebase/Auth (4.0.2):
     - Firebase/Core
     - FirebaseAuth (= 4.0.0)
@@ -49,7 +51,7 @@ PODS:
     - FirebaseAnalytics (~> 4.0)
     - FirebaseCore (~> 4.0)
     - GTMSessionFetcher/Core (~> 1.1)
-  - FirebaseUI/Auth (4.0.0):
+  - FirebaseUI/Auth (4.1.1):
     - Firebase/Auth
   - GoogleToolboxForMac/DebugUtils (2.1.1):
     - GoogleToolboxForMac/Defines (= 2.1.1)
@@ -69,6 +71,7 @@ DEPENDENCIES:
   - Alamofire (~> 4.4)
   - AppAuth
   - Charts
+  - Firebase
   - Firebase/Auth
   - Firebase/Core
   - Firebase/Database
@@ -78,7 +81,7 @@ DEPENDENCIES:
 
 SPEC CHECKSUMS:
   AFNetworking: 5e0e199f73d8626b11e79750991f5d173d1f8b67
-  Alamofire: dc44b1600b800eb63da6a19039a0083d62a6a62d
+  Alamofire: f28cdffd29de33a7bfa022cbd63ae95a27fae140
   AppAuth: f7d9a2ce4ffe79a62a8b0c1d0938e88d9809b846
   Charts: 236d6ccdd0ce6feae151d89e829a7397381a21fd
   Firebase: c7ad0731eab26d18a3fc547dd048b0f7cd9c63ae
@@ -88,11 +91,11 @@ SPEC CHECKSUMS:
   FirebaseDatabase: d829b3a8c3e2ac7a16773c5df226966b0805dfc2
   FirebaseInstanceID: 9fbf536668f4d3f0880e7438456dabd1376e294b
   FirebaseStorage: 8110a1ed2034c8fbfd83890d2acc9cdbbd99afec
-  FirebaseUI: b9de05bfb4768db05f64ea90fc2f6a07b819118f
+  FirebaseUI: 5ebebe2c096c71f20abd1d43d0388958373bdaa0
   GoogleToolboxForMac: 8e329f1b599f2512c6b10676d45736bcc2cbbeb0
   GTMSessionFetcher: 30d874b96d0d76028f61fbd122801e3f030d47db
   SwiftyJSON: c2842d878f95482ffceec5709abc3d05680c0220
 
-PODFILE CHECKSUM: 9009c2e1894ac3fcbc4fbad18b079834fa917cf2
+PODFILE CHECKSUM: 74804a499dac98debbb1c11f9647c0e894de56bd
 
 COCOAPODS: 1.2.1

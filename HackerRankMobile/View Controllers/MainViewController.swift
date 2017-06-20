@@ -69,10 +69,6 @@ extension MainViewController: UICollectionViewDelegate, UICollectionViewDataSour
             print("Error in cell for row at index path")
         }
         
-//        let segue:UIStoryboardSegue = UIStoryboardSegue.init(identifier: idString, source: self, destination: destinationVC)
-        
         self.performSegue(withIdentifier: idString, sender: self)
-        
     }
-    
 }
