@@ -18,12 +18,12 @@
 		D53012AA1D075B070031E66E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D53012A81D075B070031E66E /* Main.storyboard */; };
 		D53012AC1D075B070031E66E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D53012AB1D075B070031E66E /* Assets.xcassets */; };
 		D53012AF1D075B070031E66E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D53012AD1D075B070031E66E /* LaunchScreen.storyboard */; };
+		D54242141EFC2C9C00F777A6 /* mapstogpx20170622_164845.gpx in Resources */ = {isa = PBXBuildFile; fileRef = D54242131EFC2C9C00F777A6 /* mapstogpx20170622_164845.gpx */; };
 		D548B4911EF9BB6A00D72A86 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D548B4901EF9BB6A00D72A86 /* DetailViewController.swift */; };
 		D548B4931EF9BB7A00D72A86 /* NetworkHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = D548B4921EF9BB7A00D72A86 /* NetworkHelper.swift */; };
 		D55BA54F1EF4DEA6003BF954 /* Login.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D55BA54D1EF4DEA6003BF954 /* Login.storyboard */; };
 		D55BA5521EF4DFB9003BF954 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D55BA5511EF4DFB9003BF954 /* LoginViewController.swift */; };
 		D5A500851ED8686900A528D6 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D5A500841ED8686900A528D6 /* CoreData.framework */; };
-		D5DF90011E975A7C00369F1C /* mapstogpx20170407_052557.gpx in Resources */ = {isa = PBXBuildFile; fileRef = D5DF90001E975A7C00369F1C /* mapstogpx20170407_052557.gpx */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -42,12 +42,12 @@
 		D53012AB1D075B070031E66E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D53012AE1D075B070031E66E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		D53012B01D075B070031E66E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D54242131EFC2C9C00F777A6 /* mapstogpx20170622_164845.gpx */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = mapstogpx20170622_164845.gpx; sourceTree = "<group>"; };
 		D548B4901EF9BB6A00D72A86 /* DetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DetailViewController.swift; path = "View Controllers/DetailViewController.swift"; sourceTree = "<group>"; };
 		D548B4921EF9BB7A00D72A86 /* NetworkHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = NetworkHelper.swift; path = Helpers/NetworkHelper.swift; sourceTree = "<group>"; };
 		D55BA54E1EF4DEA6003BF954 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Login.storyboard; sourceTree = "<group>"; };
 		D55BA5511EF4DFB9003BF954 /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = LoginViewController.swift; path = "View Controllers/LoginViewController.swift"; sourceTree = "<group>"; };
 		D5A500841ED8686900A528D6 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
-		D5DF90001E975A7C00369F1C /* mapstogpx20170407_052557.gpx */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = mapstogpx20170407_052557.gpx; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -112,7 +112,7 @@
 				D53012AD1D075B070031E66E /* LaunchScreen.storyboard */,
 				D53012B01D075B070031E66E /* Info.plist */,
 				D528EC431EF0B164007D93D7 /* GoogleService-Info.plist */,
-				D5DF90001E975A7C00369F1C /* mapstogpx20170407_052557.gpx */,
+				D54242131EFC2C9C00F777A6 /* mapstogpx20170622_164845.gpx */,
 			);
 			path = HackerRankMobile;
 			sourceTree = "<group>";
@@ -226,12 +226,12 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D5DF90011E975A7C00369F1C /* mapstogpx20170407_052557.gpx in Resources */,
 				D53012AF1D075B070031E66E /* LaunchScreen.storyboard in Resources */,
 				D55BA54F1EF4DEA6003BF954 /* Login.storyboard in Resources */,
 				D528EC441EF0B164007D93D7 /* GoogleService-Info.plist in Resources */,
 				D53012AC1D075B070031E66E /* Assets.xcassets in Resources */,
 				D53012AA1D075B070031E66E /* Main.storyboard in Resources */,
+				D54242141EFC2C9C00F777A6 /* mapstogpx20170622_164845.gpx in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

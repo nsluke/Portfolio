@@ -17,7 +17,6 @@ class LoginViewController: UIViewController {
     
     @IBOutlet weak var loginButton: UIButton!
     
-    
     override func viewDidLoad() {
         super.viewDidLoad()
     }
@@ -25,27 +24,25 @@ class LoginViewController: UIViewController {
     @IBAction func loginButtonTapped(_ sender: Any) {
         print("Login Button Tapped")
 
-        // 1
         guard let authUI = FUIAuth.defaultAuthUI()
             else { return }
+
+//        authUI.delegate = self
         
-        // 2
-        authUI.delegate = self
-        
-        // 3
         let authViewController = authUI.authViewController()
         present(authViewController, animated: true)
     }
-    
 }
 extension LoginViewController: FUIAuthDelegate {
     
-    func authUI(_ authUI: FUIAuth, didSignInWith user: User?, error: Error?) {
+    
+    
+    func authUI(_ authUI: FUIAuth, didSignInWith user: FirebaseAuth.User?, error: Error?) {
+        if let error = error {
+            assertionFailure("Error signing in: \(error.localizedDescription)")
+            return
+        }
         
+        print("handle user signup / login")
     }
-    
-//    func authUI(_ authUI: FUIAuth, didSignInWith user: User?, error: Error?) {
-//        print("")
-//    }
-    
 }
