@@ -8,6 +8,7 @@
 
 import UIKit
 import CoreData
+
 //@class UIImageView+AFNetworking.h
 
 class DetailViewController: UIViewController {
@@ -20,7 +21,6 @@ class DetailViewController: UIViewController {
     @IBOutlet weak var profilePhotoImageView: UIImageView!
     @IBOutlet weak var nameLabel: UILabel!
     
-
     override func viewDidLoad() {
         super.viewDidLoad()
         

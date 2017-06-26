@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16G16b" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="WRs-B5-sAy">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16F2073" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="WRs-B5-sAy">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -12,7 +12,7 @@
         <!--Navigation Controller-->
         <scene sceneID="dgO-lS-hRT">
             <objects>
-                <navigationController id="WRs-B5-sAy" sceneMemberID="viewController">
+                <navigationController storyboardIdentifier="InitialController" id="WRs-B5-sAy" sceneMemberID="viewController">
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="IZr-ro-ook">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -92,7 +92,7 @@
                     <connections>
                         <outlet property="collectionView" destination="8HS-62-UXD" id="Owm-nI-Mr3"/>
                         <segue destination="ONQ-WF-Xvu" kind="show" identifier="transitionToSteam" id="nmf-tB-eh8"/>
-                        <segue destination="svu-E5-CRq" kind="show" identifier="transitionToMakestagram" id="Rmn-ce-LXl"/>
+                        <segue destination="ZcX-kw-Nzc" kind="show" identifier="transitionToMakestagram" id="3CB-FV-hPW"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="u7D-qi-IKL" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -175,67 +175,10 @@
             </objects>
             <point key="canvasLocation" x="1223" y="-251"/>
         </scene>
-        <!--Item 2-->
-        <scene sceneID="9My-sW-RCh">
-            <objects>
-                <viewController id="lc2-j4-F6i" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="r60-9J-BlP"/>
-                        <viewControllerLayoutGuide type="bottom" id="QsC-7M-vg5"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="vn2-vo-zLA">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                    </view>
-                    <tabBarItem key="tabBarItem" title="Item 2" id="Psw-V1-ObE"/>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="Hgy-bV-ADX" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="2054" y="1331"/>
-        </scene>
-        <!--Item 1-->
-        <scene sceneID="Pgw-B4-UZe">
-            <objects>
-                <viewController id="CkD-ln-0Mo" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="Io0-EP-hAk"/>
-                        <viewControllerLayoutGuide type="bottom" id="tUz-Pm-XcS"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="98X-AJ-PEG">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                    </view>
-                    <tabBarItem key="tabBarItem" title="Item 1" id="D7p-1a-Phl"/>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="6Vx-Im-y4S" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="1222" y="1331"/>
-        </scene>
-        <!--Tab Bar Controller-->
-        <scene sceneID="9Rl-Sg-WhU">
-            <objects>
-                <tabBarController id="svu-E5-CRq" sceneMemberID="viewController">
-                    <tabBar key="tabBar" contentMode="scaleToFill" id="qRh-NI-t9U">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="49"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                    </tabBar>
-                    <connections>
-                        <segue destination="CkD-ln-0Mo" kind="relationship" relationship="viewControllers" id="eZH-Bi-1ce"/>
-                        <segue destination="lc2-j4-F6i" kind="relationship" relationship="viewControllers" id="BJL-1j-gUR"/>
-                        <segue destination="ZcX-kw-Nzc" kind="relationship" relationship="viewControllers" id="Xyr-dc-tfc"/>
-                    </connections>
-                </tabBarController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="cNf-bs-pXd" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="1222" y="492"/>
-        </scene>
         <!--Makestagram-->
         <scene sceneID="DAH-y7-mhe">
             <objects>
-                <viewController title="Makestagram" id="ZcX-kw-Nzc" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="InitialMakestagramController" title="Makestagram" id="ZcX-kw-Nzc" customClass="MakestagramViewController" customModule="HackerRankMobile" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="Inl-JM-80r"/>
                         <viewControllerLayoutGuide type="bottom" id="6eS-as-bqk"/>
@@ -249,7 +192,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="0zg-7c-Qp3" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="438" y="1331"/>
+            <point key="canvasLocation" x="1222" y="520"/>
         </scene>
     </scenes>
 </document>

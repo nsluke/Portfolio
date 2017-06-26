@@ -7,21 +7,27 @@
 //
 
 import UIKit
+import Firebase
 
 class MakestagramViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        FirebaseApp.configure()
+
         let storyboard:UIStoryboard = UIStoryboard(name: "Login", bundle: .main)
-        let window: UIWindow = UIWindow()
+        let controller = storyboard.instantiateViewController(withIdentifier: "InitialController") as UIViewController
+
+        self.present(controller, animated: true, completion: nil)
+
+//        let window: UIWindow = UIWindow()
         
-        // 2
-        if let initialViewController = storyboard.instantiateInitialViewController() {
-            // 3
-            window.rootViewController = initialViewController
-            // 4
-            window.makeKeyAndVisible()
-        }
+//        // 2
+//        if let initialViewController = storyboard.instantiateInitialViewController() {
+//            // 3
+//            window.rootViewController = initialViewController
+//            // 4
+//            window.makeKeyAndVisible()
+//        }
     }
 }

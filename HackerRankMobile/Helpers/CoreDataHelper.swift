@@ -11,19 +11,6 @@ import CoreData
 
 class CoreDataHelper { // Core Data Singleton
     
-//    dynamic var title = ""
-
-    
-    // userStatusEnum
-    // 1 user is logging in
-    // 2 user is awaiting server communication
-    // 3 user is logged in
-    // 4 user is logged out
-    
-    // if userStatusEnum == 3, make this a logout button
-    // userStatus += 1
-    
-    
     static let appDelegate = UIApplication.shared.delegate as! AppDelegate
     static let persistentContainer = appDelegate.persistentContainer
     static let managedContext = persistentContainer.viewContext

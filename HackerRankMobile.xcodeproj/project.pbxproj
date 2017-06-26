@@ -8,12 +8,14 @@
 
 /* Begin PBXBuildFile section */
 		24C7C7792C3F9F993B4906D2 /* Pods_HackerRankMobile.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4F9A4D1E7DB5448A7494FC5D /* Pods_HackerRankMobile.framework */; };
-		D528EC441EF0B164007D93D7 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = D528EC431EF0B164007D93D7 /* GoogleService-Info.plist */; };
 		D528EC461EF0B48E007D93D7 /* CustomCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D528EC451EF0B48E007D93D7 /* CustomCollectionViewCell.swift */; };
 		D528EC491EF0B4AD007D93D7 /* CoreDataHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = D528EC471EF0B4AD007D93D7 /* CoreDataHelper.swift */; };
 		D528EC4F1EF0B4B7007D93D7 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D528EC4C1EF0B4B7007D93D7 /* MainViewController.swift */; };
 		D528EC501EF0B4B7007D93D7 /* MakestagramViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D528EC4D1EF0B4B7007D93D7 /* MakestagramViewController.swift */; };
 		D528EC531EF0B5CE007D93D7 /* HackerRankMobile.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = D528EC511EF0B5CE007D93D7 /* HackerRankMobile.xcdatamodeld */; };
+		D52E8BBE1F018C47006C0382 /* FirebaseUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = D52E8BBD1F018C47006C0382 /* FirebaseUser.swift */; };
+		D52E8BC01F0199B9006C0382 /* CreateUsernameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D52E8BBF1F0199B9006C0382 /* CreateUsernameViewController.swift */; };
+		D52E8BC21F01A985006C0382 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = D52E8BC11F01A985006C0382 /* GoogleService-Info.plist */; };
 		D53012A51D075B070031E66E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D53012A41D075B070031E66E /* AppDelegate.swift */; };
 		D53012AA1D075B070031E66E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D53012A81D075B070031E66E /* Main.storyboard */; };
 		D53012AC1D075B070031E66E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D53012AB1D075B070031E66E /* Assets.xcassets */; };
@@ -24,18 +26,21 @@
 		D55BA54F1EF4DEA6003BF954 /* Login.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D55BA54D1EF4DEA6003BF954 /* Login.storyboard */; };
 		D55BA5521EF4DFB9003BF954 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D55BA5511EF4DFB9003BF954 /* LoginViewController.swift */; };
 		D5A500851ED8686900A528D6 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D5A500841ED8686900A528D6 /* CoreData.framework */; };
+		D5AEC98F1F01B4AB005CE8AA /* UserHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5AEC98E1F01B4AB005CE8AA /* UserHelper.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		2CF2749EABA55217133D6C70 /* Pods-HackerRankMobile.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HackerRankMobile.release.xcconfig"; path = "Pods/Target Support Files/Pods-HackerRankMobile/Pods-HackerRankMobile.release.xcconfig"; sourceTree = "<group>"; };
 		3D0A9BF01FF424F9C73BA807 /* Pods-HackerRankMobile.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HackerRankMobile.debug.xcconfig"; path = "Pods/Target Support Files/Pods-HackerRankMobile/Pods-HackerRankMobile.debug.xcconfig"; sourceTree = "<group>"; };
 		4F9A4D1E7DB5448A7494FC5D /* Pods_HackerRankMobile.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_HackerRankMobile.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		D528EC431EF0B164007D93D7 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		D528EC451EF0B48E007D93D7 /* CustomCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CustomCollectionViewCell.swift; path = "Custom Views/CustomCollectionViewCell.swift"; sourceTree = "<group>"; };
 		D528EC471EF0B4AD007D93D7 /* CoreDataHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CoreDataHelper.swift; path = Helpers/CoreDataHelper.swift; sourceTree = "<group>"; };
 		D528EC4C1EF0B4B7007D93D7 /* MainViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MainViewController.swift; path = "View Controllers/MainViewController.swift"; sourceTree = "<group>"; };
 		D528EC4D1EF0B4B7007D93D7 /* MakestagramViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MakestagramViewController.swift; path = "View Controllers/MakestagramViewController.swift"; sourceTree = "<group>"; };
 		D528EC521EF0B5CE007D93D7 /* HackerRankMobile.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = HackerRankMobile.xcdatamodel; sourceTree = "<group>"; };
+		D52E8BBD1F018C47006C0382 /* FirebaseUser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = FirebaseUser.swift; path = Models/FirebaseUser.swift; sourceTree = "<group>"; };
+		D52E8BBF1F0199B9006C0382 /* CreateUsernameViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CreateUsernameViewController.swift; sourceTree = "<group>"; };
+		D52E8BC11F01A985006C0382 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		D53012A11D075B070031E66E /* HackerRankMobile.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HackerRankMobile.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D53012A41D075B070031E66E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D53012A91D075B070031E66E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -48,6 +53,7 @@
 		D55BA54E1EF4DEA6003BF954 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Login.storyboard; sourceTree = "<group>"; };
 		D55BA5511EF4DFB9003BF954 /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = LoginViewController.swift; path = "View Controllers/LoginViewController.swift"; sourceTree = "<group>"; };
 		D5A500841ED8686900A528D6 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
+		D5AEC98E1F01B4AB005CE8AA /* UserHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = UserHelper.swift; path = Helpers/UserHelper.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -107,11 +113,11 @@
 				D57FAA771E8F7414009ECD77 /* Custom Views */,
 				D57FAA6C1E8F6965009ECD77 /* Helpers */,
 				D59E7F8D1E8F92B800DDB646 /* Models */,
+				D52E8BC11F01A985006C0382 /* GoogleService-Info.plist */,
 				D53012A41D075B070031E66E /* AppDelegate.swift */,
 				D53012AB1D075B070031E66E /* Assets.xcassets */,
 				D53012AD1D075B070031E66E /* LaunchScreen.storyboard */,
 				D53012B01D075B070031E66E /* Info.plist */,
-				D528EC431EF0B164007D93D7 /* GoogleService-Info.plist */,
 				D54242131EFC2C9C00F777A6 /* mapstogpx20170622_164845.gpx */,
 			);
 			path = HackerRankMobile;
@@ -131,6 +137,7 @@
 			children = (
 				D548B4901EF9BB6A00D72A86 /* DetailViewController.swift */,
 				D55BA5511EF4DFB9003BF954 /* LoginViewController.swift */,
+				D52E8BBF1F0199B9006C0382 /* CreateUsernameViewController.swift */,
 				D528EC4C1EF0B4B7007D93D7 /* MainViewController.swift */,
 				D528EC4D1EF0B4B7007D93D7 /* MakestagramViewController.swift */,
 			);
@@ -142,6 +149,7 @@
 			children = (
 				D548B4921EF9BB7A00D72A86 /* NetworkHelper.swift */,
 				D528EC471EF0B4AD007D93D7 /* CoreDataHelper.swift */,
+				D5AEC98E1F01B4AB005CE8AA /* UserHelper.swift */,
 			);
 			name = Helpers;
 			sourceTree = "<group>";
@@ -158,6 +166,7 @@
 			isa = PBXGroup;
 			children = (
 				D528EC511EF0B5CE007D93D7 /* HackerRankMobile.xcdatamodeld */,
+				D52E8BBD1F018C47006C0382 /* FirebaseUser.swift */,
 			);
 			name = Models;
 			sourceTree = "<group>";
@@ -228,10 +237,10 @@
 			files = (
 				D53012AF1D075B070031E66E /* LaunchScreen.storyboard in Resources */,
 				D55BA54F1EF4DEA6003BF954 /* Login.storyboard in Resources */,
-				D528EC441EF0B164007D93D7 /* GoogleService-Info.plist in Resources */,
 				D53012AC1D075B070031E66E /* Assets.xcassets in Resources */,
 				D53012AA1D075B070031E66E /* Main.storyboard in Resources */,
 				D54242141EFC2C9C00F777A6 /* mapstogpx20170622_164845.gpx in Resources */,
+				D52E8BC21F01A985006C0382 /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -292,12 +301,15 @@
 			files = (
 				D55BA5521EF4DFB9003BF954 /* LoginViewController.swift in Sources */,
 				D528EC4F1EF0B4B7007D93D7 /* MainViewController.swift in Sources */,
+				D5AEC98F1F01B4AB005CE8AA /* UserHelper.swift in Sources */,
 				D548B4931EF9BB7A00D72A86 /* NetworkHelper.swift in Sources */,
 				D528EC461EF0B48E007D93D7 /* CustomCollectionViewCell.swift in Sources */,
 				D528EC531EF0B5CE007D93D7 /* HackerRankMobile.xcdatamodeld in Sources */,
+				D52E8BBE1F018C47006C0382 /* FirebaseUser.swift in Sources */,
 				D528EC491EF0B4AD007D93D7 /* CoreDataHelper.swift in Sources */,
 				D548B4911EF9BB6A00D72A86 /* DetailViewController.swift in Sources */,
 				D528EC501EF0B4B7007D93D7 /* MakestagramViewController.swift in Sources */,
+				D52E8BC01F0199B9006C0382 /* CreateUsernameViewController.swift in Sources */,
 				D53012A51D075B070031E66E /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
