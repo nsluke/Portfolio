@@ -6,6 +6,9 @@
 //  Copyright © 2017 Solomon Stuff. All rights reserved.
 //
 
+// command + shift + k : clean
+// command r : Build 
+
 import UIKit
 import CoreData
 

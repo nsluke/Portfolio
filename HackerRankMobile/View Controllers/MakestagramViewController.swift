@@ -13,8 +13,7 @@ class MakestagramViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        FirebaseApp.configure()
-
+        
         let storyboard:UIStoryboard = UIStoryboard(name: "Login", bundle: .main)
         let controller = storyboard.instantiateViewController(withIdentifier: "InitialController") as UIViewController
 

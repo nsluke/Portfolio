@@ -20,12 +20,17 @@
 		D53012AA1D075B070031E66E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D53012A81D075B070031E66E /* Main.storyboard */; };
 		D53012AC1D075B070031E66E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D53012AB1D075B070031E66E /* Assets.xcassets */; };
 		D53012AF1D075B070031E66E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D53012AD1D075B070031E66E /* LaunchScreen.storyboard */; };
+		D53802031F3992D2008D2968 /* AuthenticationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D53802021F3992D2008D2968 /* AuthenticationViewController.swift */; };
+		D53802051F39937F008D2968 /* LocalAuthentication.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D53802041F39937F008D2968 /* LocalAuthentication.framework */; };
+		D53802071F399468008D2968 /* HRMobileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D53802061F399468008D2968 /* HRMobileViewController.swift */; };
 		D54242141EFC2C9C00F777A6 /* mapstogpx20170622_164845.gpx in Resources */ = {isa = PBXBuildFile; fileRef = D54242131EFC2C9C00F777A6 /* mapstogpx20170622_164845.gpx */; };
 		D548B4911EF9BB6A00D72A86 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D548B4901EF9BB6A00D72A86 /* DetailViewController.swift */; };
 		D548B4931EF9BB7A00D72A86 /* NetworkHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = D548B4921EF9BB7A00D72A86 /* NetworkHelper.swift */; };
 		D55BA54F1EF4DEA6003BF954 /* Login.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D55BA54D1EF4DEA6003BF954 /* Login.storyboard */; };
 		D55BA5521EF4DFB9003BF954 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D55BA5511EF4DFB9003BF954 /* LoginViewController.swift */; };
 		D5A500851ED8686900A528D6 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D5A500841ED8686900A528D6 /* CoreData.framework */; };
+		D5ADE6881F32FB2600649198 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D5ADE6871F32FB2600649198 /* MapKit.framework */; };
+		D5ADE68A1F32FB3500649198 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5ADE6891F32FB3500649198 /* MapViewController.swift */; };
 		D5AEC98F1F01B4AB005CE8AA /* UserHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5AEC98E1F01B4AB005CE8AA /* UserHelper.swift */; };
 /* End PBXBuildFile section */
 
@@ -47,12 +52,17 @@
 		D53012AB1D075B070031E66E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D53012AE1D075B070031E66E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		D53012B01D075B070031E66E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D53802021F3992D2008D2968 /* AuthenticationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AuthenticationViewController.swift; sourceTree = "<group>"; };
+		D53802041F39937F008D2968 /* LocalAuthentication.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = LocalAuthentication.framework; path = System/Library/Frameworks/LocalAuthentication.framework; sourceTree = SDKROOT; };
+		D53802061F399468008D2968 /* HRMobileViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = HRMobileViewController.swift; path = "View Controllers/HRMobileViewController.swift"; sourceTree = "<group>"; };
 		D54242131EFC2C9C00F777A6 /* mapstogpx20170622_164845.gpx */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = mapstogpx20170622_164845.gpx; sourceTree = "<group>"; };
 		D548B4901EF9BB6A00D72A86 /* DetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DetailViewController.swift; path = "View Controllers/DetailViewController.swift"; sourceTree = "<group>"; };
 		D548B4921EF9BB7A00D72A86 /* NetworkHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = NetworkHelper.swift; path = Helpers/NetworkHelper.swift; sourceTree = "<group>"; };
 		D55BA54E1EF4DEA6003BF954 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Login.storyboard; sourceTree = "<group>"; };
 		D55BA5511EF4DFB9003BF954 /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = LoginViewController.swift; path = "View Controllers/LoginViewController.swift"; sourceTree = "<group>"; };
 		D5A500841ED8686900A528D6 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
+		D5ADE6871F32FB2600649198 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
+		D5ADE6891F32FB3500649198 /* MapViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MapViewController.swift; path = ../MapViewController.swift; sourceTree = "<group>"; };
 		D5AEC98E1F01B4AB005CE8AA /* UserHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = UserHelper.swift; path = Helpers/UserHelper.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -61,6 +71,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D53802051F39937F008D2968 /* LocalAuthentication.framework in Frameworks */,
+				D5ADE6881F32FB2600649198 /* MapKit.framework in Frameworks */,
 				D5A500851ED8686900A528D6 /* CoreData.framework in Frameworks */,
 				24C7C7792C3F9F993B4906D2 /* Pods_HackerRankMobile.framework in Frameworks */,
 			);
@@ -81,6 +93,8 @@
 		9B8C1584DD7EB1B2A5D1E69B /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				D53802041F39937F008D2968 /* LocalAuthentication.framework */,
+				D5ADE6871F32FB2600649198 /* MapKit.framework */,
 				D5A500841ED8686900A528D6 /* CoreData.framework */,
 				4F9A4D1E7DB5448A7494FC5D /* Pods_HackerRankMobile.framework */,
 			);
@@ -123,6 +137,16 @@
 			path = HackerRankMobile;
 			sourceTree = "<group>";
 		};
+		D53802081F399517008D2968 /* Makestagram */ = {
+			isa = PBXGroup;
+			children = (
+				D55BA5511EF4DFB9003BF954 /* LoginViewController.swift */,
+				D52E8BBF1F0199B9006C0382 /* CreateUsernameViewController.swift */,
+				D528EC4D1EF0B4B7007D93D7 /* MakestagramViewController.swift */,
+			);
+			name = Makestagram;
+			sourceTree = "<group>";
+		};
 		D55BA5501EF4DEAD003BF954 /* Storyboards */ = {
 			isa = PBXGroup;
 			children = (
@@ -135,11 +159,12 @@
 		D57FAA6B1E8F6959009ECD77 /* View Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				D548B4901EF9BB6A00D72A86 /* DetailViewController.swift */,
-				D55BA5511EF4DFB9003BF954 /* LoginViewController.swift */,
-				D52E8BBF1F0199B9006C0382 /* CreateUsernameViewController.swift */,
 				D528EC4C1EF0B4B7007D93D7 /* MainViewController.swift */,
-				D528EC4D1EF0B4B7007D93D7 /* MakestagramViewController.swift */,
+				D548B4901EF9BB6A00D72A86 /* DetailViewController.swift */,
+				D5ADE6891F32FB3500649198 /* MapViewController.swift */,
+				D53802081F399517008D2968 /* Makestagram */,
+				D53802061F399468008D2968 /* HRMobileViewController.swift */,
+				D53802021F3992D2008D2968 /* AuthenticationViewController.swift */,
 			);
 			name = "View Controllers";
 			sourceTree = "<group>";
@@ -305,9 +330,12 @@
 				D548B4931EF9BB7A00D72A86 /* NetworkHelper.swift in Sources */,
 				D528EC461EF0B48E007D93D7 /* CustomCollectionViewCell.swift in Sources */,
 				D528EC531EF0B5CE007D93D7 /* HackerRankMobile.xcdatamodeld in Sources */,
+				D5ADE68A1F32FB3500649198 /* MapViewController.swift in Sources */,
 				D52E8BBE1F018C47006C0382 /* FirebaseUser.swift in Sources */,
+				D53802071F399468008D2968 /* HRMobileViewController.swift in Sources */,
 				D528EC491EF0B4AD007D93D7 /* CoreDataHelper.swift in Sources */,
 				D548B4911EF9BB6A00D72A86 /* DetailViewController.swift in Sources */,
+				D53802031F3992D2008D2968 /* AuthenticationViewController.swift in Sources */,
 				D528EC501EF0B4B7007D93D7 /* MakestagramViewController.swift in Sources */,
 				D52E8BC01F0199B9006C0382 /* CreateUsernameViewController.swift in Sources */,
 				D53012A51D075B070031E66E /* AppDelegate.swift in Sources */,

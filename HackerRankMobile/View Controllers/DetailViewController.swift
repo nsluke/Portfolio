@@ -30,7 +30,15 @@ class DetailViewController: UIViewController {
 //            name: NSNotification.Name(rawValue: "setupView"),
 //            object: nil)
         
-        user = CoreDataHelper.retrieveUser()[0]
+        
+        
+        var localUsers = CoreDataHelper.retrieveUser()
+        
+        if localUsers[0] != nil {
+            user = localUsers[0]
+        }
+            
+        
         setupView()
 //
     }

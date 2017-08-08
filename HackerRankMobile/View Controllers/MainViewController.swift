@@ -8,12 +8,13 @@
 
 import UIKit
 
+
 class MainViewController: UIViewController {
     
     // Mark: - Variables
     @IBOutlet weak var collectionView: UICollectionView!
     
-    var collectionViewArray:[String] = ["Steam", "H R Mobile","Makestagram"]
+    var collectionViewArray:[String] = ["Steam", "H R Mobile","Makestagram", "MapView", "Touch ID"]
     
     
     // Mark: - Functions
@@ -27,10 +28,12 @@ class MainViewController: UIViewController {
         if let identifier = segue.identifier {
             if identifier == "transitionToSteam" {
                 NetworkHelper.sharedInstance.getUserProfileInfo()
-            }
-            if identifier == "transitionToMakestagram" {
+            }else if identifier == "transitionToMakestagram" {
                 print("Opening Makestagram")
+            } else if identifier == "transitionToMapView" {
+                print("Opening MapView")
             }
+            
         }
     }
     
@@ -65,6 +68,10 @@ extension MainViewController: UICollectionViewDelegate, UICollectionViewDataSour
             idString = "transitionToHRMobile"
         case "Makestagram":
             idString = "transitionToMakestagram"
+        case "MapView":
+            idString = "transitionToMapView"
+        case "Touch ID":
+            idString = "transitionToAuth"
         default:
             print("Error in cell for row at index path")
         }
