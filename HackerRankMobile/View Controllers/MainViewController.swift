@@ -14,7 +14,7 @@ class MainViewController: UIViewController {
     // Mark: - Variables
     @IBOutlet weak var collectionView: UICollectionView!
     
-    var collectionViewArray:[String] = ["Steam", "H R Mobile","Makestagram", "MapView", "Touch ID"]
+    var collectionViewArray:[String] = ["Steam", "H R Mobile","Makestagram", "MapView", "Touch ID", "Insertion Sort"]
     
     
     // Mark: - Functions
@@ -72,6 +72,8 @@ extension MainViewController: UICollectionViewDelegate, UICollectionViewDataSour
             idString = "transitionToMapView"
         case "Touch ID":
             idString = "transitionToAuth"
+        case "Insertion Sort":
+            idString = "transitionToInsertionSort"
         default:
             print("Error in cell for row at index path")
         }

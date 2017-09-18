@@ -30,6 +30,7 @@
 		D548B4931EF9BB7A00D72A86 /* NetworkHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = D548B4921EF9BB7A00D72A86 /* NetworkHelper.swift */; };
 		D55BA54F1EF4DEA6003BF954 /* Login.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D55BA54D1EF4DEA6003BF954 /* Login.storyboard */; };
 		D55BA5521EF4DFB9003BF954 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D55BA5511EF4DFB9003BF954 /* LoginViewController.swift */; };
+		D5624BA11F708C09006C0B79 /* InsertionSortViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5624BA01F708C09006C0B79 /* InsertionSortViewController.swift */; };
 		D5A500851ED8686900A528D6 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D5A500841ED8686900A528D6 /* CoreData.framework */; };
 		D5ADE6881F32FB2600649198 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D5ADE6871F32FB2600649198 /* MapKit.framework */; };
 		D5ADE68A1F32FB3500649198 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5ADE6891F32FB3500649198 /* MapViewController.swift */; };
@@ -64,6 +65,7 @@
 		D548B4921EF9BB7A00D72A86 /* NetworkHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = NetworkHelper.swift; path = Helpers/NetworkHelper.swift; sourceTree = "<group>"; };
 		D55BA54E1EF4DEA6003BF954 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Login.storyboard; sourceTree = "<group>"; };
 		D55BA5511EF4DFB9003BF954 /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = LoginViewController.swift; path = "View Controllers/LoginViewController.swift"; sourceTree = "<group>"; };
+		D5624BA01F708C09006C0B79 /* InsertionSortViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InsertionSortViewController.swift; sourceTree = "<group>"; };
 		D5A500841ED8686900A528D6 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
 		D5ADE6871F32FB2600649198 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		D5ADE6891F32FB3500649198 /* MapViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MapViewController.swift; path = ../MapViewController.swift; sourceTree = "<group>"; };
@@ -173,6 +175,7 @@
 		D57FAA6B1E8F6959009ECD77 /* View Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				D5624BA01F708C09006C0B79 /* InsertionSortViewController.swift */,
 				D528EC4C1EF0B4B7007D93D7 /* MainViewController.swift */,
 				D548B4901EF9BB6A00D72A86 /* DetailViewController.swift */,
 				D50FCB481F69F4A300623532 /* Jet Lag Calculator */,
@@ -312,7 +315,7 @@
 			);
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-HackerRankMobile/Pods-HackerRankMobile-resources.sh",
-				"$PODS_CONFIGURATION_BUILD_DIR/FirebaseUI/FirebaseAuthUI.bundle",
+				$PODS_CONFIGURATION_BUILD_DIR/FirebaseUI/FirebaseAuthUI.bundle,
 				"${PODS_ROOT}/GoogleMaps/Maps/Frameworks/GoogleMaps.framework/Resources/GoogleMaps.bundle",
 			);
 			name = "[CP] Copy Pods Resources";
@@ -371,6 +374,7 @@
 				D548B4931EF9BB7A00D72A86 /* NetworkHelper.swift in Sources */,
 				D528EC461EF0B48E007D93D7 /* CustomCollectionViewCell.swift in Sources */,
 				D528EC531EF0B5CE007D93D7 /* HackerRankMobile.xcdatamodeld in Sources */,
+				D5624BA11F708C09006C0B79 /* InsertionSortViewController.swift in Sources */,
 				D5ADE68A1F32FB3500649198 /* MapViewController.swift in Sources */,
 				D52E8BBE1F018C47006C0382 /* FirebaseUser.swift in Sources */,
 				D53802071F399468008D2968 /* HRMobileViewController.swift in Sources */,
