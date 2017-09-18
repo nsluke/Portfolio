@@ -8,11 +8,11 @@
 
 import UIKit
 import CoreData
-
+import AFNetworking
 //@class UIImageView+AFNetworking.h
 
 class DetailViewController: UIViewController {
-
+    
     var classTitle:String?
     var user:User?
     
@@ -30,47 +30,26 @@ class DetailViewController: UIViewController {
 //            name: NSNotification.Name(rawValue: "setupView"),
 //            object: nil)
         
+        sleep(3) // find a not lazy way to do this
+        user = CoreDataHelper.retrieveUser()[0]
         
-        
-        var localUsers = CoreDataHelper.retrieveUser()
-        
-        if localUsers[0] != nil {
-            user = localUsers[0]
-        }
-            
-        
-        setupView()
-//
     }
     
     override func viewWillAppear(_ animated: Bool) {
-//        nameLabel.text =
+        if let localUser = user {
+            coverPhotoImageView.setImageWith(URL(string: (user?.coverPhotoURL)!)!)
+            profilePhotoImageView.setImageWith(URL(string: (user?.profilePictureURL)!)!)
+            nameLabel.text = localUser.name
+        } else {
+     
+        }
     }
     
     override func viewDidAppear(_ animated: Bool) {
         self.navigationController?.isToolbarHidden = false
     }
     
-    func setupView() {
-        user = CoreDataHelper.retrieveUser()[0]
-        
-        if let user = user {
-            nameLabel.text = user.name
-        } else {
-            nameLabel.text = ""
-        }
-        
-//        profilePhotoImageView.photo 
-    }
+
     
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
+    
 }

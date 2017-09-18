@@ -27,10 +27,10 @@ class CoreDataHelper { // Core Data Singleton
         user.name = name
         user.coverPhotoURL = coverPhotoURL
         
-        self.saveUser()
+        self.save()
     }
     
-    static func saveUser() {
+    static func save() {
         do {
             try managedContext.save()
         } catch let error as NSError {
@@ -40,12 +40,12 @@ class CoreDataHelper { // Core Data Singleton
     
     static func delete(user: User) {
         managedContext.delete(user)
-        saveUser()
+        self.save()
     }
     
     static func retrieveUser() -> [User] {
-        
         let fetchRequest = NSFetchRequest<User>(entityName: "User")
+        
         do {
             let results = try managedContext.fetch(fetchRequest)
             return results

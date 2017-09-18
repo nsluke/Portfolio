@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="17A315i" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="WRs-B5-sAy">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="17A360a" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="WRs-B5-sAy">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -56,7 +56,7 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qCF-AK-a6t">
-                                                    <rect key="frame" x="52" y="40" width="46.5" height="20.5"/>
+                                                    <rect key="frame" x="52" y="65" width="46.5" height="20.5"/>
                                                     <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="17"/>
                                                     <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     <nil key="highlightedColor"/>
@@ -94,9 +94,9 @@
                         <outlet property="collectionView" destination="8HS-62-UXD" id="Owm-nI-Mr3"/>
                         <segue destination="ONQ-WF-Xvu" kind="show" identifier="transitionToSteam" id="nmf-tB-eh8"/>
                         <segue destination="ZcX-kw-Nzc" kind="show" identifier="transitionToMakestagram" id="3CB-FV-hPW"/>
-                        <segue destination="BIi-RA-nsn" kind="show" identifier="transitionToMapView" id="ABh-q5-vNi"/>
                         <segue destination="Ehr-Du-KQR" kind="show" identifier="transitionToAuth" id="q4E-kx-Dzq"/>
                         <segue destination="Wl8-eS-JDa" kind="show" identifier="transitionToHRMobile" id="xSH-A1-u75"/>
+                        <segue destination="bVE-vH-sJP" kind="show" identifier="transitionToMapView" id="rzI-56-jbF"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="u7D-qi-IKL" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -162,20 +162,16 @@
                         </constraints>
                     </view>
                     <toolbarItems/>
-                    <navigationItem key="navigationItem" title="Title" id="fpc-6n-d10">
-                        <barButtonItem key="leftBarButtonItem" title="Back" id="5Xx-Ry-E5S"/>
-                    </navigationItem>
+                    <navigationItem key="navigationItem" title="Title" id="fpc-6n-d10"/>
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
                         <outlet property="coverPhotoImageView" destination="bgs-ic-gls" id="LLM-de-Hfh"/>
                         <outlet property="nameLabel" destination="bft-aN-Rrr" id="GvA-1F-qnW"/>
                         <outlet property="profilePhotoImageView" destination="ykk-C6-4vZ" id="9zc-pE-d6a"/>
                         <outlet property="scrollView" destination="hgh-g3-T6t" id="nQT-Zn-8mV"/>
-                        <segue destination="FkT-dc-JAb" kind="unwind" identifier="unwindSegue" unwindAction="unwindToCollectionViewWithSegue:" id="cQ1-E7-jOd"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="UQA-KB-pop" userLabel="First Responder" sceneMemberID="firstResponder"/>
-                <exit id="FkT-dc-JAb" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="1223" y="-251"/>
         </scene>
@@ -222,7 +218,159 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="3eP-0R-RMG" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1221.5999999999999" y="-940.47976011994012"/>
+            <point key="canvasLocation" x="1990" y="-931"/>
+        </scene>
+        <!--Flight Data-->
+        <scene sceneID="Vps-ZJ-uOP">
+            <objects>
+                <viewController title="Flight Data" id="bVE-vH-sJP" customClass="FlightDetailsViewController" customModule="HackerRankMobile" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="6fm-pM-7Dh"/>
+                        <viewControllerLayoutGuide type="bottom" id="qtE-W4-53a"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="HUl-sT-wVs">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" alignment="top" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="ho2-bW-XKA">
+                                <rect key="frame" x="20" y="160" width="335" height="30"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Departure City" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7cW-Hv-yqR">
+                                        <rect key="frame" x="0.0" y="0.0" width="118.5" height="20.5"/>
+                                        <fontDescription key="fontDescription" type="system" weight="light" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="San Francisco" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="3a5-0G-9Ln">
+                                        <rect key="frame" x="138.5" y="0.0" width="196.5" height="30"/>
+                                        <nil key="textColor"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                </subviews>
+                            </stackView>
+                            <stackView opaque="NO" contentMode="scaleToFill" alignment="top" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="Krv-SI-MSq">
+                                <rect key="frame" x="20" y="198" width="335" height="30"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Departure Time" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NDf-at-Hak">
+                                        <rect key="frame" x="0.0" y="0.0" width="118.5" height="20.5"/>
+                                        <fontDescription key="fontDescription" type="system" weight="light" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" horizontalHuggingPriority="249" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="4:15" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="pCR-gR-xqK">
+                                        <rect key="frame" x="138.5" y="0.0" width="107.5" height="30"/>
+                                        <nil key="textColor"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
+                                    </textField>
+                                    <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="1" translatesAutoresizingMaskIntoConstraints="NO" id="BCR-ih-Z22">
+                                        <rect key="frame" x="266" y="0.0" width="69" height="29"/>
+                                        <segments>
+                                            <segment title="AM"/>
+                                            <segment title="PM"/>
+                                        </segments>
+                                    </segmentedControl>
+                                </subviews>
+                            </stackView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ctw-ON-xZO">
+                                <rect key="frame" x="16" y="247" width="343" height="1"/>
+                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="1" id="qDh-d4-Vg9"/>
+                                </constraints>
+                            </view>
+                            <stackView opaque="NO" contentMode="scaleToFill" alignment="top" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="PNI-sX-ebc">
+                                <rect key="frame" x="20" y="268" width="335" height="30"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Arrival City" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QWZ-ua-oOw">
+                                        <rect key="frame" x="0.0" y="0.0" width="118.5" height="20.5"/>
+                                        <fontDescription key="fontDescription" type="system" weight="light" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Singapore" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Sx2-Nj-Szs">
+                                        <rect key="frame" x="138.5" y="0.0" width="196.5" height="30"/>
+                                        <nil key="textColor"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                </subviews>
+                            </stackView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="We'll need some flight data..." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dBv-KN-Oo4">
+                                <rect key="frame" x="0.0" y="72" width="375" height="80"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="80" id="skL-Ni-z90"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" weight="ultraLight" pointSize="27"/>
+                                <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <stackView opaque="NO" contentMode="scaleToFill" alignment="top" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="G3t-yp-Ea6">
+                                <rect key="frame" x="20" y="306" width="335" height="30"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Arrival Time" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Tv2-Ys-I3h">
+                                        <rect key="frame" x="0.0" y="0.0" width="118.5" height="20.5"/>
+                                        <fontDescription key="fontDescription" type="system" weight="light" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" horizontalHuggingPriority="249" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="9:15" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="yoi-wY-cVA">
+                                        <rect key="frame" x="138.5" y="0.0" width="107.5" height="30"/>
+                                        <nil key="textColor"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="cyx-aO-gJu">
+                                        <rect key="frame" x="266" y="0.0" width="69" height="29"/>
+                                        <segments>
+                                            <segment title="AM"/>
+                                            <segment title="PM"/>
+                                        </segments>
+                                    </segmentedControl>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="ho2-bW-XKA" firstAttribute="centerX" secondItem="HUl-sT-wVs" secondAttribute="centerX" id="0Ro-yA-ZVh"/>
+                            <constraint firstAttribute="trailing" secondItem="dBv-KN-Oo4" secondAttribute="trailing" id="297-9e-zRD"/>
+                            <constraint firstItem="PNI-sX-ebc" firstAttribute="trailing" secondItem="Krv-SI-MSq" secondAttribute="trailing" id="8Hk-Mc-Le3"/>
+                            <constraint firstItem="cyx-aO-gJu" firstAttribute="trailing" secondItem="Sx2-Nj-Szs" secondAttribute="trailing" id="9fw-wT-VKS"/>
+                            <constraint firstItem="dBv-KN-Oo4" firstAttribute="top" secondItem="6fm-pM-7Dh" secondAttribute="bottom" constant="8" id="AWa-1B-B57"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="ctw-ON-xZO" secondAttribute="trailing" id="DUt-xc-5J1"/>
+                            <constraint firstItem="G3t-yp-Ea6" firstAttribute="leading" secondItem="PNI-sX-ebc" secondAttribute="leading" id="Gey-Tp-ut7"/>
+                            <constraint firstItem="ho2-bW-XKA" firstAttribute="leading" secondItem="HUl-sT-wVs" secondAttribute="leading" constant="20" id="M2h-UQ-Mye"/>
+                            <constraint firstItem="ctw-ON-xZO" firstAttribute="leading" secondItem="HUl-sT-wVs" secondAttribute="leadingMargin" id="QfH-TL-mo0"/>
+                            <constraint firstItem="G3t-yp-Ea6" firstAttribute="top" secondItem="PNI-sX-ebc" secondAttribute="bottom" constant="8" id="UNH-hU-Q5O"/>
+                            <constraint firstItem="G3t-yp-Ea6" firstAttribute="trailing" secondItem="PNI-sX-ebc" secondAttribute="trailing" id="VsS-U5-RPl"/>
+                            <constraint firstItem="ctw-ON-xZO" firstAttribute="top" secondItem="Krv-SI-MSq" secondAttribute="bottom" constant="19" id="Xeo-9X-Mxu"/>
+                            <constraint firstItem="Sx2-Nj-Szs" firstAttribute="leading" secondItem="pCR-gR-xqK" secondAttribute="leading" id="bxU-58-RPE"/>
+                            <constraint firstItem="yoi-wY-cVA" firstAttribute="leading" secondItem="Sx2-Nj-Szs" secondAttribute="leading" id="cjt-n1-on8"/>
+                            <constraint firstItem="Krv-SI-MSq" firstAttribute="trailing" secondItem="ho2-bW-XKA" secondAttribute="trailing" id="m7L-vT-R6c"/>
+                            <constraint firstItem="ho2-bW-XKA" firstAttribute="top" secondItem="dBv-KN-Oo4" secondAttribute="bottom" constant="8" id="qNG-gQ-cSU"/>
+                            <constraint firstItem="Krv-SI-MSq" firstAttribute="top" secondItem="ho2-bW-XKA" secondAttribute="bottom" constant="8" id="qoj-GL-C0t"/>
+                            <constraint firstItem="BCR-ih-Z22" firstAttribute="trailing" secondItem="3a5-0G-9Ln" secondAttribute="trailing" id="snW-Ny-Pch"/>
+                            <constraint firstItem="pCR-gR-xqK" firstAttribute="leading" secondItem="3a5-0G-9Ln" secondAttribute="leading" id="t18-2A-1fs"/>
+                            <constraint firstItem="PNI-sX-ebc" firstAttribute="top" secondItem="ctw-ON-xZO" secondAttribute="bottom" constant="20" id="twJ-T3-0UK"/>
+                            <constraint firstItem="dBv-KN-Oo4" firstAttribute="leading" secondItem="HUl-sT-wVs" secondAttribute="leading" id="vxQ-N6-hRI"/>
+                            <constraint firstItem="Krv-SI-MSq" firstAttribute="leading" secondItem="ho2-bW-XKA" secondAttribute="leading" id="woQ-cu-otA"/>
+                            <constraint firstItem="dBv-KN-Oo4" firstAttribute="centerX" secondItem="HUl-sT-wVs" secondAttribute="centerX" id="ybS-xg-a5G"/>
+                            <constraint firstItem="PNI-sX-ebc" firstAttribute="leading" secondItem="Krv-SI-MSq" secondAttribute="leading" id="z63-Hu-Lhp"/>
+                            <constraint firstAttribute="trailing" secondItem="ho2-bW-XKA" secondAttribute="trailing" constant="20" id="zFt-7k-eWW"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="departureCityTextField" destination="3a5-0G-9Ln" id="j0D-nG-a9V"/>
+                        <outlet property="departureTimeLabel" destination="NDf-at-Hak" id="Lep-UB-kYA"/>
+                        <outlet property="departureTimeSegmentedControl" destination="BCR-ih-Z22" id="qcD-uu-5NU"/>
+                        <outlet property="departureTimeTextField" destination="pCR-gR-xqK" id="Rmm-ch-zAJ"/>
+                        <outlet property="viewTitle" destination="dBv-KN-Oo4" id="dC5-bA-WyJ"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="yiz-1o-oAh" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1221.5999999999999" y="-931.48425787106453"/>
         </scene>
         <!--Makestagram-->
         <scene sceneID="DAH-y7-mhe">

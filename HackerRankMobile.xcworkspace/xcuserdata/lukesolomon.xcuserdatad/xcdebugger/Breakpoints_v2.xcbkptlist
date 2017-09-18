@@ -9,14 +9,78 @@
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "HackerRankMobile/View Controllers/DetailViewController.swift"
-            timestampString = "523872496.117609"
+            filePath = "HackerRankMobile/Helpers/NetworkHelper.swift"
+            timestampString = "524843141.181296"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "38"
-            endingLineNumber = "38"
-            landmarkName = "viewDidLoad()"
+            startingLineNumber = "36"
+            endingLineNumber = "36"
+            landmarkName = "getUserProfileInfo()"
             landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "HackerRankMobile/Helpers/CoreDataHelper.swift"
+            timestampString = "524643033.470038"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "24"
+            endingLineNumber = "24"
+            landmarkName = "saveUser(WithProfilePicture:name:coverPhotoURL:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "HackerRankMobile/Helpers/NetworkHelper.swift"
+            timestampString = "524643061.894571"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "18"
+            endingLineNumber = "18"
+            landmarkName = "getUserProfileInfo()"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "HackerRankMobile.NetworkHelper.getUserProfileInfo () -&gt; ()"
+                  moduleName = "HackerRankMobile"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/lukesolomon/Desktop/Luke/Projects/HackerRankMobile/HackerRankMobile/Helpers/NetworkHelper.swift"
+                  timestampString = "524643377.442716"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "18"
+                  endingLineNumber = "18"
+                  offsetFromSymbolStart = "48">
+               </Location>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "HackerRankMobile.NetworkHelper.(getUserProfileInfo () -&gt; ()).(closure #1)"
+                  moduleName = "HackerRankMobile"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/lukesolomon/Desktop/Luke/Projects/HackerRankMobile/HackerRankMobile/Helpers/NetworkHelper.swift"
+                  timestampString = "524643377.444661"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "20"
+                  endingLineNumber = "20"
+                  offsetFromSymbolStart = "24">
+               </Location>
+            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>
