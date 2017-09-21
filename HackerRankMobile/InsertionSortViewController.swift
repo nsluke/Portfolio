@@ -13,14 +13,13 @@ class InsertionSortViewController: UIViewController {
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var pickerView: UIPickerView!
     
-    var numbers = [10, 54, 16, 8, 60, 34, 22, 11]
+    var numbers:[Int] = []
     var sortTypes = ["Insertion", "Selection", "Quick", "Unsort"]
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
         
-        
+        self.numbers = randomizeArray(length: 10000)
         
 //        self.tableView.delegate = self
         self.tableView.dataSource = self
@@ -32,7 +31,8 @@ class InsertionSortViewController: UIViewController {
     }
     
     @IBAction func sortButtonTapped(_ sender: Any) {
-        
+        let startTime = Date.timeIntervalSinceReferenceDate
+
         switch pickerView.selectedRow(inComponent: 0) {
         case 0:
             numbers = numbers.insertionSort()
@@ -41,18 +41,36 @@ class InsertionSortViewController: UIViewController {
         case 2:
             numbers = numbers.quickSort()
         case 3:
-            numbers = [10, 54, 16, 8, 60, 34, 22, 11]
+            numbers = randomizeArray(length: 10000)
         default:
             numbers.sort()
         }
         
+        recordSortTime(startTime: startTime)
+        
         tableView.reloadData()
+    }
+    
+    func recordSortTime(startTime:TimeInterval){
+        
+        let endTime = Date.timeIntervalSinceReferenceDate
+        let seconds = endTime - startTime
+        
+        
+        let alertController = UIAlertController(title: "Sort Finished!", message: "It only took \(seconds) seconds", preferredStyle: .alert)
+        let OKAction = UIAlertAction(title: "OK", style: .default) { action in }
+        alertController.addAction(OKAction)
+        
+        self.present(alertController, animated: true) {
+
+        }
+        
     }
     
     func randomizeArray(length:Int ) -> [Int] {
         var result:[Int] = []
         for i in 0..<length {
-            result.append(Int(arc4random_uniform(20) + 1))
+            result.append(Int(arc4random_uniform(100000) + 1))
         }
         return result
     }
