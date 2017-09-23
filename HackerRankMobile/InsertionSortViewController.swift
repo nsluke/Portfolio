@@ -33,22 +33,58 @@ class InsertionSortViewController: UIViewController {
     @IBAction func sortButtonTapped(_ sender: Any) {
         let startTime = Date.timeIntervalSinceReferenceDate
 
+        let activityView = UIActivityIndicatorView(activityIndicatorStyle: .whiteLarge)
+        activityView.center = self.view.center
+        activityView.startAnimating()
+        
+        self.view.addSubview(activityView)
+        
+        
         switch pickerView.selectedRow(inComponent: 0) {
         case 0:
-            numbers = numbers.insertionSort()
+            DispatchQueue.global(qos: .userInitiated).async { // 1
+                self.numbers = self.numbers.insertionSort()
+                DispatchQueue.main.async { // 2
+                    self.recordSortTime(startTime: startTime)
+                    activityView.stopAnimating()
+                    activityView.removeFromSuperview()
+                    self.tableView.reloadData()
+                }
+            }
         case 1:
-            numbers = numbers.selectionSort()
+            DispatchQueue.global(qos: .userInitiated).async { // 1
+                self.numbers = self.numbers.selectionSort()
+                DispatchQueue.main.async { // 2
+                    self.recordSortTime(startTime: startTime)
+                    activityView.stopAnimating()
+                    activityView.removeFromSuperview()
+                    self.tableView.reloadData()
+                }
+            }
         case 2:
-            numbers = numbers.quickSort()
+            DispatchQueue.global(qos: .userInitiated).async { // 1
+                self.numbers = self.numbers.quickSort()
+                DispatchQueue.main.async { // 2
+                    self.recordSortTime(startTime: startTime)
+                    activityView.stopAnimating()
+                    activityView.removeFromSuperview()
+                    self.tableView.reloadData()
+                }
+            }
         case 3:
-            numbers = randomizeArray(length: 10000)
+            DispatchQueue.global(qos: .userInitiated).async { // 1
+                self.numbers = self.randomizeArray(length: 10000)
+                DispatchQueue.main.async { // 2
+                    self.recordSortTime(startTime: startTime)
+                    activityView.stopAnimating()
+                    activityView.removeFromSuperview()
+                    self.tableView.reloadData()
+                }
+            }
         default:
             numbers.sort()
         }
         
-        recordSortTime(startTime: startTime)
-        
-        tableView.reloadData()
     }
     
     func recordSortTime(startTime:TimeInterval){

@@ -10,7 +10,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "HackerRankMobile/Helpers/NetworkHelper.swift"
-            timestampString = "524843141.181296"
+            timestampString = "527736142.209977"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "36"
@@ -42,45 +42,13 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "HackerRankMobile/Helpers/NetworkHelper.swift"
-            timestampString = "524643061.894571"
+            timestampString = "527736142.210158"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "18"
             endingLineNumber = "18"
             landmarkName = "getUserProfileInfo()"
             landmarkType = "7">
-            <Locations>
-               <Location
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "HackerRankMobile.NetworkHelper.getUserProfileInfo() -&gt; ()"
-                  moduleName = "HackerRankMobile"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/lukesolomon/Desktop/Luke/Projects/HackerRankMobile/HackerRankMobile/Helpers/NetworkHelper.swift"
-                  timestampString = "527727423.649809"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "19"
-                  endingLineNumber = "19"
-                  offsetFromSymbolStart = "28">
-               </Location>
-               <Location
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "closure #1 (Alamofire.DataResponse&lt;Any&gt;) -&gt; () in HackerRankMobile.NetworkHelper.getUserProfileInfo() -&gt; ()"
-                  moduleName = "HackerRankMobile"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/lukesolomon/Desktop/Luke/Projects/HackerRankMobile/HackerRankMobile/Helpers/NetworkHelper.swift"
-                  timestampString = "527727423.65153"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "21"
-                  endingLineNumber = "21"
-                  offsetFromSymbolStart = "20">
-               </Location>
-            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -90,13 +58,13 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "HackerRankMobile/InsertionSortViewController.swift"
-            timestampString = "527727419.903657"
+            timestampString = "527736525.872179"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "120"
-            endingLineNumber = "120"
-            landmarkName = "numberOfComponents(in:)"
-            landmarkType = "7">
+            startingLineNumber = "143"
+            endingLineNumber = "143"
+            landmarkName = "InsertionSortViewController"
+            landmarkType = "21">
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>
