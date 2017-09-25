@@ -12,6 +12,7 @@ class InsertionSortViewController: UIViewController {
     
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var pickerView: UIPickerView!
+    @IBOutlet weak var activityIndicator: UIActivityIndicatorView!
     
     var numbers:[Int] = []
     var sortTypes = ["Insertion", "Selection", "Quick", "Unsort"]
@@ -27,58 +28,45 @@ class InsertionSortViewController: UIViewController {
         self.pickerView.delegate = self
         self.pickerView.dataSource = self
         
+        self.activityIndicator.stopAnimating()
+        self.activityIndicator.isHidden = true
+        
         // Do any additional setup after loading the view.
     }
     
     @IBAction func sortButtonTapped(_ sender: Any) {
         let startTime = Date.timeIntervalSinceReferenceDate
-
-        let activityView = UIActivityIndicatorView(activityIndicatorStyle: .whiteLarge)
-        activityView.center = self.view.center
-        activityView.startAnimating()
         
-        self.view.addSubview(activityView)
+        self.activityIndicator.startAnimating()
+        self.activityIndicator.isHidden = false
         
+        let handlerBlock: () -> Void = {
+            self.recordSortTime(startTime: startTime)
+        }
         
         switch pickerView.selectedRow(inComponent: 0) {
         case 0:
             DispatchQueue.global(qos: .userInitiated).async { // 1
-                self.numbers = self.numbers.insertionSort()
-                DispatchQueue.main.async { // 2
-                    self.recordSortTime(startTime: startTime)
-                    activityView.stopAnimating()
-                    activityView.removeFromSuperview()
-                    self.tableView.reloadData()
-                }
+                self.numbers = self.numbers.insertionSort(completionHandler: handlerBlock)
+
             }
         case 1:
             DispatchQueue.global(qos: .userInitiated).async { // 1
-                self.numbers = self.numbers.selectionSort()
+                self.numbers = self.numbers.selectionSort(completionHandler: handlerBlock)
                 DispatchQueue.main.async { // 2
-                    self.recordSortTime(startTime: startTime)
-                    activityView.stopAnimating()
-                    activityView.removeFromSuperview()
-                    self.tableView.reloadData()
+
                 }
             }
         case 2:
             DispatchQueue.global(qos: .userInitiated).async { // 1
-                self.numbers = self.numbers.quickSort()
-                DispatchQueue.main.async { // 2
-                    self.recordSortTime(startTime: startTime)
-                    activityView.stopAnimating()
-                    activityView.removeFromSuperview()
-                    self.tableView.reloadData()
-                }
+                self.numbers = self.numbers.quickSort(completionHandler: handlerBlock)
             }
         case 3:
             DispatchQueue.global(qos: .userInitiated).async { // 1
                 self.numbers = self.randomizeArray(length: 10000)
                 DispatchQueue.main.async { // 2
                     self.recordSortTime(startTime: startTime)
-                    activityView.stopAnimating()
-                    activityView.removeFromSuperview()
-                    self.tableView.reloadData()
+
                 }
             }
         default:
@@ -88,7 +76,7 @@ class InsertionSortViewController: UIViewController {
     }
     
     func recordSortTime(startTime:TimeInterval){
-        
+
         let endTime = Date.timeIntervalSinceReferenceDate
         let seconds = endTime - startTime
         
@@ -101,6 +89,9 @@ class InsertionSortViewController: UIViewController {
 
         }
         
+        self.activityIndicator.stopAnimating()
+        self.activityIndicator.removeFromSuperview()
+        self.tableView.reloadData()
     }
     
     func randomizeArray(length:Int ) -> [Int] {
@@ -160,7 +151,7 @@ extension InsertionSortViewController:UIPickerViewDataSource {
 
 extension Array where Element:Comparable {
     
-    func insertionSort() -> Array<Element> {
+    func insertionSort(completionHandler: () -> Void) -> Array<Element> {
         //check for trivial case
         guard self.count > 1 else {
             return self
@@ -187,7 +178,7 @@ extension Array where Element:Comparable {
         return output
     }
     
-    func selectionSort() -> Array<Element> {
+    func selectionSort(completionHandler: () -> Void) -> Array<Element> {
         // Check for trivial case
         guard self.count > 1 else {
             return self
@@ -215,12 +206,8 @@ extension Array where Element:Comparable {
         }
         return output
     }
-    
-}
 
-extension Array where Element: Comparable {
-    
-    mutating func quickSort() -> Array<Element> {
+    mutating func quickSort(completionHandler: () -> Void) -> Array<Element> {
         
         func qSort(start startIndex: Int, _ pivot: Int) {
             
