@@ -8,10 +8,18 @@ use_frameworks!
 def shared_target_pods 
     pod 'AFNetworking'
     pod 'Alamofire', '~> 4.4'
+    
+    pod 'Firebase'
     pod 'Firebase/Core'
+    pod 'Firebase/Auth'
+    pod 'FirebaseUI/Auth'
+    pod 'Firebase/Database'
+    pod 'Firebase/Storage'
+    
     pod 'Charts'
     pod 'AppAuth'
     pod 'SwiftyJSON'
+    pod 'GoogleMaps'
 end
 
 target :’HackerRankMobile’ do

@@ -6,13 +6,14 @@
 //  Copyright © 2017 Solomon Stuff. All rights reserved.
 //
 
+// command + shift + k : clean
+// command r : Build 
+
 import UIKit
 import CoreData
 
-class CoreDataHelper {
+class CoreDataHelper { // Core Data Singleton
     
-//    dynamic var title = ""
-
     static let appDelegate = UIApplication.shared.delegate as! AppDelegate
     static let persistentContainer = appDelegate.persistentContainer
     static let managedContext = persistentContainer.viewContext
@@ -26,10 +27,10 @@ class CoreDataHelper {
         user.name = name
         user.coverPhotoURL = coverPhotoURL
         
-        self.saveUser()
+        self.save()
     }
     
-    static func saveUser() {
+    static func save() {
         do {
             try managedContext.save()
         } catch let error as NSError {
@@ -39,12 +40,12 @@ class CoreDataHelper {
     
     static func delete(user: User) {
         managedContext.delete(user)
-        saveUser()
+        self.save()
     }
     
     static func retrieveUser() -> [User] {
-        
         let fetchRequest = NSFetchRequest<User>(entityName: "User")
+        
         do {
             let results = try managedContext.fetch(fetchRequest)
             return results
