@@ -234,7 +234,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" alignment="top" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="ho2-bW-XKA">
-                                <rect key="frame" x="20" y="160" width="374" height="30"/>
+                                <rect key="frame" x="20" y="180" width="374" height="30"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Departure City" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7cW-Hv-yqR">
                                         <rect key="frame" x="0.0" y="0.0" width="118.33333333333334" height="20.333333333333343"/>
@@ -251,7 +251,7 @@
                                 </subviews>
                             </stackView>
                             <stackView opaque="NO" contentMode="scaleToFill" alignment="top" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="Krv-SI-MSq">
-                                <rect key="frame" x="20" y="198" width="374" height="30"/>
+                                <rect key="frame" x="20" y="218" width="374" height="30"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Departure Time" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NDf-at-Hak">
                                         <rect key="frame" x="0.0" y="0.0" width="118.33333333333334" height="20.333333333333343"/>
@@ -275,14 +275,14 @@
                                 </subviews>
                             </stackView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ctw-ON-xZO">
-                                <rect key="frame" x="20" y="247" width="374" height="1"/>
+                                <rect key="frame" x="20" y="267" width="374" height="1"/>
                                 <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="1" id="qDh-d4-Vg9"/>
                                 </constraints>
                             </view>
                             <stackView opaque="NO" contentMode="scaleToFill" alignment="top" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="PNI-sX-ebc">
-                                <rect key="frame" x="20" y="268" width="374" height="30"/>
+                                <rect key="frame" x="20" y="288" width="374" height="30"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Arrival City" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QWZ-ua-oOw">
                                         <rect key="frame" x="0.0" y="0.0" width="118.33333333333334" height="20.333333333333314"/>
@@ -299,7 +299,7 @@
                                 </subviews>
                             </stackView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="We'll need some flight data..." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dBv-KN-Oo4">
-                                <rect key="frame" x="0.0" y="72" width="414" height="80"/>
+                                <rect key="frame" x="0.0" y="92" width="414" height="80"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="80" id="skL-Ni-z90"/>
                                 </constraints>
@@ -308,7 +308,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <stackView opaque="NO" contentMode="scaleToFill" alignment="top" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="G3t-yp-Ea6">
-                                <rect key="frame" x="20" y="306" width="374" height="30"/>
+                                <rect key="frame" x="20" y="326" width="374" height="30"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Arrival Time" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Tv2-Ys-I3h">
                                         <rect key="frame" x="0.0" y="0.0" width="118.33333333333334" height="20.333333333333314"/>
@@ -479,6 +479,7 @@
                     <connections>
                         <outlet property="activityIndicator" destination="xhx-PQ-sr9" id="rCv-IZ-VDq"/>
                         <outlet property="pickerView" destination="k2Y-mJ-575" id="JWC-BD-bQ5"/>
+                        <outlet property="sortButton" destination="bpA-5q-zzD" id="9xF-uA-wNJ"/>
                         <outlet property="tableView" destination="nXy-o5-mQ9" id="eK0-ue-czS"/>
                     </connections>
                 </viewController>

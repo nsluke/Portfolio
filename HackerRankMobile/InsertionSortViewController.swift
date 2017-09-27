@@ -13,6 +13,7 @@ class InsertionSortViewController: UIViewController {
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var pickerView: UIPickerView!
     @IBOutlet weak var activityIndicator: UIActivityIndicatorView!
+    @IBOutlet weak var sortButton: UIButton!
     
     var numbers:[Int] = []
     var sortTypes = ["Insertion", "Selection", "Quick", "Unsort"]
@@ -40,6 +41,8 @@ class InsertionSortViewController: UIViewController {
         self.activityIndicator.startAnimating()
         self.activityIndicator.isHidden = false
         
+        self.sortButton.isHidden = true
+        
         let handlerBlock: () -> Void = {
             self.recordSortTime(startTime: startTime)
         }
@@ -64,10 +67,8 @@ class InsertionSortViewController: UIViewController {
         case 3:
             DispatchQueue.global(qos: .userInitiated).async { // 1
                 self.numbers = self.randomizeArray(length: 10000)
-                DispatchQueue.main.async { // 2
-                    self.recordSortTime(startTime: startTime)
+                self.recordSortTime(startTime: startTime)
 
-                }
             }
         default:
             numbers.sort()
@@ -76,22 +77,25 @@ class InsertionSortViewController: UIViewController {
     }
     
     func recordSortTime(startTime:TimeInterval){
+        DispatchQueue.main.async { // 2
+            let endTime = Date.timeIntervalSinceReferenceDate
+            let seconds = endTime - startTime
+            
+            
+            let alertController = UIAlertController(title: "Sort Finished!", message: "It only took \(seconds) seconds", preferredStyle: .alert)
+            let OKAction = UIAlertAction(title: "OK", style: .default) { action in }
+            alertController.addAction(OKAction)
+            
+            self.present(alertController, animated: true) {
 
-        let endTime = Date.timeIntervalSinceReferenceDate
-        let seconds = endTime - startTime
-        
-        
-        let alertController = UIAlertController(title: "Sort Finished!", message: "It only took \(seconds) seconds", preferredStyle: .alert)
-        let OKAction = UIAlertAction(title: "OK", style: .default) { action in }
-        alertController.addAction(OKAction)
-        
-        self.present(alertController, animated: true) {
+            }
+            
+            self.activityIndicator.stopAnimating()
+    //        self.activityIndicator.removeFromSuperview()
+            self.sortButton.isHidden = false
 
+            self.tableView.reloadData()
         }
-        
-        self.activityIndicator.stopAnimating()
-        self.activityIndicator.removeFromSuperview()
-        self.tableView.reloadData()
     }
     
     func randomizeArray(length:Int ) -> [Int] {
@@ -175,6 +179,7 @@ extension Array where Element:Comparable {
                 secondaryindex -= 1
             }
         }
+        completionHandler()
         return output
     }
     
@@ -204,6 +209,7 @@ extension Array where Element:Comparable {
                 swap(&output[primaryindex], &output[minimum])
             }
         }
+        completionHandler()
         return output
     }
 
@@ -219,6 +225,8 @@ extension Array where Element:Comparable {
         }
         
         qSort(start: 0, self.endIndex - 1)
+        
+        completionHandler()
         return self
     }
     
