@@ -25,16 +25,20 @@
 		D53802031F3992D2008D2968 /* AuthenticationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D53802021F3992D2008D2968 /* AuthenticationViewController.swift */; };
 		D53802051F39937F008D2968 /* LocalAuthentication.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D53802041F39937F008D2968 /* LocalAuthentication.framework */; };
 		D53802071F399468008D2968 /* HRMobileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D53802061F399468008D2968 /* HRMobileViewController.swift */; };
+		D53C3DF21F8414B100905B23 /* LinkedList.swift in Sources */ = {isa = PBXBuildFile; fileRef = D53C3DF11F8414B100905B23 /* LinkedList.swift */; };
 		D54242141EFC2C9C00F777A6 /* mapstogpx20170622_164845.gpx in Resources */ = {isa = PBXBuildFile; fileRef = D54242131EFC2C9C00F777A6 /* mapstogpx20170622_164845.gpx */; };
 		D548B4911EF9BB6A00D72A86 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D548B4901EF9BB6A00D72A86 /* DetailViewController.swift */; };
 		D548B4931EF9BB7A00D72A86 /* NetworkHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = D548B4921EF9BB7A00D72A86 /* NetworkHelper.swift */; };
 		D55BA54F1EF4DEA6003BF954 /* Login.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D55BA54D1EF4DEA6003BF954 /* Login.storyboard */; };
 		D55BA5521EF4DFB9003BF954 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D55BA5511EF4DFB9003BF954 /* LoginViewController.swift */; };
 		D5624BA11F708C09006C0B79 /* InsertionSortViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5624BA01F708C09006C0B79 /* InsertionSortViewController.swift */; };
+		D58005F31F9671CA006AFEC0 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = D58005F21F9671CA006AFEC0 /* Constants.swift */; };
+		D58005F51F9673C3006AFEC0 /* Storyboard+Utility.swift in Sources */ = {isa = PBXBuildFile; fileRef = D58005F41F9673C3006AFEC0 /* Storyboard+Utility.swift */; };
 		D5A500851ED8686900A528D6 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D5A500841ED8686900A528D6 /* CoreData.framework */; };
 		D5ADE6881F32FB2600649198 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D5ADE6871F32FB2600649198 /* MapKit.framework */; };
 		D5ADE68A1F32FB3500649198 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5ADE6891F32FB3500649198 /* MapViewController.swift */; };
 		D5AEC98F1F01B4AB005CE8AA /* UserHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5AEC98E1F01B4AB005CE8AA /* UserHelper.swift */; };
+		D5BCE1871F7C69B8003700A8 /* DataStructuresViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5BCE1861F7C69B8003700A8 /* DataStructuresViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -60,16 +64,20 @@
 		D53802021F3992D2008D2968 /* AuthenticationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AuthenticationViewController.swift; sourceTree = "<group>"; };
 		D53802041F39937F008D2968 /* LocalAuthentication.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = LocalAuthentication.framework; path = System/Library/Frameworks/LocalAuthentication.framework; sourceTree = SDKROOT; };
 		D53802061F399468008D2968 /* HRMobileViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = HRMobileViewController.swift; path = "View Controllers/HRMobileViewController.swift"; sourceTree = "<group>"; };
+		D53C3DF11F8414B100905B23 /* LinkedList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = LinkedList.swift; path = Models/LinkedList.swift; sourceTree = "<group>"; };
 		D54242131EFC2C9C00F777A6 /* mapstogpx20170622_164845.gpx */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = mapstogpx20170622_164845.gpx; sourceTree = "<group>"; };
 		D548B4901EF9BB6A00D72A86 /* DetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DetailViewController.swift; path = "View Controllers/DetailViewController.swift"; sourceTree = "<group>"; };
 		D548B4921EF9BB7A00D72A86 /* NetworkHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = NetworkHelper.swift; path = Helpers/NetworkHelper.swift; sourceTree = "<group>"; };
 		D55BA54E1EF4DEA6003BF954 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Login.storyboard; sourceTree = "<group>"; };
 		D55BA5511EF4DFB9003BF954 /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = LoginViewController.swift; path = "View Controllers/LoginViewController.swift"; sourceTree = "<group>"; };
 		D5624BA01F708C09006C0B79 /* InsertionSortViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InsertionSortViewController.swift; sourceTree = "<group>"; };
+		D58005F21F9671CA006AFEC0 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Constants.swift; path = Supporting/Constants.swift; sourceTree = "<group>"; };
+		D58005F41F9673C3006AFEC0 /* Storyboard+Utility.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Storyboard+Utility.swift"; sourceTree = "<group>"; };
 		D5A500841ED8686900A528D6 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
 		D5ADE6871F32FB2600649198 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		D5ADE6891F32FB3500649198 /* MapViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MapViewController.swift; path = ../MapViewController.swift; sourceTree = "<group>"; };
 		D5AEC98E1F01B4AB005CE8AA /* UserHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = UserHelper.swift; path = Helpers/UserHelper.swift; sourceTree = "<group>"; };
+		D5BCE1861F7C69B8003700A8 /* DataStructuresViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataStructuresViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -142,6 +150,7 @@
 				D57FAA771E8F7414009ECD77 /* Custom Views */,
 				D57FAA6C1E8F6965009ECD77 /* Helpers */,
 				D59E7F8D1E8F92B800DDB646 /* Models */,
+				D58005F61F9673D2006AFEC0 /* Extensions */,
 				D52E8BC11F01A985006C0382 /* GoogleService-Info.plist */,
 				D53012A41D075B070031E66E /* AppDelegate.swift */,
 				D53012AB1D075B070031E66E /* Assets.xcassets */,
@@ -175,6 +184,7 @@
 		D57FAA6B1E8F6959009ECD77 /* View Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				D5BCE1861F7C69B8003700A8 /* DataStructuresViewController.swift */,
 				D5624BA01F708C09006C0B79 /* InsertionSortViewController.swift */,
 				D528EC4C1EF0B4B7007D93D7 /* MainViewController.swift */,
 				D548B4901EF9BB6A00D72A86 /* DetailViewController.swift */,
@@ -192,6 +202,7 @@
 				D548B4921EF9BB7A00D72A86 /* NetworkHelper.swift */,
 				D528EC471EF0B4AD007D93D7 /* CoreDataHelper.swift */,
 				D5AEC98E1F01B4AB005CE8AA /* UserHelper.swift */,
+				D58005F21F9671CA006AFEC0 /* Constants.swift */,
 			);
 			name = Helpers;
 			sourceTree = "<group>";
@@ -204,11 +215,20 @@
 			name = "Custom Views";
 			sourceTree = "<group>";
 		};
+		D58005F61F9673D2006AFEC0 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				D58005F41F9673C3006AFEC0 /* Storyboard+Utility.swift */,
+			);
+			name = Extensions;
+			sourceTree = "<group>";
+		};
 		D59E7F8D1E8F92B800DDB646 /* Models */ = {
 			isa = PBXGroup;
 			children = (
 				D528EC511EF0B5CE007D93D7 /* HackerRankMobile.xcdatamodeld */,
 				D52E8BBD1F018C47006C0382 /* FirebaseUser.swift */,
+				D53C3DF11F8414B100905B23 /* LinkedList.swift */,
 			);
 			name = Models;
 			sourceTree = "<group>";
@@ -373,10 +393,14 @@
 				D5AEC98F1F01B4AB005CE8AA /* UserHelper.swift in Sources */,
 				D548B4931EF9BB7A00D72A86 /* NetworkHelper.swift in Sources */,
 				D528EC461EF0B48E007D93D7 /* CustomCollectionViewCell.swift in Sources */,
+				D58005F31F9671CA006AFEC0 /* Constants.swift in Sources */,
 				D528EC531EF0B5CE007D93D7 /* HackerRankMobile.xcdatamodeld in Sources */,
+				D5BCE1871F7C69B8003700A8 /* DataStructuresViewController.swift in Sources */,
 				D5624BA11F708C09006C0B79 /* InsertionSortViewController.swift in Sources */,
+				D53C3DF21F8414B100905B23 /* LinkedList.swift in Sources */,
 				D5ADE68A1F32FB3500649198 /* MapViewController.swift in Sources */,
 				D52E8BBE1F018C47006C0382 /* FirebaseUser.swift in Sources */,
+				D58005F51F9673C3006AFEC0 /* Storyboard+Utility.swift in Sources */,
 				D53802071F399468008D2968 /* HRMobileViewController.swift in Sources */,
 				D528EC491EF0B4AD007D93D7 /* CoreDataHelper.swift in Sources */,
 				D548B4911EF9BB6A00D72A86 /* DetailViewController.swift in Sources */,
@@ -467,7 +491,7 @@
 				MTL_ENABLE_DEBUG_INFO = NO;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
-				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
 		};
@@ -513,7 +537,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				SDKROOT = iphoneos;
-				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				VALIDATE_PRODUCT = YES;
 			};
 			name = Release;

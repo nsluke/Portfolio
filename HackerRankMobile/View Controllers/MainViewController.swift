@@ -14,7 +14,7 @@ class MainViewController: UIViewController {
     // Mark: - Variables
     @IBOutlet weak var collectionView: UICollectionView!
     
-    var collectionViewArray:[String] = ["Steam", "H R Mobile","Makestagram", "MapView", "Touch ID", "Insertion Sort"]
+    var collectionViewArray:[String] = ["Steam", "H R Mobile","Makestagram", "Jet Lag Calculator", "Touch ID", "Insertion Sort", "Data Structures"]
     
     
     // Mark: - Functions
@@ -30,10 +30,9 @@ class MainViewController: UIViewController {
                 NetworkHelper.sharedInstance.getUserProfileInfo()
             }else if identifier == "transitionToMakestagram" {
                 print("Opening Makestagram")
-            } else if identifier == "transitionToMapView" {
-                print("Opening MapView")
+            } else if identifier == "transitionToJetLagCalculator" {
+                print("Opening Jet Lag Calculator")
             }
-            
         }
     }
     
@@ -68,12 +67,14 @@ extension MainViewController: UICollectionViewDelegate, UICollectionViewDataSour
             idString = "transitionToHRMobile"
         case "Makestagram":
             idString = "transitionToMakestagram"
-        case "MapView":
-            idString = "transitionToMapView"
+        case "Jet Lag Calculator":
+            idString = "transitionToJetLagCalculator"
         case "Touch ID":
             idString = "transitionToAuth"
         case "Insertion Sort":
             idString = "transitionToInsertionSort"
+        case "Data Structures":
+            idString = "transitionToDataStructures"
         default:
             print("Error in cell for row at index path")
         }

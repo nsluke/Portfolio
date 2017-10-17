@@ -33,25 +33,20 @@ class LoginViewController: UIViewController {
 }
 extension LoginViewController: FUIAuthDelegate {
     func authUI(_ authUI: FUIAuth, didSignInWith user: FIRUser?, error: Error?) {
-        if let error = error {
-            assertionFailure("Error signing in: \(error.localizedDescription)")
-        }
-
-        guard let user = user else { return }
-
-        let userRef = Database.database().reference().child("users").child(user.uid)
-        
-        userRef.observeSingleEvent(of: .value, with: { [unowned self] (snapshot) in
-            if let user = FirebaseUser(snapshot: snapshot) {
+        UserService.show(forUID: user!.uid) { (user) in
+            if let user = user {
+                // handle existing user
                 FirebaseUser.setCurrent(user)
                 
-                let storyboard:UIStoryboard = UIStoryboard(name: "Main", bundle: .main)
-                let controller = storyboard.instantiateViewController(withIdentifier: "InitialMakestagramController") as UIViewController
-                
-                self.present(controller, animated: true, completion: nil)
+                let storyboard = UIStoryboard(name: "Main", bundle: .main)
+                if let initialViewController = storyboard.instantiateInitialViewController() {
+                    self.view.window?.rootViewController = initialViewController
+                    self.view.window?.makeKeyAndVisible()
+                }
             } else {
-                self.performSegue(withIdentifier: "toCreateUsername", sender: self)
+                // handle new user
+                self.performSegue(withIdentifier: Constants.Segue.toCreateUsername, sender: self)
             }
-        })
+        }
     }
 }

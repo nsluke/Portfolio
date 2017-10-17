@@ -91,7 +91,7 @@ class InsertionSortViewController: UIViewController {
             }
             
             self.activityIndicator.stopAnimating()
-    //        self.activityIndicator.removeFromSuperview()
+
             self.sortButton.isHidden = false
 
             self.tableView.reloadData()
