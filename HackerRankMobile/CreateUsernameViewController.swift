@@ -18,7 +18,7 @@ class CreateUsernameViewController: UIViewController {
     @IBOutlet weak var nextButton: UIButton!
     
     @IBAction func nextButtonTapped(_ sender: Any) {
-        guard let firUser = Auth.auth().currentUser,
+        guard let firUser:FirebaseUser = Auth.auth().currentUser as? FirebaseUser,  //Auth.auth().currentUser,
             let username = textfield.text,
             !username.isEmpty else { return }
         
