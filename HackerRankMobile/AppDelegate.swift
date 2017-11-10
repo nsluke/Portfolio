@@ -20,6 +20,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     private func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
         // Override point for customization after application launch.      
         FirebaseApp.configure()
+        
+        configureInitialRootViewController(for: window)
+        
         GMSServices.provideAPIKey("AIzaSyBy9fYWcs2CrHovSqWLF6U-yX76c-ALp90")
         
         return true
@@ -92,6 +95,28 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
                 fatalError("Unresolved error \(nserror), \(nserror.userInfo)")
             }
         }
+    }
+
+}
+extension AppDelegate {
+    
+    func configureInitialRootViewController(for window: UIWindow?) {
+        let defaults = UserDefaults.standard
+        let initialViewController: UIViewController
+        
+        if Auth.auth().currentUser != nil,
+            let userData = defaults.object(forKey: Constants.UserDefaults.currentUser) as? Data,
+            let user = NSKeyedUnarchiver.unarchiveObject(with: userData) as? FirebaseUser {
+            
+            FirebaseUser.setCurrent(user, writeToUserDefaults: true)
+            
+            initialViewController = UIStoryboard.initialViewController(for: .main)
+        } else {
+            initialViewController = UIStoryboard.initialViewController(for: .login)
+        }
+        
+        window?.rootViewController = initialViewController
+        window?.makeKeyAndVisible()
     }
 
 }

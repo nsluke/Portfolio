@@ -29,6 +29,8 @@
 		D54242141EFC2C9C00F777A6 /* mapstogpx20170622_164845.gpx in Resources */ = {isa = PBXBuildFile; fileRef = D54242131EFC2C9C00F777A6 /* mapstogpx20170622_164845.gpx */; };
 		D548B4911EF9BB6A00D72A86 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D548B4901EF9BB6A00D72A86 /* DetailViewController.swift */; };
 		D548B4931EF9BB7A00D72A86 /* NetworkHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = D548B4921EF9BB7A00D72A86 /* NetworkHelper.swift */; };
+		D5524E261FB50E7600F863A8 /* MainTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5524E251FB50E7600F863A8 /* MainTabBarController.swift */; };
+		D5524E281FB510A600F863A8 /* MGPhotoHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5524E271FB510A600F863A8 /* MGPhotoHelper.swift */; };
 		D55BA54F1EF4DEA6003BF954 /* Login.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D55BA54D1EF4DEA6003BF954 /* Login.storyboard */; };
 		D55BA5521EF4DFB9003BF954 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D55BA5511EF4DFB9003BF954 /* LoginViewController.swift */; };
 		D5624BA11F708C09006C0B79 /* InsertionSortViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5624BA01F708C09006C0B79 /* InsertionSortViewController.swift */; };
@@ -70,6 +72,8 @@
 		D54242131EFC2C9C00F777A6 /* mapstogpx20170622_164845.gpx */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = mapstogpx20170622_164845.gpx; sourceTree = "<group>"; };
 		D548B4901EF9BB6A00D72A86 /* DetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DetailViewController.swift; path = "View Controllers/DetailViewController.swift"; sourceTree = "<group>"; };
 		D548B4921EF9BB7A00D72A86 /* NetworkHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = NetworkHelper.swift; path = Helpers/NetworkHelper.swift; sourceTree = "<group>"; };
+		D5524E251FB50E7600F863A8 /* MainTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = MainTabBarController.swift; path = Extensions/MainTabBarController.swift; sourceTree = "<group>"; };
+		D5524E271FB510A600F863A8 /* MGPhotoHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = MGPhotoHelper.swift; path = Helpers/MGPhotoHelper.swift; sourceTree = "<group>"; };
 		D55BA54E1EF4DEA6003BF954 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Login.storyboard; sourceTree = "<group>"; };
 		D55BA5511EF4DFB9003BF954 /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = LoginViewController.swift; path = "View Controllers/LoginViewController.swift"; sourceTree = "<group>"; };
 		D5624BA01F708C09006C0B79 /* InsertionSortViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InsertionSortViewController.swift; sourceTree = "<group>"; };
@@ -174,6 +178,7 @@
 				D55BA5511EF4DFB9003BF954 /* LoginViewController.swift */,
 				D52E8BBF1F0199B9006C0382 /* CreateUsernameViewController.swift */,
 				D528EC4D1EF0B4B7007D93D7 /* MakestagramViewController.swift */,
+				D5524E251FB50E7600F863A8 /* MainTabBarController.swift */,
 			);
 			name = Makestagram;
 			sourceTree = "<group>";
@@ -205,6 +210,7 @@
 		D57FAA6C1E8F6965009ECD77 /* Helpers */ = {
 			isa = PBXGroup;
 			children = (
+				D5524E271FB510A600F863A8 /* MGPhotoHelper.swift */,
 				D548B4921EF9BB7A00D72A86 /* NetworkHelper.swift */,
 				D528EC471EF0B4AD007D93D7 /* CoreDataHelper.swift */,
 				D5AEC98E1F01B4AB005CE8AA /* UserHelper.swift */,
@@ -396,6 +402,7 @@
 			files = (
 				D55BA5521EF4DFB9003BF954 /* LoginViewController.swift in Sources */,
 				D528EC4F1EF0B4B7007D93D7 /* MainViewController.swift in Sources */,
+				D5524E261FB50E7600F863A8 /* MainTabBarController.swift in Sources */,
 				D5AEC98F1F01B4AB005CE8AA /* UserHelper.swift in Sources */,
 				D548B4931EF9BB7A00D72A86 /* NetworkHelper.swift in Sources */,
 				D528EC461EF0B48E007D93D7 /* CustomCollectionViewCell.swift in Sources */,
@@ -403,6 +410,7 @@
 				D528EC531EF0B5CE007D93D7 /* HackerRankMobile.xcdatamodeld in Sources */,
 				D5BCE1871F7C69B8003700A8 /* DataStructuresViewController.swift in Sources */,
 				D5624BA11F708C09006C0B79 /* InsertionSortViewController.swift in Sources */,
+				D5524E281FB510A600F863A8 /* MGPhotoHelper.swift in Sources */,
 				D58005F81F967FF2006AFEC0 /* HomeViewController.swift in Sources */,
 				D53C3DF21F8414B100905B23 /* LinkedList.swift in Sources */,
 				D5ADE68A1F32FB3500649198 /* MapViewController.swift in Sources */,

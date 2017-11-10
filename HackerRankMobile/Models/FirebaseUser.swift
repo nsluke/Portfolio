@@ -10,7 +10,7 @@ import Foundation
 import FirebaseDatabase.FIRDataSnapshot
 
 
-class FirebaseUser {
+class FirebaseUser: NSObject {
     
     // MARK: - Singleton
     private static var _current: FirebaseUser?
@@ -24,7 +24,13 @@ class FirebaseUser {
     }
     
     // MARK: - Class Methods
-    static func setCurrent(_ user: FirebaseUser) {
+    static func setCurrent(_ user: FirebaseUser, writeToUserDefaults: Bool) {
+
+        if writeToUserDefaults {
+            let data = NSKeyedArchiver.archivedData(withRootObject: user)
+            
+            UserDefaults.standard.set(data, forKey: Constants.UserDefaults.currentUser)
+        }
         _current = user
     }
     
@@ -36,6 +42,8 @@ class FirebaseUser {
     init(uid: String, username: String) {
         self.uid = uid
         self.username = username
+        
+        super.init()
     }
     
     init?(snapshot: DataSnapshot) {
@@ -45,7 +53,25 @@ class FirebaseUser {
         
         self.uid = snapshot.key
         self.username = username
+        
+        super.init()
     }
     
+    required init?(coder aDecoder: NSCoder) {
+        guard let uid = aDecoder.decodeObject(forKey: Constants.UserDefaults.uid) as? String,
+            let username = aDecoder.decodeObject(forKey: Constants.UserDefaults.username) as? String
+            else { return nil }
+        
+        self.uid = uid
+        self.username = username
+        
+        super.init()
+    }
 
+}
+extension FirebaseUser: NSCoding {
+    func encode(with aCoder: NSCoder) {
+        aCoder.encode(uid, forKey: Constants.UserDefaults.uid)
+        aCoder.encode(username, forKey: Constants.UserDefaults.username)
+    }
 }
