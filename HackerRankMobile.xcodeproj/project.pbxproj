@@ -13,7 +13,6 @@
 		D528EC461EF0B48E007D93D7 /* CustomCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D528EC451EF0B48E007D93D7 /* CustomCollectionViewCell.swift */; };
 		D528EC491EF0B4AD007D93D7 /* CoreDataHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = D528EC471EF0B4AD007D93D7 /* CoreDataHelper.swift */; };
 		D528EC4F1EF0B4B7007D93D7 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D528EC4C1EF0B4B7007D93D7 /* MainViewController.swift */; };
-		D528EC501EF0B4B7007D93D7 /* MakestagramViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D528EC4D1EF0B4B7007D93D7 /* MakestagramViewController.swift */; };
 		D528EC531EF0B5CE007D93D7 /* HackerRankMobile.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = D528EC511EF0B5CE007D93D7 /* HackerRankMobile.xcdatamodeld */; };
 		D52E8BBE1F018C47006C0382 /* FirebaseUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = D52E8BBD1F018C47006C0382 /* FirebaseUser.swift */; };
 		D52E8BC01F0199B9006C0382 /* CreateUsernameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D52E8BBF1F0199B9006C0382 /* CreateUsernameViewController.swift */; };
@@ -31,6 +30,11 @@
 		D548B4931EF9BB7A00D72A86 /* NetworkHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = D548B4921EF9BB7A00D72A86 /* NetworkHelper.swift */; };
 		D5524E261FB50E7600F863A8 /* MainTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5524E251FB50E7600F863A8 /* MainTabBarController.swift */; };
 		D5524E281FB510A600F863A8 /* MGPhotoHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5524E271FB510A600F863A8 /* MGPhotoHelper.swift */; };
+		D5524E2A1FB643AA00F863A8 /* StorageService.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5524E291FB643AA00F863A8 /* StorageService.swift */; };
+		D5524E2C1FB6440900F863A8 /* PostService.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5524E2B1FB6440900F863A8 /* PostService.swift */; };
+		D5524E2F1FB671AD00F863A8 /* Photos.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D5524E2E1FB6719D00F863A8 /* Photos.framework */; };
+		D5524E301FB671AD00F863A8 /* PhotosUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D5524E2D1FB6719700F863A8 /* PhotosUI.framework */; };
+		D5524E321FB6750700F863A8 /* Makestagram.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D5524E311FB6750700F863A8 /* Makestagram.storyboard */; };
 		D55BA54F1EF4DEA6003BF954 /* Login.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D55BA54D1EF4DEA6003BF954 /* Login.storyboard */; };
 		D55BA5521EF4DFB9003BF954 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D55BA5511EF4DFB9003BF954 /* LoginViewController.swift */; };
 		D5624BA11F708C09006C0B79 /* InsertionSortViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5624BA01F708C09006C0B79 /* InsertionSortViewController.swift */; };
@@ -54,7 +58,6 @@
 		D528EC451EF0B48E007D93D7 /* CustomCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CustomCollectionViewCell.swift; path = "Custom Views/CustomCollectionViewCell.swift"; sourceTree = "<group>"; };
 		D528EC471EF0B4AD007D93D7 /* CoreDataHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CoreDataHelper.swift; path = Helpers/CoreDataHelper.swift; sourceTree = "<group>"; };
 		D528EC4C1EF0B4B7007D93D7 /* MainViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MainViewController.swift; path = "View Controllers/MainViewController.swift"; sourceTree = "<group>"; };
-		D528EC4D1EF0B4B7007D93D7 /* MakestagramViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MakestagramViewController.swift; path = "View Controllers/MakestagramViewController.swift"; sourceTree = "<group>"; };
 		D528EC521EF0B5CE007D93D7 /* HackerRankMobile.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = HackerRankMobile.xcdatamodel; sourceTree = "<group>"; };
 		D52E8BBD1F018C47006C0382 /* FirebaseUser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = FirebaseUser.swift; path = Models/FirebaseUser.swift; sourceTree = "<group>"; };
 		D52E8BBF1F0199B9006C0382 /* CreateUsernameViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CreateUsernameViewController.swift; sourceTree = "<group>"; };
@@ -70,10 +73,15 @@
 		D53802061F399468008D2968 /* HRMobileViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = HRMobileViewController.swift; path = "View Controllers/HRMobileViewController.swift"; sourceTree = "<group>"; };
 		D53C3DF11F8414B100905B23 /* LinkedList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = LinkedList.swift; path = Models/LinkedList.swift; sourceTree = "<group>"; };
 		D54242131EFC2C9C00F777A6 /* mapstogpx20170622_164845.gpx */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = mapstogpx20170622_164845.gpx; sourceTree = "<group>"; };
-		D548B4901EF9BB6A00D72A86 /* DetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DetailViewController.swift; path = "View Controllers/DetailViewController.swift"; sourceTree = "<group>"; };
+		D548B4901EF9BB6A00D72A86 /* DetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 		D548B4921EF9BB7A00D72A86 /* NetworkHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = NetworkHelper.swift; path = Helpers/NetworkHelper.swift; sourceTree = "<group>"; };
 		D5524E251FB50E7600F863A8 /* MainTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = MainTabBarController.swift; path = Extensions/MainTabBarController.swift; sourceTree = "<group>"; };
 		D5524E271FB510A600F863A8 /* MGPhotoHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = MGPhotoHelper.swift; path = Helpers/MGPhotoHelper.swift; sourceTree = "<group>"; };
+		D5524E291FB643AA00F863A8 /* StorageService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StorageService.swift; sourceTree = "<group>"; };
+		D5524E2B1FB6440900F863A8 /* PostService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostService.swift; sourceTree = "<group>"; };
+		D5524E2D1FB6719700F863A8 /* PhotosUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = PhotosUI.framework; path = System/Library/Frameworks/PhotosUI.framework; sourceTree = SDKROOT; };
+		D5524E2E1FB6719D00F863A8 /* Photos.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Photos.framework; path = System/Library/Frameworks/Photos.framework; sourceTree = SDKROOT; };
+		D5524E311FB6750700F863A8 /* Makestagram.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Makestagram.storyboard; sourceTree = "<group>"; };
 		D55BA54E1EF4DEA6003BF954 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Login.storyboard; sourceTree = "<group>"; };
 		D55BA5511EF4DFB9003BF954 /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = LoginViewController.swift; path = "View Controllers/LoginViewController.swift"; sourceTree = "<group>"; };
 		D5624BA01F708C09006C0B79 /* InsertionSortViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InsertionSortViewController.swift; sourceTree = "<group>"; };
@@ -93,9 +101,11 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D5A500851ED8686900A528D6 /* CoreData.framework in Frameworks */,
+				D5524E2F1FB671AD00F863A8 /* Photos.framework in Frameworks */,
+				D5524E301FB671AD00F863A8 /* PhotosUI.framework in Frameworks */,
 				D53802051F39937F008D2968 /* LocalAuthentication.framework in Frameworks */,
 				D5ADE6881F32FB2600649198 /* MapKit.framework in Frameworks */,
-				D5A500851ED8686900A528D6 /* CoreData.framework in Frameworks */,
 				24C7C7792C3F9F993B4906D2 /* Pods_HackerRankMobile.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -115,6 +125,8 @@
 		9B8C1584DD7EB1B2A5D1E69B /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				D5524E2E1FB6719D00F863A8 /* Photos.framework */,
+				D5524E2D1FB6719700F863A8 /* PhotosUI.framework */,
 				D53802041F39937F008D2968 /* LocalAuthentication.framework */,
 				D5ADE6871F32FB2600649198 /* MapKit.framework */,
 				D5A500841ED8686900A528D6 /* CoreData.framework */,
@@ -177,10 +189,42 @@
 				D58005F71F967FF2006AFEC0 /* HomeViewController.swift */,
 				D55BA5511EF4DFB9003BF954 /* LoginViewController.swift */,
 				D52E8BBF1F0199B9006C0382 /* CreateUsernameViewController.swift */,
-				D528EC4D1EF0B4B7007D93D7 /* MakestagramViewController.swift */,
 				D5524E251FB50E7600F863A8 /* MainTabBarController.swift */,
 			);
 			name = Makestagram;
+			sourceTree = "<group>";
+		};
+		D5524E331FB675E300F863A8 /* Data Structures & Algorithms */ = {
+			isa = PBXGroup;
+			children = (
+				D5BCE1861F7C69B8003700A8 /* DataStructuresViewController.swift */,
+				D5624BA01F708C09006C0B79 /* InsertionSortViewController.swift */,
+			);
+			name = "Data Structures & Algorithms";
+			sourceTree = "<group>";
+		};
+		D5524E341FB6760F00F863A8 /* HRMobile */ = {
+			isa = PBXGroup;
+			children = (
+				D53802061F399468008D2968 /* HRMobileViewController.swift */,
+			);
+			name = HRMobile;
+			sourceTree = "<group>";
+		};
+		D5524E351FB6761900F863A8 /* Random iOS stuff */ = {
+			isa = PBXGroup;
+			children = (
+				D53802021F3992D2008D2968 /* AuthenticationViewController.swift */,
+			);
+			name = "Random iOS stuff";
+			sourceTree = "<group>";
+		};
+		D5524E361FB6762900F863A8 /* Steam */ = {
+			isa = PBXGroup;
+			children = (
+				D548B4901EF9BB6A00D72A86 /* DetailViewController.swift */,
+			);
+			name = Steam;
 			sourceTree = "<group>";
 		};
 		D55BA5501EF4DEAD003BF954 /* Storyboards */ = {
@@ -188,6 +232,7 @@
 			children = (
 				D53012A81D075B070031E66E /* Main.storyboard */,
 				D55BA54D1EF4DEA6003BF954 /* Login.storyboard */,
+				D5524E311FB6750700F863A8 /* Makestagram.storyboard */,
 			);
 			name = Storyboards;
 			sourceTree = "<group>";
@@ -195,14 +240,13 @@
 		D57FAA6B1E8F6959009ECD77 /* View Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				D5BCE1861F7C69B8003700A8 /* DataStructuresViewController.swift */,
-				D5624BA01F708C09006C0B79 /* InsertionSortViewController.swift */,
 				D528EC4C1EF0B4B7007D93D7 /* MainViewController.swift */,
-				D548B4901EF9BB6A00D72A86 /* DetailViewController.swift */,
-				D50FCB481F69F4A300623532 /* Jet Lag Calculator */,
 				D53802081F399517008D2968 /* Makestagram */,
-				D53802061F399468008D2968 /* HRMobileViewController.swift */,
-				D53802021F3992D2008D2968 /* AuthenticationViewController.swift */,
+				D5524E331FB675E300F863A8 /* Data Structures & Algorithms */,
+				D50FCB481F69F4A300623532 /* Jet Lag Calculator */,
+				D5524E341FB6760F00F863A8 /* HRMobile */,
+				D5524E351FB6761900F863A8 /* Random iOS stuff */,
+				D5524E361FB6762900F863A8 /* Steam */,
 			);
 			name = "View Controllers";
 			sourceTree = "<group>";
@@ -210,11 +254,13 @@
 		D57FAA6C1E8F6965009ECD77 /* Helpers */ = {
 			isa = PBXGroup;
 			children = (
+				D58005F21F9671CA006AFEC0 /* Constants.swift */,
 				D5524E271FB510A600F863A8 /* MGPhotoHelper.swift */,
 				D548B4921EF9BB7A00D72A86 /* NetworkHelper.swift */,
 				D528EC471EF0B4AD007D93D7 /* CoreDataHelper.swift */,
 				D5AEC98E1F01B4AB005CE8AA /* UserHelper.swift */,
-				D58005F21F9671CA006AFEC0 /* Constants.swift */,
+				D5524E291FB643AA00F863A8 /* StorageService.swift */,
+				D5524E2B1FB6440900F863A8 /* PostService.swift */,
 			);
 			name = Helpers;
 			sourceTree = "<group>";
@@ -311,6 +357,7 @@
 			files = (
 				D53012AF1D075B070031E66E /* LaunchScreen.storyboard in Resources */,
 				D55BA54F1EF4DEA6003BF954 /* Login.storyboard in Resources */,
+				D5524E321FB6750700F863A8 /* Makestagram.storyboard in Resources */,
 				D53012AC1D075B070031E66E /* Assets.xcassets in Resources */,
 				D53012AA1D075B070031E66E /* Main.storyboard in Resources */,
 				D54242141EFC2C9C00F777A6 /* mapstogpx20170622_164845.gpx in Resources */,
@@ -347,7 +394,7 @@
 			);
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-HackerRankMobile/Pods-HackerRankMobile-resources.sh",
-				$PODS_CONFIGURATION_BUILD_DIR/FirebaseUI/FirebaseAuthUI.bundle,
+				"$PODS_CONFIGURATION_BUILD_DIR/FirebaseUI/FirebaseAuthUI.bundle",
 				"${PODS_ROOT}/GoogleMaps/Maps/Frameworks/GoogleMaps.framework/Resources/GoogleMaps.bundle",
 			);
 			name = "[CP] Copy Pods Resources";
@@ -369,7 +416,6 @@
 				"${BUILT_PRODUCTS_DIR}/AFNetworking/AFNetworking.framework",
 				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
 				"${BUILT_PRODUCTS_DIR}/AppAuth/AppAuth.framework",
-				"${BUILT_PRODUCTS_DIR}/Charts/Charts.framework",
 				"${BUILT_PRODUCTS_DIR}/GTMSessionFetcher/GTMSessionFetcher.framework",
 				"${BUILT_PRODUCTS_DIR}/GoogleToolboxForMac/GoogleToolboxForMac.framework",
 				"${BUILT_PRODUCTS_DIR}/SwiftyJSON/SwiftyJSON.framework",
@@ -381,7 +427,6 @@
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AFNetworking.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AppAuth.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Charts.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMSessionFetcher.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleToolboxForMac.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyJSON.framework",
@@ -407,6 +452,7 @@
 				D548B4931EF9BB7A00D72A86 /* NetworkHelper.swift in Sources */,
 				D528EC461EF0B48E007D93D7 /* CustomCollectionViewCell.swift in Sources */,
 				D58005F31F9671CA006AFEC0 /* Constants.swift in Sources */,
+				D5524E2A1FB643AA00F863A8 /* StorageService.swift in Sources */,
 				D528EC531EF0B5CE007D93D7 /* HackerRankMobile.xcdatamodeld in Sources */,
 				D5BCE1871F7C69B8003700A8 /* DataStructuresViewController.swift in Sources */,
 				D5624BA11F708C09006C0B79 /* InsertionSortViewController.swift in Sources */,
@@ -415,12 +461,12 @@
 				D53C3DF21F8414B100905B23 /* LinkedList.swift in Sources */,
 				D5ADE68A1F32FB3500649198 /* MapViewController.swift in Sources */,
 				D52E8BBE1F018C47006C0382 /* FirebaseUser.swift in Sources */,
+				D5524E2C1FB6440900F863A8 /* PostService.swift in Sources */,
 				D58005F51F9673C3006AFEC0 /* Storyboard+Utility.swift in Sources */,
 				D53802071F399468008D2968 /* HRMobileViewController.swift in Sources */,
 				D528EC491EF0B4AD007D93D7 /* CoreDataHelper.swift in Sources */,
 				D548B4911EF9BB6A00D72A86 /* DetailViewController.swift in Sources */,
 				D53802031F3992D2008D2968 /* AuthenticationViewController.swift in Sources */,
-				D528EC501EF0B4B7007D93D7 /* MakestagramViewController.swift in Sources */,
 				D58005FA1F96800F006AFEC0 /* FindFriendsViewController.swift in Sources */,
 				D50FCB471F69F49500623532 /* FlightDetailsViewController.swift in Sources */,
 				D52E8BC01F0199B9006C0382 /* CreateUsernameViewController.swift in Sources */,

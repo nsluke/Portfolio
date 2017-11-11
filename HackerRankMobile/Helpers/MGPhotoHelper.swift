@@ -7,16 +7,18 @@
 //
 
 import UIKit
+import Photos
 
 class MGPhotoHelper: NSObject {
 
     // MARK: - Properties
     var completionHandler: ((UIImage) -> Void)?
     
-    
     // MARK: - Helper Methods
     
     func presentActionSheet(from viewController: UIViewController) {
+        checkPermission()
+        
         let alertController = UIAlertController(title: nil, message: "Where do you want to get your picture from?", preferredStyle: .actionSheet)
         
         if UIImagePickerController.isSourceTypeAvailable(.camera) {
@@ -48,6 +50,33 @@ class MGPhotoHelper: NSObject {
         
         viewController.present(imagePickerController, animated: true)
         
+    }
+    
+    
+    // Don't forget to go to Product > Scheme > Edit Scheme
+    // In your Environment Variables create OS_ACTIVITY_MODE and for it's value set it to disable
+    func checkPermission() {
+        let photoAuthorizationStatus = PHPhotoLibrary.authorizationStatus()
+        switch photoAuthorizationStatus {
+            case .authorized:
+                print("Access is granted by user")
+            case .notDetermined:
+                PHPhotoLibrary.requestAuthorization({
+                    (newStatus) in
+                    print("status is \(newStatus)")
+                    if newStatus ==  PHAuthorizationStatus.authorized {
+                        /* do stuff here */
+                        print("success")
+                    }
+                })
+                print("It is not determined until now")
+            case .restricted:
+                // same same
+                print("User do not have access to photo album.")
+            case .denied:
+                // same same
+                print("User has denied the permission.")
+        }
     }
     
 }

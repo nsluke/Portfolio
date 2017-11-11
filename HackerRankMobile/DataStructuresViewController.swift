@@ -19,7 +19,6 @@ class DataStructuresViewController: UIViewController {
         super.viewDidLoad()
         
         textView.text = list.description
-        
     }
     
     override func didReceiveMemoryWarning() {
@@ -28,13 +27,11 @@ class DataStructuresViewController: UIViewController {
     }
     
     @IBAction func reverseButtonTapped(_ sender: Any) {
-        
         list.reverse()
         textView.text = list.description
     }
     
     @IBAction func palindromeButtonTapped(_ sender: Any) {
-        
         var message = ""
         
         if list.isPalindrome(palindrome) == true {
@@ -51,6 +48,5 @@ class DataStructuresViewController: UIViewController {
             
         }
     }
-    
     
 }

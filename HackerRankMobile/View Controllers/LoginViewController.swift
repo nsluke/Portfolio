@@ -23,7 +23,8 @@ class LoginViewController: UIViewController {
     @IBAction func loginButtonTapped(_ sender: Any) {
         print("Login Button Tapped")
 
-        guard let authUI = FUIAuth.defaultAuthUI() else { return }
+        guard let authUI = FUIAuth.defaultAuthUI()
+            else { return }
         
         authUI.delegate = self
         
@@ -34,15 +35,15 @@ class LoginViewController: UIViewController {
 extension LoginViewController: FUIAuthDelegate {
     
     func authUI(_ authUI: FUIAuth, didSignInWith user: FIRUser?, error: Error?) {
-       
         UserService.show(forUID: user!.uid) { (user) in
             if let user = user {
                 // handle existing user
                 FirebaseUser.setCurrent(user, writeToUserDefaults: true)
-
-                let initialViewController = UIStoryboard.initialViewController(for: .main)
-                self.view.window?.rootViewController = initialViewController
-                self.view.window?.makeKeyAndVisible()
+                
+                let storyboard:UIStoryboard = UIStoryboard(name: "Makestagram", bundle: .main)
+                let controller = storyboard.instantiateViewController(withIdentifier: "InitialController") as UIViewController
+                self.present(controller, animated: true, completion: nil)
+                
             } else {
                 // handle new user
                 self.performSegue(withIdentifier: Constants.Segue.toCreateUsername, sender: self)

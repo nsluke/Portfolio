@@ -18,18 +18,21 @@ class CreateUsernameViewController: UIViewController {
     @IBOutlet weak var nextButton: UIButton!
     
     @IBAction func nextButtonTapped(_ sender: Any) {
+        guard let firUser = Auth.auth().currentUser,
+            let username = createUsernameLabel.text, !username.isEmpty else { return }
         
-        UserService.create(FirebaseUser, username: createUsernameLabel.text) { (user) in
+        UserService.create(firUser, username: username) { (user) in
             guard let user = user else {
                 // handle error
                 return
             }
-            
             FirebaseUser.setCurrent(user, writeToUserDefaults: true)
             
-            let initialViewController = UIStoryboard.initialViewController(for: .main)
-            self.view.window?.rootViewController = initialViewController
-            self.view.window?.makeKeyAndVisible()
+            let storyboard:UIStoryboard = UIStoryboard(name: "Makestagram", bundle: .main)
+            let controller = storyboard.instantiateViewController(withIdentifier: "InitialController") as UIViewController
+            
+            self.present(controller, animated: true, completion: nil)
         }
     }
+    
 }

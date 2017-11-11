@@ -16,7 +16,6 @@ def shared_target_pods
     pod 'Firebase/Database'
     pod 'Firebase/Storage'
     
-    pod 'Charts'
     pod 'AppAuth'
     pod 'SwiftyJSON'
     pod 'GoogleMaps'

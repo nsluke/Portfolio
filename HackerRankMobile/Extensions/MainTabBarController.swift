@@ -16,7 +16,7 @@ class MainTabBarController: UITabBarController {
         super.viewDidLoad()
 
         photoHelper.completionHandler = { image in
-            print("handle image")
+            PostService.create(for: image)
         }
         
         delegate = self
@@ -37,8 +37,9 @@ extension MainTabBarController: UITabBarControllerDelegate {
         if viewController.tabBarItem.tag == 1 {
             photoHelper.presentActionSheet(from: self)
             return false
+        } else {
+            return true
         }
-        return true
     }
     
 }

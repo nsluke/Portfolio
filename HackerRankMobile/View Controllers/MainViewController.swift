@@ -20,7 +20,6 @@ class MainViewController: UIViewController {
     // Mark: - Functions
     override func viewDidLoad() {
         super.viewDidLoad()
-        
     }
     
     // MARK: - Navigation
@@ -28,10 +27,10 @@ class MainViewController: UIViewController {
         if let identifier = segue.identifier {
             if identifier == "transitionToSteam" {
                 NetworkHelper.sharedInstance.getUserProfileInfo()
-            }else if identifier == "transitionToMakestagram" {
-                print("Opening Makestagram")
             } else if identifier == "transitionToJetLagCalculator" {
                 print("Opening Jet Lag Calculator")
+            } else if identifier == "transitionToMakestagram" {
+                 print("Opening Makestagram")
             }
         }
     }
@@ -61,22 +60,22 @@ extension MainViewController: UICollectionViewDelegate, UICollectionViewDataSour
         var idString:String = ""
 //        var destinationVC:UIViewController?
         switch collectionViewArray[indexPath.row] {
-        case "Steam":
-            idString = "transitionToSteam"
-        case "H R Mobile":
-            idString = "transitionToHRMobile"
-        case "Makestagram":
-            idString = "transitionToMakestagram"
-        case "Jet Lag Calculator":
-            idString = "transitionToJetLagCalculator"
-        case "Touch ID":
-            idString = "transitionToAuth"
-        case "Insertion Sort":
-            idString = "transitionToInsertionSort"
-        case "Data Structures":
-            idString = "transitionToDataStructures"
-        default:
-            print("Error in cell for row at index path")
+            case "Steam":
+                idString = "transitionToSteam"
+            case "H R Mobile":
+                idString = "transitionToHRMobile"
+            case "Makestagram":
+                idString = "transitionToMakestagram"
+            case "Jet Lag Calculator":
+                idString = "transitionToJetLagCalculator"
+            case "Touch ID":
+                idString = "transitionToAuth"
+            case "Insertion Sort":
+                idString = "transitionToInsertionSort"
+            case "Data Structures":
+                idString = "transitionToDataStructures"
+            default:
+                print("Error in cell for row at index path")
         }
         
         self.performSegue(withIdentifier: idString, sender: self)

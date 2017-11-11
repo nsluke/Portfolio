@@ -11,7 +11,7 @@ import FirebaseAuth.FIRUser
 import FirebaseDatabase
 
 struct UserService {
-    static func create(_ firUser: FirebaseUser, username: String, completion: @escaping (FirebaseUser?) -> Void) {
+    static func create(_ firUser: FIRUser, username: String, completion: @escaping (FirebaseUser?) -> Void) {
         let userAttrs = ["username": username]
         
         let ref = Database.database().reference().child("users").child(firUser.uid)
@@ -30,11 +30,10 @@ struct UserService {
     
     static func show(forUID uid: String, completion: @escaping (FirebaseUser?) -> Void) {
         let ref = Database.database().reference().child("users").child(uid)
+        
         ref.observeSingleEvent(of: .value, with: { (snapshot) in
-            guard let user = FirebaseUser(snapshot: snapshot) else {
-                return completion(nil)
-            }
-            
+            guard let user = FirebaseUser(snapshot: snapshot)
+                else { return completion(nil) }
             completion(user)
         })
     }
