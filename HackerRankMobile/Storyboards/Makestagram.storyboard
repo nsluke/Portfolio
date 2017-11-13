@@ -20,7 +20,7 @@
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </tabBar>
                     <connections>
-                        <segue destination="zk4-nv-WXb" kind="relationship" relationship="viewControllers" id="7xH-Pi-Gza"/>
+                        <segue destination="FYo-aq-Ejc" kind="relationship" relationship="viewControllers" id="7xH-Pi-Gza"/>
                         <segue destination="pbr-1q-dbu" kind="relationship" relationship="viewControllers" id="gry-NE-9jz"/>
                         <segue destination="iCK-O1-mi6" kind="relationship" relationship="viewControllers" id="Soi-lC-Vud"/>
                     </connections>
@@ -29,10 +29,10 @@
             </objects>
             <point key="canvasLocation" x="1220" y="400"/>
         </scene>
-        <!--Home-->
+        <!--Home View Controller-->
         <scene sceneID="U8c-Kp-2Hj">
             <objects>
-                <viewController id="zk4-nv-WXb" customClass="HomeViewController" customModule="HackerRankMobile" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="UIViewController-zk4-nv-WXb" id="zk4-nv-WXb" customClass="HomeViewController" customModule="HackerRankMobile" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="JDu-BT-c7a"/>
                         <viewControllerLayoutGuide type="bottom" id="OL6-Nu-PXq"/>
@@ -43,13 +43,11 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="YxA-FB-39n"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Home" selectedImage="tab_home_black" id="TkH-c5-ub4">
-                        <inset key="imageInsets" minX="0.0" minY="7" maxX="0.0" maxY="-7"/>
-                    </tabBarItem>
+                    <navigationItem key="navigationItem" id="3dJ-ez-7bX"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dc5-Fz-Uo6" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2903" y="-408"/>
+            <point key="canvasLocation" x="335" y="2001"/>
         </scene>
         <!--Add Image-->
         <scene sceneID="Ufv-Qa-Hm0">
@@ -71,7 +69,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="sWR-2V-Rhv" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2903" y="252"/>
+            <point key="canvasLocation" x="1559.2" y="1238.2308845577213"/>
         </scene>
         <!--Find Friends-->
         <scene sceneID="dco-SY-j6Y">
@@ -93,12 +91,21 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Rtk-Xl-THQ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2903" y="913"/>
+            <point key="canvasLocation" x="2432.8000000000002" y="1237.3313343328336"/>
+        </scene>
+        <!--Home-->
+        <scene sceneID="CPP-ag-VSm">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Home" id="FYo-aq-Ejc" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Item" id="OVM-zi-NJC"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="VbR-yI-jiF" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="336" y="1238.6806596701649"/>
         </scene>
     </scenes>
     <resources>
         <image name="tab_find_friends_black" width="25" height="25"/>
-        <image name="tab_home_black" width="25" height="25"/>
         <image name="tab_plus_black" width="25" height="25"/>
     </resources>
 </document>
