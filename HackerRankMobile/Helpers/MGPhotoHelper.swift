@@ -49,9 +49,7 @@ class MGPhotoHelper: NSObject {
         imagePickerController.sourceType = sourceType
         
         viewController.present(imagePickerController, animated: true)
-        
     }
-    
     
     // Don't forget to go to Product > Scheme > Edit Scheme
     // In your Environment Variables create OS_ACTIVITY_MODE and for it's value set it to disable

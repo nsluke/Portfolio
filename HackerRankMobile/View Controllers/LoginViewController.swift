@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Firebase
 import FirebaseAuth
 import FirebaseAuthUI
 import FirebaseDatabase
@@ -18,19 +19,25 @@ class LoginViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        FirebaseApp.configure()
     }
     
     @IBAction func loginButtonTapped(_ sender: Any) {
         print("Login Button Tapped")
+        
+        
+        
+        if let authUI = FUIAuth.defaultAuthUI() {
+            authUI.delegate = self
+            
+            let authViewController = authUI.authViewController()
+            present(authViewController, animated: true)
+        }
 
-        guard let authUI = FUIAuth.defaultAuthUI()
-            else { return }
         
-        authUI.delegate = self
-        
-        let authViewController = authUI.authViewController()
-        present(authViewController, animated: true)
     }
+    
 }
 extension LoginViewController: FUIAuthDelegate {
     

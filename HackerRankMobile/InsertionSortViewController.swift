@@ -206,7 +206,7 @@ extension Array where Element:Comparable {
             }
             //swap minimum value with array iteration
             if primaryindex != minimum {
-                swap(&output[primaryindex], &output[minimum])
+//                swap(&output[primaryindex], &output[minimum])
             }
         }
         completionHandler()
@@ -240,7 +240,7 @@ extension Array where Element:Comparable {
             
             if self[currentIndex] <= self[pivot] {
                 if wallIndex != currentIndex {
-                    swap(&self[currentIndex], &self[wallIndex])
+//                    swap(&self[currentIndex], &self[wallIndex])
                 }
                 
                 //advance wall
@@ -250,7 +250,7 @@ extension Array where Element:Comparable {
         
         //move pivot to final position
         if wallIndex != pivot {
-            swap(&self[wallIndex], &self[pivot])
+//            Mutableswap(&self[wallIndex], &self[pivot])
         }
         return wallIndex
     }
