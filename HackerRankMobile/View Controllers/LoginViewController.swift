@@ -26,8 +26,6 @@ class LoginViewController: UIViewController {
     @IBAction func loginButtonTapped(_ sender: Any) {
         print("Login Button Tapped")
         
-        
-        
         if let authUI = FUIAuth.defaultAuthUI() {
             authUI.delegate = self
             
@@ -56,7 +54,6 @@ extension LoginViewController: FUIAuthDelegate {
                 self.performSegue(withIdentifier: Constants.Segue.toCreateUsername, sender: self)
             }
         }
-        
     }
     
 }

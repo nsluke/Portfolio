@@ -14,6 +14,10 @@
 		D528EC491EF0B4AD007D93D7 /* CoreDataHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = D528EC471EF0B4AD007D93D7 /* CoreDataHelper.swift */; };
 		D528EC4F1EF0B4B7007D93D7 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D528EC4C1EF0B4B7007D93D7 /* MainViewController.swift */; };
 		D528EC531EF0B5CE007D93D7 /* HackerRankMobile.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = D528EC511EF0B5CE007D93D7 /* HackerRankMobile.xcdatamodeld */; };
+		D52B6D841FBA4C1500B0EAEF /* Post.swift in Sources */ = {isa = PBXBuildFile; fileRef = D52B6D831FBA4C1500B0EAEF /* Post.swift */; };
+		D52B6D861FBA4C9E00B0EAEF /* UIImage+Size.swift in Sources */ = {isa = PBXBuildFile; fileRef = D52B6D851FBA4C9E00B0EAEF /* UIImage+Size.swift */; };
+		D52B6D881FBA4CDA00B0EAEF /* StorageReference+Post.swift in Sources */ = {isa = PBXBuildFile; fileRef = D52B6D871FBA4CDA00B0EAEF /* StorageReference+Post.swift */; };
+		D52B6D8A1FBA4D8C00B0EAEF /* Home.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D52B6D891FBA4D8C00B0EAEF /* Home.storyboard */; };
 		D52E8BBE1F018C47006C0382 /* FirebaseUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = D52E8BBD1F018C47006C0382 /* FirebaseUser.swift */; };
 		D52E8BC01F0199B9006C0382 /* CreateUsernameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D52E8BBF1F0199B9006C0382 /* CreateUsernameViewController.swift */; };
 		D52E8BC21F01A985006C0382 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = D52E8BC11F01A985006C0382 /* GoogleService-Info.plist */; };
@@ -45,7 +49,7 @@
 		D5A500851ED8686900A528D6 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D5A500841ED8686900A528D6 /* CoreData.framework */; };
 		D5ADE6881F32FB2600649198 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D5ADE6871F32FB2600649198 /* MapKit.framework */; };
 		D5ADE68A1F32FB3500649198 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5ADE6891F32FB3500649198 /* MapViewController.swift */; };
-		D5AEC98F1F01B4AB005CE8AA /* UserHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5AEC98E1F01B4AB005CE8AA /* UserHelper.swift */; };
+		D5AEC98F1F01B4AB005CE8AA /* UserService.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5AEC98E1F01B4AB005CE8AA /* UserService.swift */; };
 		D5BCE1871F7C69B8003700A8 /* DataStructuresViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5BCE1861F7C69B8003700A8 /* DataStructuresViewController.swift */; };
 /* End PBXBuildFile section */
 
@@ -59,6 +63,10 @@
 		D528EC471EF0B4AD007D93D7 /* CoreDataHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CoreDataHelper.swift; path = Helpers/CoreDataHelper.swift; sourceTree = "<group>"; };
 		D528EC4C1EF0B4B7007D93D7 /* MainViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MainViewController.swift; path = "View Controllers/MainViewController.swift"; sourceTree = "<group>"; };
 		D528EC521EF0B5CE007D93D7 /* HackerRankMobile.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = HackerRankMobile.xcdatamodel; sourceTree = "<group>"; };
+		D52B6D831FBA4C1500B0EAEF /* Post.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Post.swift; path = Models/Post.swift; sourceTree = "<group>"; };
+		D52B6D851FBA4C9E00B0EAEF /* UIImage+Size.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImage+Size.swift"; sourceTree = "<group>"; };
+		D52B6D871FBA4CDA00B0EAEF /* StorageReference+Post.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "StorageReference+Post.swift"; path = "Extensions/StorageReference+Post.swift"; sourceTree = "<group>"; };
+		D52B6D891FBA4D8C00B0EAEF /* Home.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Home.storyboard; sourceTree = "<group>"; };
 		D52E8BBD1F018C47006C0382 /* FirebaseUser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = FirebaseUser.swift; path = Models/FirebaseUser.swift; sourceTree = "<group>"; };
 		D52E8BBF1F0199B9006C0382 /* CreateUsernameViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CreateUsernameViewController.swift; sourceTree = "<group>"; };
 		D52E8BC11F01A985006C0382 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
@@ -92,7 +100,7 @@
 		D5A500841ED8686900A528D6 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
 		D5ADE6871F32FB2600649198 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		D5ADE6891F32FB3500649198 /* MapViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MapViewController.swift; path = ../MapViewController.swift; sourceTree = "<group>"; };
-		D5AEC98E1F01B4AB005CE8AA /* UserHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = UserHelper.swift; path = Helpers/UserHelper.swift; sourceTree = "<group>"; };
+		D5AEC98E1F01B4AB005CE8AA /* UserService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = UserService.swift; path = Helpers/UserService.swift; sourceTree = "<group>"; };
 		D5BCE1861F7C69B8003700A8 /* DataStructuresViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataStructuresViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -169,8 +177,8 @@
 				D57FAA6B1E8F6959009ECD77 /* View Controllers */,
 				D57FAA771E8F7414009ECD77 /* Custom Views */,
 				D57FAA6C1E8F6965009ECD77 /* Helpers */,
-				D59E7F8D1E8F92B800DDB646 /* Models */,
 				D58005F61F9673D2006AFEC0 /* Extensions */,
+				D59E7F8D1E8F92B800DDB646 /* Models */,
 				D52E8BC11F01A985006C0382 /* GoogleService-Info.plist */,
 				D53012A41D075B070031E66E /* AppDelegate.swift */,
 				D53012AB1D075B070031E66E /* Assets.xcassets */,
@@ -233,6 +241,7 @@
 				D53012A81D075B070031E66E /* Main.storyboard */,
 				D55BA54D1EF4DEA6003BF954 /* Login.storyboard */,
 				D5524E311FB6750700F863A8 /* Makestagram.storyboard */,
+				D52B6D891FBA4D8C00B0EAEF /* Home.storyboard */,
 			);
 			name = Storyboards;
 			sourceTree = "<group>";
@@ -258,7 +267,7 @@
 				D5524E271FB510A600F863A8 /* MGPhotoHelper.swift */,
 				D548B4921EF9BB7A00D72A86 /* NetworkHelper.swift */,
 				D528EC471EF0B4AD007D93D7 /* CoreDataHelper.swift */,
-				D5AEC98E1F01B4AB005CE8AA /* UserHelper.swift */,
+				D5AEC98E1F01B4AB005CE8AA /* UserService.swift */,
 				D5524E291FB643AA00F863A8 /* StorageService.swift */,
 				D5524E2B1FB6440900F863A8 /* PostService.swift */,
 			);
@@ -276,6 +285,8 @@
 		D58005F61F9673D2006AFEC0 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
+				D52B6D871FBA4CDA00B0EAEF /* StorageReference+Post.swift */,
+				D52B6D851FBA4C9E00B0EAEF /* UIImage+Size.swift */,
 				D58005F41F9673C3006AFEC0 /* Storyboard+Utility.swift */,
 			);
 			name = Extensions;
@@ -284,6 +295,7 @@
 		D59E7F8D1E8F92B800DDB646 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				D52B6D831FBA4C1500B0EAEF /* Post.swift */,
 				D528EC511EF0B5CE007D93D7 /* HackerRankMobile.xcdatamodeld */,
 				D52E8BBD1F018C47006C0382 /* FirebaseUser.swift */,
 				D53C3DF11F8414B100905B23 /* LinkedList.swift */,
@@ -358,6 +370,7 @@
 				D53012AF1D075B070031E66E /* LaunchScreen.storyboard in Resources */,
 				D55BA54F1EF4DEA6003BF954 /* Login.storyboard in Resources */,
 				D5524E321FB6750700F863A8 /* Makestagram.storyboard in Resources */,
+				D52B6D8A1FBA4D8C00B0EAEF /* Home.storyboard in Resources */,
 				D53012AC1D075B070031E66E /* Assets.xcassets in Resources */,
 				D53012AA1D075B070031E66E /* Main.storyboard in Resources */,
 				D54242141EFC2C9C00F777A6 /* mapstogpx20170622_164845.gpx in Resources */,
@@ -448,11 +461,13 @@
 				D55BA5521EF4DFB9003BF954 /* LoginViewController.swift in Sources */,
 				D528EC4F1EF0B4B7007D93D7 /* MainViewController.swift in Sources */,
 				D5524E261FB50E7600F863A8 /* MainTabBarController.swift in Sources */,
-				D5AEC98F1F01B4AB005CE8AA /* UserHelper.swift in Sources */,
+				D5AEC98F1F01B4AB005CE8AA /* UserService.swift in Sources */,
 				D548B4931EF9BB7A00D72A86 /* NetworkHelper.swift in Sources */,
+				D52B6D881FBA4CDA00B0EAEF /* StorageReference+Post.swift in Sources */,
 				D528EC461EF0B48E007D93D7 /* CustomCollectionViewCell.swift in Sources */,
 				D58005F31F9671CA006AFEC0 /* Constants.swift in Sources */,
 				D5524E2A1FB643AA00F863A8 /* StorageService.swift in Sources */,
+				D52B6D861FBA4C9E00B0EAEF /* UIImage+Size.swift in Sources */,
 				D528EC531EF0B5CE007D93D7 /* HackerRankMobile.xcdatamodeld in Sources */,
 				D5BCE1871F7C69B8003700A8 /* DataStructuresViewController.swift in Sources */,
 				D5624BA11F708C09006C0B79 /* InsertionSortViewController.swift in Sources */,
@@ -469,6 +484,7 @@
 				D53802031F3992D2008D2968 /* AuthenticationViewController.swift in Sources */,
 				D58005FA1F96800F006AFEC0 /* FindFriendsViewController.swift in Sources */,
 				D50FCB471F69F49500623532 /* FlightDetailsViewController.swift in Sources */,
+				D52B6D841FBA4C1500B0EAEF /* Post.swift in Sources */,
 				D52E8BC01F0199B9006C0382 /* CreateUsernameViewController.swift in Sources */,
 				D53012A51D075B070031E66E /* AppDelegate.swift in Sources */,
 			);

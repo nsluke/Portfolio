@@ -16,6 +16,15 @@ class MGPhotoHelper: NSObject {
     
     // MARK: - Helper Methods
     
+    func presentImagePickerController(with sourceType: UIImagePickerControllerSourceType, from viewController: UIViewController) {
+        let imagePickerController = UIImagePickerController()
+        imagePickerController.sourceType = sourceType
+        imagePickerController.delegate = self
+        
+        viewController.present(imagePickerController, animated: true)
+    }
+
+    
     func presentActionSheet(from viewController: UIViewController) {
         checkPermission()
         
@@ -41,14 +50,6 @@ class MGPhotoHelper: NSObject {
         alertController.addAction(cancelAction)
         
         viewController.present(alertController, animated: true)
-    }
-    
-    func presentImagePickerController(with sourceType: UIImagePickerControllerSourceType, from viewController: UIViewController) {
-        
-        let imagePickerController = UIImagePickerController()
-        imagePickerController.sourceType = sourceType
-        
-        viewController.present(imagePickerController, animated: true)
     }
     
     // Don't forget to go to Product > Scheme > Edit Scheme

@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13196" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="4KJ-BT-Dyl">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13174"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Home View Controller-->
+        <scene sceneID="U8c-Kp-2Hj">
+            <objects>
+                <viewController id="zk4-nv-WXb" customClass="HomeViewController" customModule="HackerRankMobile" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableViewCell key="view" clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="PostImageCell" id="hop-Mi-rPt">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="hop-Mi-rPt" id="chu-Je-E0V">
+                            <rect key="frame" x="0.0" y="0.0" width="375" height="666.5"/>
+                            <autoresizingMask key="autoresizingMask"/>
+                        </tableViewCellContentView>
+                    </tableViewCell>
+                    <navigationItem key="navigationItem" id="Eef-vO-Mrk"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dc5-Fz-Uo6" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3668" y="-409.7451274362819"/>
+        </scene>
+        <!--Home-->
+        <scene sceneID="GMI-zy-1ng">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="4KJ-BT-Dyl" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Home" selectedImage="tab_home_black" id="TkH-c5-ub4">
+                        <inset key="imageInsets" minX="0.0" minY="7" maxX="0.0" maxY="-7"/>
+                    </tabBarItem>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="wbE-V5-WMp">
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="zk4-nv-WXb" kind="relationship" relationship="rootViewController" id="qWX-ty-XHQ"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="H2O-Vj-e6z" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2902.4000000000001" y="-408.39580209895058"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="tab_home_black" width="25" height="25"/>
+    </resources>
+</document>
