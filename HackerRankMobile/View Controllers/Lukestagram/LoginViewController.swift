@@ -20,13 +20,10 @@ class LoginViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        FirebaseApp.configure()
     }
     
     @IBAction func loginButtonTapped(_ sender: Any) {
         print("Login Button Tapped")
-        
-        
         
         if let authUI = FUIAuth.defaultAuthUI() {
             authUI.delegate = self
@@ -34,10 +31,7 @@ class LoginViewController: UIViewController {
             let authViewController = authUI.authViewController()
             present(authViewController, animated: true)
         }
-
-        
     }
-    
 }
 extension LoginViewController: FUIAuthDelegate {
     
@@ -56,7 +50,6 @@ extension LoginViewController: FUIAuthDelegate {
                 self.performSegue(withIdentifier: Constants.Segue.toCreateUsername, sender: self)
             }
         }
-        
     }
     
 }

@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13196" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="WRs-B5-sAy">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="WRs-B5-sAy">
     <device id="retina5_5" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13174"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13527"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -97,7 +97,8 @@
                         <segue destination="6m8-fa-dk8" kind="show" identifier="transitionToInsertionSort" id="UBA-7K-Lz9"/>
                         <segue destination="BIi-RA-nsn" kind="show" identifier="transitionToMapView" id="uKs-zA-7hN"/>
                         <segue destination="wao-v9-Gtx" kind="show" identifier="transitionToDataStructures" id="5b3-VX-yqQ"/>
-                        <segue destination="Hd5-aQ-4Z2" kind="show" identifier="transitionToMakestagram" id="61W-p0-ZGU"/>
+                        <segue destination="Hd5-aQ-4Z2" kind="show" identifier="transitionToLoginStoryboard" id="61W-p0-ZGU"/>
+                        <segue destination="Y7i-N9-RP5" kind="show" identifier="transitionToMakestagram" id="tf8-ha-3LT"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="u7D-qi-IKL" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -111,6 +112,14 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="lfe-0P-sED" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1221" y="233"/>
+        </scene>
+        <!--Makestagram-->
+        <scene sceneID="Xrm-mG-QpB">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Makestagram" id="Y7i-N9-RP5" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="koi-xg-r0r" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1225" y="319"/>
         </scene>
         <!--Steam-->
         <scene sceneID="NIV-7D-ght">

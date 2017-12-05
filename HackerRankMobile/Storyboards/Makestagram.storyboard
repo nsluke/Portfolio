@@ -20,7 +20,11 @@
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </tabBar>
                     <connections>
+<<<<<<< HEAD:HackerRankMobile/Storyboards/Makestagram.storyboard
                         <segue destination="FYo-aq-Ejc" kind="relationship" relationship="viewControllers" id="7xH-Pi-Gza"/>
+=======
+                        <segue destination="sLP-sP-1TC" kind="relationship" relationship="viewControllers" id="7xH-Pi-Gza"/>
+>>>>>>> origin/my-new-branch:HackerRankMobile/Makestagram.storyboard
                         <segue destination="pbr-1q-dbu" kind="relationship" relationship="viewControllers" id="gry-NE-9jz"/>
                         <segue destination="iCK-O1-mi6" kind="relationship" relationship="viewControllers" id="Soi-lC-Vud"/>
                     </connections>
@@ -29,6 +33,7 @@
             </objects>
             <point key="canvasLocation" x="1220" y="400"/>
         </scene>
+<<<<<<< HEAD:HackerRankMobile/Storyboards/Makestagram.storyboard
         <!--Home View Controller-->
         <scene sceneID="U8c-Kp-2Hj">
             <objects>
@@ -49,6 +54,8 @@
             </objects>
             <point key="canvasLocation" x="335" y="2001"/>
         </scene>
+=======
+>>>>>>> origin/my-new-branch:HackerRankMobile/Makestagram.storyboard
         <!--Add Image-->
         <scene sceneID="Ufv-Qa-Hm0">
             <objects>
@@ -102,6 +109,16 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="VbR-yI-jiF" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="336" y="1238.6806596701649"/>
+        </scene>
+        <!--Home-->
+        <scene sceneID="6fB-Jh-AIf">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Home" id="sLP-sP-1TC" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Item" id="yca-Nb-o9f"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="E6c-p4-IcQ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2902.4000000000001" y="-408.39580209895058"/>
         </scene>
     </scenes>
     <resources>
