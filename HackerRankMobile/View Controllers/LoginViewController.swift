@@ -20,7 +20,6 @@ class LoginViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        FirebaseApp.configure()
     }
     
     @IBAction func loginButtonTapped(_ sender: Any) {
@@ -32,10 +31,7 @@ class LoginViewController: UIViewController {
             let authViewController = authUI.authViewController()
             present(authViewController, animated: true)
         }
-
-        
     }
-    
 }
 extension LoginViewController: FUIAuthDelegate {
     

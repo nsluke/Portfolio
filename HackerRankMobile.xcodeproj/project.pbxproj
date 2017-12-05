@@ -29,7 +29,10 @@
 		D53802051F39937F008D2968 /* LocalAuthentication.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D53802041F39937F008D2968 /* LocalAuthentication.framework */; };
 		D53802071F399468008D2968 /* HRMobileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D53802061F399468008D2968 /* HRMobileViewController.swift */; };
 		D53C3DF21F8414B100905B23 /* LinkedList.swift in Sources */ = {isa = PBXBuildFile; fileRef = D53C3DF11F8414B100905B23 /* LinkedList.swift */; };
+		D54057B71FCF2FEE006D5804 /* PostImageCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D54057B61FCF2FEE006D5804 /* PostImageCell.swift */; };
+		D54057B91FCF36E1006D5804 /* PostHeaderCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D54057B81FCF36E1006D5804 /* PostHeaderCell.swift */; };
 		D54242141EFC2C9C00F777A6 /* mapstogpx20170622_164845.gpx in Resources */ = {isa = PBXBuildFile; fileRef = D54242131EFC2C9C00F777A6 /* mapstogpx20170622_164845.gpx */; };
+		D543455D1FD742AA009FC05D /* LikeService.swift in Sources */ = {isa = PBXBuildFile; fileRef = D543455C1FD742AA009FC05D /* LikeService.swift */; };
 		D548B4911EF9BB6A00D72A86 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D548B4901EF9BB6A00D72A86 /* DetailViewController.swift */; };
 		D548B4931EF9BB7A00D72A86 /* NetworkHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = D548B4921EF9BB7A00D72A86 /* NetworkHelper.swift */; };
 		D5524E261FB50E7600F863A8 /* MainTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5524E251FB50E7600F863A8 /* MainTabBarController.swift */; };
@@ -51,6 +54,7 @@
 		D5ADE68A1F32FB3500649198 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5ADE6891F32FB3500649198 /* MapViewController.swift */; };
 		D5AEC98F1F01B4AB005CE8AA /* UserService.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5AEC98E1F01B4AB005CE8AA /* UserService.swift */; };
 		D5BCE1871F7C69B8003700A8 /* DataStructuresViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5BCE1861F7C69B8003700A8 /* DataStructuresViewController.swift */; };
+		D5D607A41FCF3C8000461BC4 /* PostActionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5D607A31FCF3C8000461BC4 /* PostActionCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -80,7 +84,10 @@
 		D53802041F39937F008D2968 /* LocalAuthentication.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = LocalAuthentication.framework; path = System/Library/Frameworks/LocalAuthentication.framework; sourceTree = SDKROOT; };
 		D53802061F399468008D2968 /* HRMobileViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = HRMobileViewController.swift; path = "View Controllers/HRMobileViewController.swift"; sourceTree = "<group>"; };
 		D53C3DF11F8414B100905B23 /* LinkedList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = LinkedList.swift; path = Models/LinkedList.swift; sourceTree = "<group>"; };
+		D54057B61FCF2FEE006D5804 /* PostImageCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PostImageCell.swift; path = "Custom Views/PostImageCell.swift"; sourceTree = "<group>"; };
+		D54057B81FCF36E1006D5804 /* PostHeaderCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = PostHeaderCell.swift; path = "Custom Views/PostHeaderCell.swift"; sourceTree = "<group>"; };
 		D54242131EFC2C9C00F777A6 /* mapstogpx20170622_164845.gpx */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = mapstogpx20170622_164845.gpx; sourceTree = "<group>"; };
+		D543455C1FD742AA009FC05D /* LikeService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = LikeService.swift; path = Helpers/LikeService.swift; sourceTree = "<group>"; };
 		D548B4901EF9BB6A00D72A86 /* DetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 		D548B4921EF9BB7A00D72A86 /* NetworkHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = NetworkHelper.swift; path = Helpers/NetworkHelper.swift; sourceTree = "<group>"; };
 		D5524E251FB50E7600F863A8 /* MainTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = MainTabBarController.swift; path = Extensions/MainTabBarController.swift; sourceTree = "<group>"; };
@@ -102,6 +109,7 @@
 		D5ADE6891F32FB3500649198 /* MapViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MapViewController.swift; path = ../MapViewController.swift; sourceTree = "<group>"; };
 		D5AEC98E1F01B4AB005CE8AA /* UserService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = UserService.swift; path = Helpers/UserService.swift; sourceTree = "<group>"; };
 		D5BCE1861F7C69B8003700A8 /* DataStructuresViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataStructuresViewController.swift; sourceTree = "<group>"; };
+		D5D607A31FCF3C8000461BC4 /* PostActionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = PostActionCell.swift; path = "Custom Views/PostActionCell.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -264,6 +272,7 @@
 			isa = PBXGroup;
 			children = (
 				D58005F21F9671CA006AFEC0 /* Constants.swift */,
+				D543455C1FD742AA009FC05D /* LikeService.swift */,
 				D5524E271FB510A600F863A8 /* MGPhotoHelper.swift */,
 				D548B4921EF9BB7A00D72A86 /* NetworkHelper.swift */,
 				D528EC471EF0B4AD007D93D7 /* CoreDataHelper.swift */,
@@ -278,6 +287,9 @@
 			isa = PBXGroup;
 			children = (
 				D528EC451EF0B48E007D93D7 /* CustomCollectionViewCell.swift */,
+				D54057B61FCF2FEE006D5804 /* PostImageCell.swift */,
+				D54057B81FCF36E1006D5804 /* PostHeaderCell.swift */,
+				D5D607A31FCF3C8000461BC4 /* PostActionCell.swift */,
 			);
 			name = "Custom Views";
 			sourceTree = "<group>";
@@ -431,6 +443,7 @@
 				"${BUILT_PRODUCTS_DIR}/AppAuth/AppAuth.framework",
 				"${BUILT_PRODUCTS_DIR}/GTMSessionFetcher/GTMSessionFetcher.framework",
 				"${BUILT_PRODUCTS_DIR}/GoogleToolboxForMac/GoogleToolboxForMac.framework",
+				"${BUILT_PRODUCTS_DIR}/Kingfisher/Kingfisher.framework",
 				"${BUILT_PRODUCTS_DIR}/SwiftyJSON/SwiftyJSON.framework",
 				"${BUILT_PRODUCTS_DIR}/leveldb-library/leveldb.framework",
 				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
@@ -442,6 +455,7 @@
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AppAuth.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMSessionFetcher.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleToolboxForMac.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Kingfisher.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyJSON.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/leveldb.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
@@ -461,6 +475,7 @@
 				D55BA5521EF4DFB9003BF954 /* LoginViewController.swift in Sources */,
 				D528EC4F1EF0B4B7007D93D7 /* MainViewController.swift in Sources */,
 				D5524E261FB50E7600F863A8 /* MainTabBarController.swift in Sources */,
+				D543455D1FD742AA009FC05D /* LikeService.swift in Sources */,
 				D5AEC98F1F01B4AB005CE8AA /* UserService.swift in Sources */,
 				D548B4931EF9BB7A00D72A86 /* NetworkHelper.swift in Sources */,
 				D52B6D881FBA4CDA00B0EAEF /* StorageReference+Post.swift in Sources */,
@@ -471,17 +486,20 @@
 				D528EC531EF0B5CE007D93D7 /* HackerRankMobile.xcdatamodeld in Sources */,
 				D5BCE1871F7C69B8003700A8 /* DataStructuresViewController.swift in Sources */,
 				D5624BA11F708C09006C0B79 /* InsertionSortViewController.swift in Sources */,
+				D54057B71FCF2FEE006D5804 /* PostImageCell.swift in Sources */,
 				D5524E281FB510A600F863A8 /* MGPhotoHelper.swift in Sources */,
 				D58005F81F967FF2006AFEC0 /* HomeViewController.swift in Sources */,
 				D53C3DF21F8414B100905B23 /* LinkedList.swift in Sources */,
 				D5ADE68A1F32FB3500649198 /* MapViewController.swift in Sources */,
 				D52E8BBE1F018C47006C0382 /* FirebaseUser.swift in Sources */,
+				D5D607A41FCF3C8000461BC4 /* PostActionCell.swift in Sources */,
 				D5524E2C1FB6440900F863A8 /* PostService.swift in Sources */,
 				D58005F51F9673C3006AFEC0 /* Storyboard+Utility.swift in Sources */,
 				D53802071F399468008D2968 /* HRMobileViewController.swift in Sources */,
 				D528EC491EF0B4AD007D93D7 /* CoreDataHelper.swift in Sources */,
 				D548B4911EF9BB6A00D72A86 /* DetailViewController.swift in Sources */,
 				D53802031F3992D2008D2968 /* AuthenticationViewController.swift in Sources */,
+				D54057B91FCF36E1006D5804 /* PostHeaderCell.swift in Sources */,
 				D58005FA1F96800F006AFEC0 /* FindFriendsViewController.swift in Sources */,
 				D50FCB471F69F49500623532 /* FlightDetailsViewController.swift in Sources */,
 				D52B6D841FBA4C1500B0EAEF /* Post.swift in Sources */,

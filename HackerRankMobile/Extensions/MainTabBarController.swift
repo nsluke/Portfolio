@@ -21,7 +21,6 @@ class MainTabBarController: UITabBarController {
         
         delegate = self
         tabBar.unselectedItemTintColor = .black
-        
         // Do any additional setup after loading the view.
     }
 
@@ -32,7 +31,6 @@ class MainTabBarController: UITabBarController {
     
 }
 extension MainTabBarController: UITabBarControllerDelegate {
-    
     func tabBarController(_ tabBarController: UITabBarController, shouldSelect viewController: UIViewController) -> Bool {
         if viewController.tabBarItem.tag == 1 {
             photoHelper.presentActionSheet(from: self)
@@ -41,7 +39,4 @@ extension MainTabBarController: UITabBarControllerDelegate {
             return true
         }
     }
-    
 }
-
-

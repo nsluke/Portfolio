@@ -19,6 +19,8 @@ def shared_target_pods
     pod 'AppAuth'
     pod 'SwiftyJSON'
     pod 'GoogleMaps'
+    
+    pod 'Kingfisher'
 end
 
 target :’HackerRankMobile’ do

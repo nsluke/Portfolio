@@ -7,6 +7,8 @@
 //
 
 import UIKit
+import Firebase
+import FirebaseAuth
 
 
 class MainViewController: UIViewController {
@@ -24,6 +26,11 @@ class MainViewController: UIViewController {
     
     // MARK: - Navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+//
+//        idString = "transitionToHomeStoryboard"
+//    } else {
+//    idString = "transitionToLoginStoryboard"
+        
         if let identifier = segue.identifier {
             if identifier == "transitionToSteam" {
                 NetworkHelper.sharedInstance.getUserProfileInfo()
@@ -31,6 +38,8 @@ class MainViewController: UIViewController {
                 print("Opening Jet Lag Calculator")
             } else if identifier == "transitionToMakestagram" {
                  print("Opening Makestagram")
+            } else if identifier == "transitionToLoginStoryboard" {
+                print("Logging in to Makestagram")
             }
         }
     }
@@ -43,7 +52,7 @@ class MainViewController: UIViewController {
 }
 
 extension MainViewController: UICollectionViewDelegate, UICollectionViewDataSource {
-    
+
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell:CustomCollectionViewCell = collectionView.dequeueReusableCell(withReuseIdentifier: "ReuseID", for: indexPath) as! CustomCollectionViewCell
         
@@ -65,7 +74,15 @@ extension MainViewController: UICollectionViewDelegate, UICollectionViewDataSour
             case "H R Mobile":
                 idString = "transitionToHRMobile"
             case "Makestagram":
-                idString = "transitionToMakestagram"
+                let defaults = UserDefaults.standard
+                if Auth.auth().currentUser != nil,
+                  let userData = defaults.object(forKey: Constants.UserDefaults.currentUser) as? Data,
+                  let user = NSKeyedUnarchiver.unarchiveObject(with: userData) as? FirebaseUser {
+                    FirebaseUser.setCurrent(user, writeToUserDefaults: true)
+                    idString = "transitionToMakestagram"
+                } else {
+                    idString = "transitionToLoginStoryboard"
+                }
             case "Jet Lag Calculator":
                 idString = "transitionToJetLagCalculator"
             case "Touch ID":

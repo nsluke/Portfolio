@@ -40,6 +40,9 @@ struct UserService {
     
     static func posts(for user: FirebaseUser, completion: @escaping ([Post]) -> Void) {
         let ref = Database.database().reference().child("posts").child(user.uid)
+//        let ref = Database.database().reference().child("posts").child("Bde9s5WCrqXulDEy8cf0NNEQRoS2")
+
+        // Bde9s5WCrqXulDEy8cf0NNEQRoS2
         
         ref.observeSingleEvent(of: .value, with: { (snapshot) in
             guard let snapshot = snapshot.children.allObjects as? [DataSnapshot] else {

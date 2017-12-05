@@ -85,7 +85,6 @@ extension MGPhotoHelper: UINavigationControllerDelegate, UIImagePickerController
         if let selectedImage = info[UIImagePickerControllerOriginalImage] as? UIImage {
             completionHandler?(selectedImage)
         }
-        
         picker.dismiss(animated: true)
     }
     
