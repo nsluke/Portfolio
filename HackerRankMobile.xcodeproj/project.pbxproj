@@ -184,6 +184,7 @@
 				D55BA5501EF4DEAD003BF954 /* Storyboards */,
 				D57FAA6B1E8F6959009ECD77 /* View Controllers */,
 				D57FAA771E8F7414009ECD77 /* Custom Views */,
+				D53F0EB41FD7840D00A8D3C2 /* Services */,
 				D57FAA6C1E8F6965009ECD77 /* Helpers */,
 				D58005F61F9673D2006AFEC0 /* Extensions */,
 				D59E7F8D1E8F92B800DDB646 /* Models */,
@@ -208,6 +209,17 @@
 				D5524E251FB50E7600F863A8 /* MainTabBarController.swift */,
 			);
 			name = Makestagram;
+			sourceTree = "<group>";
+		};
+		D53F0EB41FD7840D00A8D3C2 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				D543455C1FD742AA009FC05D /* LikeService.swift */,
+				D5AEC98E1F01B4AB005CE8AA /* UserService.swift */,
+				D5524E291FB643AA00F863A8 /* StorageService.swift */,
+				D5524E2B1FB6440900F863A8 /* PostService.swift */,
+			);
+			name = Services;
 			sourceTree = "<group>";
 		};
 		D5524E331FB675E300F863A8 /* Data Structures & Algorithms */ = {
@@ -272,13 +284,9 @@
 			isa = PBXGroup;
 			children = (
 				D58005F21F9671CA006AFEC0 /* Constants.swift */,
-				D543455C1FD742AA009FC05D /* LikeService.swift */,
 				D5524E271FB510A600F863A8 /* MGPhotoHelper.swift */,
 				D548B4921EF9BB7A00D72A86 /* NetworkHelper.swift */,
 				D528EC471EF0B4AD007D93D7 /* CoreDataHelper.swift */,
-				D5AEC98E1F01B4AB005CE8AA /* UserService.swift */,
-				D5524E291FB643AA00F863A8 /* StorageService.swift */,
-				D5524E2B1FB6440900F863A8 /* PostService.swift */,
 			);
 			name = Helpers;
 			sourceTree = "<group>";

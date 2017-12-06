@@ -40,17 +40,30 @@ struct UserService {
     
     static func posts(for user: FirebaseUser, completion: @escaping ([Post]) -> Void) {
         let ref = Database.database().reference().child("posts").child(user.uid)
-//        let ref = Database.database().reference().child("posts").child("Bde9s5WCrqXulDEy8cf0NNEQRoS2")
-
-        // Bde9s5WCrqXulDEy8cf0NNEQRoS2
-        
         ref.observeSingleEvent(of: .value, with: { (snapshot) in
             guard let snapshot = snapshot.children.allObjects as? [DataSnapshot] else {
                 return completion([])
             }
             
-            let posts = snapshot.reversed().flatMap(Post.init)
-            completion(posts)
+            let dispatchGroup = DispatchGroup()
+            
+            let posts: [Post] = snapshot.reversed().flatMap {
+                        guard let post = Post(snapshot: $0) else { return nil }
+                        
+                        dispatchGroup.enter()
+                        
+                        LikeService.isPostLiked(post) { (isLiked) in
+                            post.isLiked = isLiked
+                            
+                            dispatchGroup.leave()
+                        }
+                        
+                        return post
+            }
+            
+            dispatchGroup.notify(queue: .main, execute: {
+                completion(posts)
+            })
         })
     }
     

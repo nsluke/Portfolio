@@ -19,7 +19,7 @@ class CreateUsernameViewController: UIViewController {
     
     @IBAction func nextButtonTapped(_ sender: Any) {
         guard let firUser = Auth.auth().currentUser,
-            let username = createUsernameLabel.text, !username.isEmpty else { return }
+            let username = textfield.text, !username.isEmpty else { return }
         
         UserService.create(firUser, username: username) { (user) in
             guard let user = user else {

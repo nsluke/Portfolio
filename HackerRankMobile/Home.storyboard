@@ -6,6 +6,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13527"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -93,14 +94,18 @@
                                                 <autoresizingMask key="autoresizingMask"/>
                                                 <subviews>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Hzd-2s-4fU">
-                                                        <rect key="frame" x="12" y="0.0" width="24" height="45.5"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="45.5" height="45.5"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="width" secondItem="Hzd-2s-4fU" secondAttribute="height" multiplier="1:1" id="azV-4O-zlV"/>
+                                                        </constraints>
                                                         <state key="normal" image="btn_heart_black_outline"/>
+                                                        <state key="selected" image="btn_heart_red_solid"/>
                                                         <connections>
                                                             <action selector="likeButtonTapped:" destination="TTB-5J-mPt" eventType="touchUpInside" id="cIJ-lp-qhg"/>
                                                         </connections>
                                                     </button>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="5 Likes" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wBj-0p-75R">
-                                                        <rect key="frame" x="48" y="11" width="47.5" height="24"/>
+                                                        <rect key="frame" x="45.5" y="11" width="47.5" height="24"/>
                                                         <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="14"/>
                                                         <nil key="textColor"/>
                                                         <nil key="highlightedColor"/>
@@ -129,9 +134,9 @@
                                                     <constraint firstAttribute="bottom" secondItem="Hzd-2s-4fU" secondAttribute="bottom" id="WVh-l4-muW"/>
                                                     <constraint firstAttribute="bottom" secondItem="ZU4-Lz-9HI" secondAttribute="bottom" id="WmS-yt-OEh"/>
                                                     <constraint firstAttribute="trailing" secondItem="qco-wr-Vif" secondAttribute="trailing" constant="15" id="X0W-cD-G7P"/>
-                                                    <constraint firstItem="Hzd-2s-4fU" firstAttribute="leading" secondItem="u6l-fw-ZnN" secondAttribute="leading" constant="12" id="f8c-DO-W7Y"/>
+                                                    <constraint firstItem="Hzd-2s-4fU" firstAttribute="leading" secondItem="u6l-fw-ZnN" secondAttribute="leading" id="f8c-DO-W7Y"/>
                                                     <constraint firstAttribute="trailing" secondItem="ZU4-Lz-9HI" secondAttribute="trailing" constant="30" id="g2t-lk-dhK"/>
-                                                    <constraint firstItem="wBj-0p-75R" firstAttribute="leading" secondItem="Hzd-2s-4fU" secondAttribute="trailing" constant="12" id="xPu-7Q-WRY"/>
+                                                    <constraint firstItem="wBj-0p-75R" firstAttribute="leading" secondItem="Hzd-2s-4fU" secondAttribute="trailing" id="xPu-7Q-WRY"/>
                                                 </constraints>
                                             </tableViewCellContentView>
                                             <connections>
@@ -190,6 +195,7 @@
     </scenes>
     <resources>
         <image name="btn_heart_black_outline" width="24" height="24"/>
+        <image name="btn_heart_red_solid" width="24" height="24"/>
         <image name="btn_options_black" width="24" height="24"/>
         <image name="tab_home_black" width="25" height="25"/>
     </resources>
