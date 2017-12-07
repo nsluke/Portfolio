@@ -25,6 +25,7 @@
 		D53012AA1D075B070031E66E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D53012A81D075B070031E66E /* Main.storyboard */; };
 		D53012AC1D075B070031E66E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D53012AB1D075B070031E66E /* Assets.xcassets */; };
 		D53012AF1D075B070031E66E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D53012AD1D075B070031E66E /* LaunchScreen.storyboard */; };
+		D5360E471FD87F7B00FF2F2A /* FindFriendsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5360E461FD87F7B00FF2F2A /* FindFriendsCell.swift */; };
 		D53802031F3992D2008D2968 /* AuthenticationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D53802021F3992D2008D2968 /* AuthenticationViewController.swift */; };
 		D53802051F39937F008D2968 /* LocalAuthentication.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D53802041F39937F008D2968 /* LocalAuthentication.framework */; };
 		D53802071F399468008D2968 /* HRMobileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D53802061F399468008D2968 /* HRMobileViewController.swift */; };
@@ -80,6 +81,7 @@
 		D53012AB1D075B070031E66E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D53012AE1D075B070031E66E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		D53012B01D075B070031E66E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D5360E461FD87F7B00FF2F2A /* FindFriendsCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FindFriendsCell.swift; sourceTree = "<group>"; };
 		D53802021F3992D2008D2968 /* AuthenticationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AuthenticationViewController.swift; sourceTree = "<group>"; };
 		D53802041F39937F008D2968 /* LocalAuthentication.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = LocalAuthentication.framework; path = System/Library/Frameworks/LocalAuthentication.framework; sourceTree = SDKROOT; };
 		D53802061F399468008D2968 /* HRMobileViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = HRMobileViewController.swift; path = "View Controllers/HRMobileViewController.swift"; sourceTree = "<group>"; };
@@ -294,6 +296,7 @@
 		D57FAA771E8F7414009ECD77 /* Custom Views */ = {
 			isa = PBXGroup;
 			children = (
+				D5360E461FD87F7B00FF2F2A /* FindFriendsCell.swift */,
 				D528EC451EF0B48E007D93D7 /* CustomCollectionViewCell.swift */,
 				D54057B61FCF2FEE006D5804 /* PostImageCell.swift */,
 				D54057B81FCF36E1006D5804 /* PostHeaderCell.swift */,
@@ -488,6 +491,7 @@
 				D548B4931EF9BB7A00D72A86 /* NetworkHelper.swift in Sources */,
 				D52B6D881FBA4CDA00B0EAEF /* StorageReference+Post.swift in Sources */,
 				D528EC461EF0B48E007D93D7 /* CustomCollectionViewCell.swift in Sources */,
+				D5360E471FD87F7B00FF2F2A /* FindFriendsCell.swift in Sources */,
 				D58005F31F9671CA006AFEC0 /* Constants.swift in Sources */,
 				D5524E2A1FB643AA00F863A8 /* StorageService.swift in Sources */,
 				D52B6D861FBA4C9E00B0EAEF /* UIImage+Size.swift in Sources */,

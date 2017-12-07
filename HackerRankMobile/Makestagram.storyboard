@@ -6,6 +6,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13527"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -51,7 +52,7 @@
             </objects>
             <point key="canvasLocation" x="2903" y="252"/>
         </scene>
-        <!--Find Friends View Controller-->
+        <!--Find Friends-->
         <scene sceneID="dco-SY-j6Y">
             <objects>
                 <viewController id="iCK-O1-mi6" customClass="FindFriendsViewController" customModule="HackerRankMobile" customModuleProvider="target" sceneMemberID="viewController">
@@ -62,14 +63,71 @@
                     <view key="view" contentMode="scaleToFill" id="tvX-6B-4BQ">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="545-bC-Toj">
+                                <rect key="frame" x="0.0" y="64" width="375" height="554"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="FindFriendsCell" rowHeight="71" id="sgu-bv-3GL" customClass="FindFriendsCell" customModule="HackerRankMobile" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="375" height="71"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="sgu-bv-3GL" id="Pl4-rt-X8W">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="70.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UAb-iK-5zq">
+                                                    <rect key="frame" x="30" y="11" width="213" height="49"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cYz-nZ-C0s">
+                                                    <rect key="frame" x="255" y="21" width="115" height="29"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="115" id="Cdh-dX-Id3"/>
+                                                    </constraints>
+                                                    <state key="normal" title="Button"/>
+                                                </button>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstAttribute="bottomMargin" secondItem="UAb-iK-5zq" secondAttribute="bottom" id="2qC-Nj-2wM"/>
+                                                <constraint firstItem="cYz-nZ-C0s" firstAttribute="leading" secondItem="UAb-iK-5zq" secondAttribute="trailing" constant="12" id="D7c-aE-v6z"/>
+                                                <constraint firstItem="cYz-nZ-C0s" firstAttribute="top" secondItem="Pl4-rt-X8W" secondAttribute="topMargin" constant="10" id="HMX-oZ-XCa"/>
+                                                <constraint firstItem="UAb-iK-5zq" firstAttribute="top" secondItem="Pl4-rt-X8W" secondAttribute="topMargin" id="OzB-m6-vmd"/>
+                                                <constraint firstAttribute="bottomMargin" secondItem="cYz-nZ-C0s" secondAttribute="bottom" constant="10" id="fqk-kJ-iN3"/>
+                                                <constraint firstItem="cYz-nZ-C0s" firstAttribute="trailing" secondItem="Pl4-rt-X8W" secondAttribute="trailingMargin" constant="10" id="hhc-Zi-2Ye"/>
+                                                <constraint firstItem="UAb-iK-5zq" firstAttribute="leading" secondItem="Pl4-rt-X8W" secondAttribute="leadingMargin" constant="15" id="qoN-tf-qM9"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="followButton" destination="cYz-nZ-C0s" id="m6h-DN-F0i"/>
+                                            <outlet property="usernameLabbel" destination="UAb-iK-5zq" id="KG2-jc-n2o"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="iCK-O1-mi6" id="CTk-VV-LcN"/>
+                                    <outlet property="delegate" destination="iCK-O1-mi6" id="qUX-JI-3U5"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="545-bC-Toj" firstAttribute="leading" secondItem="RZu-qa-fEE" secondAttribute="leading" id="1Fs-of-Mwk"/>
+                            <constraint firstItem="545-bC-Toj" firstAttribute="trailing" secondItem="RZu-qa-fEE" secondAttribute="trailing" id="eem-BF-npo"/>
+                            <constraint firstItem="1kv-xo-Xea" firstAttribute="top" secondItem="545-bC-Toj" secondAttribute="bottom" id="fGA-7H-Y57"/>
+                            <constraint firstItem="545-bC-Toj" firstAttribute="top" secondItem="xcV-zq-C3D" secondAttribute="bottom" id="zFt-Pm-8kN"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="RZu-qa-fEE"/>
                     </view>
-                    <navigationItem key="navigationItem" id="k90-fY-mvA"/>
+                    <navigationItem key="navigationItem" title="Find Friends" id="k90-fY-mvA"/>
+                    <connections>
+                        <outlet property="tableView" destination="545-bC-Toj" id="X1S-uy-uU6"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Rtk-Xl-THQ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3690" y="912"/>
+            <point key="canvasLocation" x="3688.8000000000002" y="911.69415292353835"/>
         </scene>
         <!--Home-->
         <scene sceneID="6fB-Jh-AIf">
