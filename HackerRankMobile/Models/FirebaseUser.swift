@@ -14,6 +14,7 @@ class FirebaseUser: NSObject {
     
     // MARK: - Singleton
     private static var _current: FirebaseUser?
+    var isFollowed = false
     
     static var current: FirebaseUser {
         guard let currentUser = _current else {

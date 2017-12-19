@@ -9,8 +9,8 @@ import Foundation
 import FirebaseDatabase
 
 struct FollowService {
-    private static func followUser(_ user: User, forCurrentUserWithSuccess success: @escaping (Bool) -> Void) {
-        let currentUID = User.current.uid
+    private static func followUser(_ user: FirebaseUser, forCurrentUserWithSuccess success: @escaping (Bool) -> Void) {
+        let currentUID = FirebaseUser.current.uid
         let followData = ["followers/\(user.uid)/\(currentUID)" : true,
                           "following/\(currentUID)/\(user.uid)" : true]
         let ref = Database.database().reference()
@@ -22,8 +22,8 @@ struct FollowService {
         }
     }
     
-    private static func unfollowUser(_ user: User, forCurrentUserWithSuccess success: @escaping (Bool) -> Void) {
-        let currentUID = User.current.uid
+    private static func unfollowUser(_ user: FirebaseUser, forCurrentUserWithSuccess success: @escaping (Bool) -> Void) {
+        let currentUID = FirebaseUser.current.uid
         // Use NSNull() object instead of nil because updateChildValues expects type [Hashable : Any]
         // http://stackoverflow.com/questions/38462074/using-updatechildvalues-to-delete-from-firebase
         let followData = ["followers/\(user.uid)/\(currentUID)" : NSNull(),
@@ -37,7 +37,7 @@ struct FollowService {
         }
     }
     
-    static func setIsFollowing(_ isFollowing: Bool, fromCurrentUserTo followee: User, success: @escaping (Bool) -> Void) {
+    static func setIsFollowing(_ isFollowing: Bool, fromCurrentUserTo followee: FirebaseUser, success: @escaping (Bool) -> Void) {
         if isFollowing {
             followUser(followee, forCurrentUserWithSuccess: success)
         } else {
@@ -45,8 +45,8 @@ struct FollowService {
         }
     }
     
-    static func isUserFollowed(_ user: User, byCurrentUserWithCompletion completion: @escaping (Bool) -> Void) {
-        let currentUID = User.current.uid
+    static func isUserFollowed(_ user: FirebaseUser, byCurrentUserWithCompletion completion: @escaping (Bool) -> Void) {
+        let currentUID = FirebaseUser.current.uid
         let ref = Database.database().reference().child("followers").child(user.uid)
         
         ref.queryEqual(toValue: nil, childKey: currentUID).observeSingleEvent(of: .value, with: { (snapshot) in
@@ -57,5 +57,4 @@ struct FollowService {
             }
         })
     }
-    
 }

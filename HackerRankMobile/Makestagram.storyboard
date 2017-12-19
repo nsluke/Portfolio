@@ -87,6 +87,9 @@
                                                         <constraint firstAttribute="width" constant="115" id="Cdh-dX-Id3"/>
                                                     </constraints>
                                                     <state key="normal" title="Button"/>
+                                                    <connections>
+                                                        <action selector="followButtonTapped:" destination="sgu-bv-3GL" eventType="touchUpInside" id="7zT-Jd-i7P"/>
+                                                    </connections>
                                                 </button>
                                             </subviews>
                                             <constraints>
@@ -100,7 +103,7 @@
                                             </constraints>
                                         </tableViewCellContentView>
                                         <connections>
-                                            <outlet property="followButton" destination="cYz-nZ-C0s" id="m6h-DN-F0i"/>
+                                            <outlet property="followButton" destination="cYz-nZ-C0s" id="Jd4-4J-4q1"/>
                                             <outlet property="usernameLabbel" destination="UAb-iK-5zq" id="KG2-jc-n2o"/>
                                         </connections>
                                     </tableViewCell>
@@ -127,7 +130,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Rtk-Xl-THQ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3688.8000000000002" y="911.69415292353835"/>
+            <point key="canvasLocation" x="3666" y="912"/>
         </scene>
         <!--Home-->
         <scene sceneID="6fB-Jh-AIf">
