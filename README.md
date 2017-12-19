@@ -31,7 +31,7 @@ That's really just what the repo was titled originally - creating a mobile Hacke
 
 The Steam App turned out to require a lot of knowledge of OAuth, so I decided to go a different route and learn how to work with Firebase by building an instagram clone.
 
-<b>
+<br>
 
 ## Where did the inspiration for these projects come from?
 
