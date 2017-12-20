@@ -20,27 +20,41 @@ class HomeViewController: UIViewController {
         return dateFormatter
     }()
     
+    
     @IBOutlet weak var tableView: UITableView!
+    let refreshControl = UIRefreshControl()
+
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
         configureTableView()
+        reloadTimeline()
+    }
+    
+    func configureTableView() {
+        tableView.tableFooterView = UIView()
+        tableView.separatorStyle = .none
         
-        UserService.posts(for: FirebaseUser.current) { (posts) in
+//        refreshControl.addTarget(self, action: #selector(reloadTimeline), for: .valueChanged)
+//        refreshControl.addSubview(refreshControl)
+    }
+    
+    func reloadTimeline() {
+        UserService.timeline { (posts) in
             self.posts = posts
+            
+            if self.refreshControl.isRefreshing {
+                self.refreshControl.endRefreshing()
+            }
+            
             self.tableView.reloadData()
         }
     }
     
-    func configureTableView() {
-        // remove separators for empty cells
-        tableView.tableFooterView = UIView()
-        // remove separators from cells
-        tableView.separatorStyle = .none
-    }
-    
 }
+
+// MARK: - UITableViewDataSource
 
 extension HomeViewController: UITableViewDataSource {
     
@@ -59,7 +73,7 @@ extension HomeViewController: UITableViewDataSource {
         switch indexPath.row {
         case 0:
             let cell = tableView.dequeueReusableCell(withIdentifier: "PostHeaderCell") as! PostHeaderCell
-            cell.usernameLabel.text = FirebaseUser.current.username
+            cell.usernameLabel.text = post.poster.username
             
             return cell
             
@@ -87,11 +101,13 @@ extension HomeViewController: UITableViewDataSource {
         cell.likeButton.isSelected = post.isLiked
         cell.likeCountLabel.text = "\(post.likeCount) likes"
     }
+    
 }
 
 // MARK: - UITableViewDelegate
 
 extension HomeViewController: UITableViewDelegate {
+    
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         switch indexPath.row {
         case 0:
@@ -108,9 +124,11 @@ extension HomeViewController: UITableViewDelegate {
             fatalError()
         }
     }
+    
 }
 
 extension HomeViewController: PostActionCellDelegate {
+    
     func didTapLikeButton(_ likeButton: UIButton, on cell: PostActionCell) {
         guard let indexPath = tableView.indexPath(for: cell) else { return }
         likeButton.isUserInteractionEnabled = false
@@ -131,4 +149,5 @@ extension HomeViewController: PostActionCellDelegate {
             }
         }
     }
+    
 }

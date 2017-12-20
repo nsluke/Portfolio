@@ -9,16 +9,34 @@ import Foundation
 import FirebaseDatabase
 
 struct FollowService {
+    
     private static func followUser(_ user: FirebaseUser, forCurrentUserWithSuccess success: @escaping (Bool) -> Void) {
         let currentUID = FirebaseUser.current.uid
         let followData = ["followers/\(user.uid)/\(currentUID)" : true,
                           "following/\(currentUID)/\(user.uid)" : true]
+        
         let ref = Database.database().reference()
         ref.updateChildValues(followData) { (error, _) in
             if let error = error {
                 assertionFailure(error.localizedDescription)
+                success(false)
             }
-            success(error == nil)
+            
+            UserService.posts(for: user) { (posts) in
+                let postKeys = posts.flatMap { $0.key }
+                
+                var followData = [String : Any]()
+                let timelinePostDict = ["poster_uid" : user.uid]
+                postKeys.forEach { followData["timeline/\(currentUID)/\($0)"] = timelinePostDict }
+                
+                ref.updateChildValues(followData, withCompletionBlock: { (error, ref) in
+                    if let error = error {
+                        assertionFailure(error.localizedDescription)
+                    }
+                    
+                    success(error == nil)
+                })
+            }
         }
     }
     

@@ -96,7 +96,7 @@ struct UserService {
         })
     }
     
-    static func followers(for user: User, completion: @escaping ([String]) -> Void) {
+    static func followers(for user: FirebaseUser, completion: @escaping ([String]) -> Void) {
         let followersRef = Database.database().reference().child("followers").child(user.uid)
         
         followersRef.observeSingleEvent(of: .value, with: { (snapshot) in
@@ -107,4 +107,39 @@ struct UserService {
             completion(followersKeys)
         })
     }
-œ}
+    
+    static func timeline(completion: @escaping ([Post]) -> Void) {
+        let currentUser = FirebaseUser.current
+        
+        let timelineRef = Database.database().reference().child("timeline").child(currentUser.uid)
+        timelineRef.observeSingleEvent(of: .value, with: { (snapshot) in
+            guard let snapshot = snapshot.children.allObjects as? [DataSnapshot]
+                else { return completion([]) }
+            
+            let dispatchGroup = DispatchGroup()
+            
+            var posts = [Post]()
+            
+            for postSnap in snapshot {
+                guard let postDict = postSnap.value as? [String : Any],
+                    let posterUID = postDict["poster_uid"] as? String
+                    else { continue }
+                
+                dispatchGroup.enter()
+                
+                PostService.show(forKey: postSnap.key, posterUID: posterUID) { (post) in
+                    if let post = post {
+                        posts.append(post)
+                    }
+                    
+                    dispatchGroup.leave()
+                }
+            }
+            
+            dispatchGroup.notify(queue: .main, execute: {
+                completion(posts.reversed())
+            })
+        })
+    }
+    
+}

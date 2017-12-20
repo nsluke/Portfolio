@@ -13,9 +13,7 @@ class FindFriendsViewController: UIViewController {
     
     var users = [FirebaseUser]()
     
-    
     @IBOutlet weak var tableView: UITableView!
-    
     
     override func viewDidLoad() {
         super.viewDidLoad()
