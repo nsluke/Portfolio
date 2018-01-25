@@ -14,7 +14,7 @@ import AFNetworking
 class DetailViewController: UIViewController {
     
     var classTitle:String?
-    var user:User?
+    var user = User()
     
     @IBOutlet weak var scrollView: UIScrollView!
     @IBOutlet weak var coverPhotoImageView: UIImageView!
@@ -24,25 +24,16 @@ class DetailViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-//        NotificationCenter.default.addObserver(
-//            self,
-//            selector: #selector(self.setupView),
-//            name: NSNotification.Name(rawValue: "setupView"),
-//            object: nil)
-        
-        sleep(3) // find a not lazy way to do this
-        user = CoreDataHelper.retrieveUser()[0]
-        
+        NetworkHelper.getUserProfileInfo {
+            CoreDataHelper.retrieveUser(completion: { (results) in
+                self.user = results[0]
+                self.setUpViews()
+            })
+        }
     }
     
     override func viewWillAppear(_ animated: Bool) {
-        if let localUser = user {
-            coverPhotoImageView.setImageWith(URL(string: (user?.coverPhotoURL)!)!)
-            profilePhotoImageView.setImageWith(URL(string: (user?.profilePictureURL)!)!)
-            nameLabel.text = localUser.name
-        } else {
-     
-        }
+
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -50,6 +41,14 @@ class DetailViewController: UIViewController {
     }
     
 
-    
+    func setUpViews() {
+        self.coverPhotoImageView.setImageWith(URL(string: (self.user.coverPhotoURL)!)!)
+        
+        self.profilePhotoImageView.setImageWith(URL(string: (self.user.profilePictureURL)!)!)
+        
+        self.nameLabel.text = self.user.name
+    }
     
 }
+
+

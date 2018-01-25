@@ -28,7 +28,7 @@ class CreateUsernameViewController: UIViewController {
             }
             FirebaseUser.setCurrent(user, writeToUserDefaults: true)
             
-            let storyboard:UIStoryboard = UIStoryboard(name: "Makestagram", bundle: .main)
+            let storyboard:UIStoryboard = UIStoryboard(name: "Lukestagram", bundle: .main)
             let controller = storyboard.instantiateViewController(withIdentifier: "InitialController") as UIViewController
             
             self.present(controller, animated: true, completion: nil)

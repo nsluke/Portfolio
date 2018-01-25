@@ -35,9 +35,6 @@ class HomeViewController: UIViewController {
     func configureTableView() {
         tableView.tableFooterView = UIView()
         tableView.separatorStyle = .none
-        
-//        refreshControl.addTarget(self, action: #selector(reloadTimeline), for: .valueChanged)
-//        refreshControl.addSubview(refreshControl)
     }
     
     func reloadTimeline() {

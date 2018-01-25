@@ -6,26 +6,33 @@
 //  Copyright © 2017 Solomon Stuff. All rights reserved.
 //
 
-// command + shift + k : clean
-// command r : Build 
-
 import UIKit
 import CoreData
+import SwiftyJSON
 
-class CoreDataHelper { // Core Data Singleton
+class CoreDataHelper {
     
     static let appDelegate = UIApplication.shared.delegate as! AppDelegate
     static let persistentContainer = appDelegate.persistentContainer
     static let managedContext = persistentContainer.viewContext
     
-    //static methods will go here
-    
-    static func saveUser(WithProfilePicture profilePictureURL:String?, name:String?, coverPhotoURL:String?) {
+
+    static func saveUser(WithProfilePicture profilePictureURL:String, name:String, coverPhotoURL:String) {
         let user = NSEntityDescription.insertNewObject(forEntityName: "User", into: managedContext) as! User
         
         user.profilePictureURL = profilePictureURL
         user.name = name
         user.coverPhotoURL = coverPhotoURL
+        
+        self.save()
+    }
+    
+    static func saveUser(withJson json:JSON) {
+        let user = NSEntityDescription.insertNewObject(forEntityName: "User", into: managedContext) as! User
+
+        user.name = json["realname"].stringValue
+        user.coverPhotoURL = json["avatar"].stringValue
+        user.profilePictureURL = json["avatarfull"].stringValue
         
         self.save()
     }
@@ -43,17 +50,15 @@ class CoreDataHelper { // Core Data Singleton
         self.save()
     }
     
-    static func retrieveUser() -> [User] {
+    static func retrieveUser(completion: @escaping([User]) -> Void) {
         let fetchRequest = NSFetchRequest<User>(entityName: "User")
         
         do {
             let results = try managedContext.fetch(fetchRequest)
-            return results
+            completion(results)
         } catch let error as NSError {
             print("Could not fetch \(error)")
         }
-        
-        return []
     }
     
 }

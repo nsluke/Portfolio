@@ -16,8 +16,7 @@ class MainViewController: UIViewController {
     // Mark: - Variables
     @IBOutlet weak var collectionView: UICollectionView!
     
-    var collectionViewArray:[String] = ["Steam", "H R Mobile","Makestagram", "Jet Lag Calculator", "Touch ID", "Insertion Sort", "Data Structures"]
-    
+    var collectionViewArray:[String] = ["Lukestagram", "Local Auth", "Sorting", "Data Structures", "Map View" , "HackerRank",  "Steam", "Jet Lag Calculator"]
     
     // Mark: - Functions
     override func viewDidLoad() {
@@ -26,20 +25,15 @@ class MainViewController: UIViewController {
     
     // MARK: - Navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-//
-//        idString = "transitionToHomeStoryboard"
-//    } else {
-//    idString = "transitionToLoginStoryboard"
-        
         if let identifier = segue.identifier {
             if identifier == "transitionToSteam" {
-                NetworkHelper.sharedInstance.getUserProfileInfo()
+//                NetworkHelper.sharedInstance.getUserProfileInfo()
             } else if identifier == "transitionToJetLagCalculator" {
                 print("Opening Jet Lag Calculator")
-            } else if identifier == "transitionToMakestagram" {
-                 print("Opening Makestagram")
+            } else if identifier == "transitionToLukestagram" {
+                 print("Opening Lukestagram")
             } else if identifier == "transitionToLoginStoryboard" {
-                print("Logging in to Makestagram")
+                print("Logging in to Lukestagram")
             }
         }
     }
@@ -57,6 +51,7 @@ extension MainViewController: UICollectionViewDelegate, UICollectionViewDataSour
         let cell:CustomCollectionViewCell = collectionView.dequeueReusableCell(withReuseIdentifier: "ReuseID", for: indexPath) as! CustomCollectionViewCell
         
         cell.mainLabel.text = collectionViewArray[indexPath.row]
+        cell.imageView.image = UIImage.init(named: collectionViewArray[indexPath.row])
         return cell
     }
     
@@ -66,31 +61,34 @@ extension MainViewController: UICollectionViewDelegate, UICollectionViewDataSour
 
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         
-        var idString:String = ""
-//        var destinationVC:UIViewController?
+        var idString = String()
+
         switch collectionViewArray[indexPath.row] {
             case "Steam":
                 idString = "transitionToSteam"
-            case "H R Mobile":
+            case "HackerRank":
                 idString = "transitionToHRMobile"
-            case "Makestagram":
+            case "Lukestagram":
                 let defaults = UserDefaults.standard
                 if Auth.auth().currentUser != nil,
                   let userData = defaults.object(forKey: Constants.UserDefaults.currentUser) as? Data,
                   let user = NSKeyedUnarchiver.unarchiveObject(with: userData) as? FirebaseUser {
                     FirebaseUser.setCurrent(user, writeToUserDefaults: true)
-                    idString = "transitionToMakestagram"
+                    idString = "transitionToLukestagram"
                 } else {
                     idString = "transitionToLoginStoryboard"
                 }
             case "Jet Lag Calculator":
                 idString = "transitionToJetLagCalculator"
-            case "Touch ID":
+            case "Local Auth":
                 idString = "transitionToAuth"
-            case "Insertion Sort":
+            case "Sorting":
                 idString = "transitionToInsertionSort"
             case "Data Structures":
                 idString = "transitionToDataStructures"
+            case "Map View":
+                idString = "transitionToMapView"
+            
             default:
                 print("Error in cell for row at index path")
         }
