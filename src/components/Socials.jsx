@@ -2,11 +2,11 @@ import './Socials.css'
 
 const links = [
   { name: 'GitHub', url: 'https://github.com/nsluke' },
-  { name: 'YouTube', url: '#' },
-  { name: 'Instagram', url: '#' },
+  { name: 'YouTube', url: 'https://www.youtube.com/@LukeSS' },
+  { name: 'Instagram', url: 'https://www.instagram.com/luke_solomon/' },
   { name: 'X / Twitter', url: 'https://twitter.com/_luke_warm' },
-  { name: 'LinkedIn', url: '#' },
-  { name: 'Email', url: 'mailto:solomora@gmail.com' },
+  { name: 'LinkedIn', url: 'https://www.linkedin.com/in/luke-solomon-7b846375/' },
+  { name: 'Email', url: 'mailto:solomora@gmail.com+portfolio' },
 ]
 
 function Socials() {

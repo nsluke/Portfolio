@@ -9,7 +9,7 @@ function App() {
   return (
     <div className="site">
       <Hero />
-      <Marquee text="Software Engineer — iOS Developer — Builder —" />
+      <Marquee text="Swift - Objective-C - Typescript - GDScript - Python - HTML/CSS - JavaScript - Vue - React - SwiftUI - UIKit - Git - Firebase - Xcode - Node.js - "/>
       <Projects />
       <Socials />
       <Footer />

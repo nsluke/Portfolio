@@ -5,11 +5,11 @@ function Hero() {
     <section className="hero">
       <div className="hero-content">
         <h1 className="hero-name">Luke Solomon</h1>
-        <p className="hero-tagline">Building things that matter</p>
+        <p className="hero-tagline">Made In New York.</p>
         <div className="hero-meta">
-          <span>New York</span>
+          <span></span>
           <span className="hero-sep">/</span>
-          <span>iOS & Web</span>
+          <span>iOS, Web, Godot.</span>
         </div>
       </div>
     </section>

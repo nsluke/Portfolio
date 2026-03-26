@@ -3,41 +3,42 @@ import './Projects.css'
 
 const projects = [
   {
+    name: 'Treachery',
+    description: 'Multiplayer MTG Variant for iOS',
+    tech: 'Swift',
+    url: 'https://github.com/paintedlabs/Treachery-FrontEnd',
+  },
+    {
+    name: 'The Lazer Dragon Workout Experience',
+    description: 'A HIIT Timer app designed & built from scratch',
+    tech: 'Swift',
+    url: 'https://github.com/nsluke/Lazer-Dragon-Workout-Experience',
+  },
+  {
     name: 'Claudius',
     description: 'A Claude-powered iOS assistant',
     tech: 'Swift',
     url: 'https://github.com/nsluke/Claudius',
   },
   {
-    name: 'Lazer Dragon Workout Experience',
-    description: 'A HIIT Timer app designed & built from scratch',
-    tech: 'Swift',
-    url: 'https://github.com/nsluke/Lazer-Dragon-Workout-Experience',
-  },
-  {
     name: 'Manadrain',
-    description: 'Mana pool management application',
+    description: 'A Chrome extension for tracking MTG Cards',
     tech: 'TypeScript',
     url: 'https://github.com/nsluke/manadrain',
   },
   {
     name: 'Planechase Bot',
-    description: 'Discord bot for Magic: The Gathering Planechase',
+    description: 'Discord bot for Planechase',
     tech: 'Python',
     url: 'https://github.com/nsluke/Planechase-Bot',
   },
   {
     name: 'PushPush',
-    description: 'Push notification experimentation platform',
+    description: 'The First game I ever made. Aged like fine wine.',
     tech: 'HTML',
     url: 'https://github.com/nsluke/PushPush',
   },
-  {
-    name: 'Treachery',
-    description: 'Multiplayer hidden-role game for iOS',
-    tech: 'Swift',
-    url: 'https://github.com/paintedlabs/Treachery-FrontEnd',
-  },
+
 ]
 
 function Projects() {
