@@ -410,15 +410,15 @@
         <div class="box-header">♫ Luke's Music ♫</div>
         <div class="box-body music-player">
           <div class="title">▶ NOW PLAYING ▶</div>
-          <audio id="myAudio" loop>
-            <source src="data:audio/wav;base64,UklGRiQAAABXQVZFZm10IBAAAAABAAEARKwAAIhYAQACABAAZGF0YQAAAAA=" type="audio/wav">
-          </audio>
-          <div class="now-playing">♫ Darude - Sandstorm ♫</div>
-          <div class="music-controls">
-            <button onclick="document.getElementById('myAudio').play()">▶ Play</button>
-            <button onclick="document.getElementById('myAudio').pause()">⏸ Pause</button>
-          </div>
-          <div style="color:#666; font-size:9px; margin-top:6px;">(imagine it's playing rn)</div>
+          <iframe
+            width="100%"
+            height="60"
+            src="https://www.youtube.com/embed/RRKJiM9Njr8?autoplay=1&loop=1&playlist=RRKJiM9Njr8"
+            allow="autoplay"
+            frameborder="0"
+            style="border: 1px inset #333; max-width: 250px;"
+          ></iframe>
+          <div class="now-playing">♫ hit play if it doesn't start ♫</div>
         </div>
       </div>
 
@@ -565,6 +565,38 @@
     count++;
     counter.textContent = String(count).padStart(6, '0').replace(/(\d)(?=(\d{3})+$)/g, '$1,');
   }, 30000);
+
+  // Sparkle trail cursor
+  const sparkles = [];
+  const sparkleChars = ['✦', '✧', '★', '·', '✶', '⋆'];
+  const sparkleColors = ['#ff00ff', '#00ffff', '#ffff00', '#ff99ff', '#99ffff', '#ffffff'];
+
+  document.addEventListener('mousemove', (e) => {
+    const sparkle = document.createElement('div');
+    sparkle.textContent = sparkleChars[Math.floor(Math.random() * sparkleChars.length)];
+    sparkle.style.cssText = `
+      position: fixed;
+      left: ${e.clientX}px;
+      top: ${e.clientY}px;
+      pointer-events: none;
+      font-size: ${8 + Math.random() * 14}px;
+      color: ${sparkleColors[Math.floor(Math.random() * sparkleColors.length)]};
+      text-shadow: 0 0 4px currentColor;
+      z-index: 99999;
+      transition: all 0.8s ease-out;
+      opacity: 1;
+    `;
+    document.body.appendChild(sparkle);
+
+    const dx = (Math.random() - 0.5) * 40;
+    const dy = -20 - Math.random() * 30;
+    requestAnimationFrame(() => {
+      sparkle.style.transform = `translate(${dx}px, ${dy}px) scale(0)`;
+      sparkle.style.opacity = '0';
+    });
+
+    setTimeout(() => sparkle.remove(), 800);
+  });
 </script>
 
 </body>
