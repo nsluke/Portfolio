@@ -10,35 +10,40 @@ const projects = [
   },
     {
     name: 'The Lazer Dragon Workout Experience',
-    description: 'A HIIT Timer app designed & built from scratch',
+    description: 'Think you can take on the Lazer Dragon?',
     tech: 'Swift',
     url: 'https://github.com/nsluke/Lazer-Dragon-Workout-Experience',
   },
   {
     name: 'Claudius',
-    description: 'A Claude-powered iOS assistant',
+    description: 'Track Your Claude usage, right on your menu bar. ',
     tech: 'Swift',
     url: 'https://github.com/nsluke/Claudius',
   },
   {
     name: 'Manadrain',
-    description: 'A Chrome extension for tracking MTG Cards',
+    description: 'Stash your favorite cards for later.',
     tech: 'TypeScript',
     url: 'https://github.com/nsluke/manadrain',
   },
   {
     name: 'Planechase Bot',
-    description: 'Discord bot for Planechase',
+    description: 'Discord bot for playing Planechase',
     tech: 'Python',
     url: 'https://github.com/nsluke/Planechase-Bot',
   },
   {
     name: 'PushPush',
     description: 'The First game I ever made. Aged like fine wine.',
-    tech: 'HTML',
+    tech: 'Objective-C',
     url: 'https://github.com/nsluke/PushPush',
   },
-
+  {
+    name: 'Bling My Deck',
+    description: 'Find the most expensive printing of every card in your MTG deck',
+    tech: 'TypeScript',
+    url: 'https://github.com/nsluke/blingmydeck',
+  },
 ]
 
 function Projects() {
