@@ -1,0 +1,15 @@
+.footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 3vw;
+  font-size: clamp(0.6rem, 1vw, 0.75rem);
+}
+
+.footer-name {
+  color: var(--text);
+}
+
+.footer-year {
+  color: var(--text);
+}
