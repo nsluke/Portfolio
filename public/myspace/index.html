@@ -1,0 +1,571 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>~*~LuKe'S mYsPaCe~*~</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Comic+Neue:wght@400;700&display=swap');
+
+  * {
+    cursor: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20"><text y="16" font-size="16">⭐</text></svg>'), auto;
+    box-sizing: border-box;
+  }
+
+  body {
+    background-color: #000033;
+    background-image:
+      repeating-linear-gradient(
+        0deg,
+        transparent,
+        transparent 2px,
+        rgba(255,0,255,0.03) 2px,
+        rgba(255,0,255,0.03) 4px
+      ),
+      repeating-linear-gradient(
+        90deg,
+        transparent,
+        transparent 2px,
+        rgba(0,255,255,0.03) 2px,
+        rgba(0,255,255,0.03) 4px
+      ),
+      radial-gradient(ellipse at 20% 50%, #1a0033 0%, transparent 70%),
+      radial-gradient(ellipse at 80% 50%, #000066 0%, transparent 70%);
+    color: #00ffff;
+    font-family: 'Comic Neue', 'Comic Sans MS', cursive;
+    margin: 0;
+    padding: 10px;
+  }
+
+  a { color: #ff00ff; text-decoration: underline; }
+  a:hover { color: #ffff00; text-decoration: none; }
+
+  marquee { font-size: 11px; }
+
+  .container {
+    max-width: 900px;
+    margin: 0 auto;
+  }
+
+  /* NAV BAR */
+  .nav {
+    background: linear-gradient(to right, #003366, #006699);
+    border: 2px solid #0099ff;
+    padding: 6px 12px;
+    font-size: 12px;
+    margin-bottom: 8px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .nav a { color: #ffffff; margin: 0 8px; font-size: 11px; text-decoration: none; }
+  .nav a:hover { text-decoration: underline; }
+
+  /* HEADER */
+  .header {
+    text-align: center;
+    padding: 10px;
+    border: 3px ridge #ff00ff;
+    background: linear-gradient(180deg, #1a0033, #000066);
+    margin-bottom: 10px;
+  }
+  .header h1 {
+    font-size: 28px;
+    color: #ff00ff;
+    text-shadow: 2px 2px #000, 0 0 10px #ff00ff, 0 0 20px #ff00ff;
+    margin: 5px 0;
+    letter-spacing: 3px;
+  }
+  .header .subtitle {
+    color: #ffff00;
+    font-size: 14px;
+    text-shadow: 1px 1px #000;
+  }
+
+  /* PROFILE LAYOUT */
+  .profile {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 10px;
+  }
+
+  .left-col {
+    width: 300px;
+    flex-shrink: 0;
+  }
+
+  .right-col {
+    flex: 1;
+    min-width: 0;
+  }
+
+  /* BOXES */
+  .box {
+    border: 2px ridge #9933ff;
+    background: rgba(0, 0, 51, 0.8);
+    margin-bottom: 10px;
+    overflow: hidden;
+  }
+  .box-header {
+    background: linear-gradient(to right, #660099, #330066);
+    color: #fff;
+    font-size: 12px;
+    font-weight: bold;
+    padding: 4px 8px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    border-bottom: 1px solid #9933ff;
+  }
+  .box-body {
+    padding: 10px;
+    font-size: 13px;
+    line-height: 1.5;
+  }
+
+  /* PROFILE PIC */
+  .profile-pic-container {
+    text-align: center;
+    padding: 10px;
+  }
+  .profile-pic {
+    width: 200px;
+    height: 200px;
+    border: 3px ridge #ff00ff;
+    background: linear-gradient(135deg, #330066, #003366);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 8px;
+    font-size: 80px;
+  }
+  .mood {
+    font-size: 12px;
+    color: #ffff00;
+  }
+  .online-now {
+    display: inline-block;
+    background: #00ff00;
+    color: #000;
+    font-size: 10px;
+    font-weight: bold;
+    padding: 2px 6px;
+    border-radius: 3px;
+    animation: blink 1s infinite;
+    margin-top: 5px;
+  }
+
+  /* DETAILS TABLE */
+  .details-table {
+    width: 100%;
+    font-size: 12px;
+    border-collapse: collapse;
+  }
+  .details-table td {
+    padding: 3px 6px;
+    border-bottom: 1px solid #330066;
+  }
+  .details-table td:first-child {
+    color: #ff99ff;
+    font-weight: bold;
+    width: 40%;
+  }
+
+  /* ABOUT ME */
+  .about-text {
+    color: #ccccff;
+    font-size: 13px;
+  }
+  .about-text b { color: #ff00ff; }
+
+  /* MUSIC PLAYER */
+  .music-player {
+    border: 2px inset #333;
+    background: #1a1a2e;
+    padding: 8px;
+    text-align: center;
+  }
+  .music-player .title {
+    color: #00ff00;
+    font-size: 11px;
+    margin-bottom: 6px;
+  }
+  .music-player .now-playing {
+    color: #ffff00;
+    font-size: 10px;
+    margin-top: 4px;
+    animation: blink 2s infinite;
+  }
+  .music-controls {
+    display: flex;
+    justify-content: center;
+    gap: 8px;
+    margin-top: 6px;
+  }
+  .music-controls button {
+    background: #333;
+    color: #00ff00;
+    border: 1px outset #666;
+    padding: 3px 10px;
+    font-family: 'Comic Neue', 'Comic Sans MS', cursive;
+    font-size: 11px;
+    cursor: pointer;
+  }
+  .music-controls button:hover {
+    background: #555;
+  }
+
+  /* TOP 8 */
+  .top8-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 8px;
+  }
+  .friend {
+    text-align: center;
+    font-size: 10px;
+  }
+  .friend-pic {
+    width: 80px;
+    height: 80px;
+    border: 2px ridge #9933ff;
+    background: linear-gradient(135deg, #1a0033, #003);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 4px;
+    font-size: 36px;
+  }
+  .friend a {
+    color: #00ffff;
+    font-size: 11px;
+  }
+
+  /* COMMENTS */
+  .comment {
+    border-bottom: 1px dashed #660099;
+    padding: 8px 0;
+    font-size: 12px;
+  }
+  .comment:last-child { border-bottom: none; }
+  .comment-author {
+    color: #ff00ff;
+    font-weight: bold;
+  }
+  .comment-date {
+    color: #666699;
+    font-size: 10px;
+  }
+  .comment-text {
+    color: #ccccff;
+    margin-top: 3px;
+  }
+
+  /* BLINKIES BAR */
+  .blinkies {
+    text-align: center;
+    padding: 8px;
+    font-size: 11px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 6px;
+  }
+  .blinkie {
+    display: inline-block;
+    padding: 3px 8px;
+    border: 1px solid;
+    font-size: 9px;
+    font-weight: bold;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    animation: blink 1.5s infinite;
+  }
+  .blinkie:nth-child(1) { color: #ff00ff; border-color: #ff00ff; animation-delay: 0s; }
+  .blinkie:nth-child(2) { color: #00ffff; border-color: #00ffff; animation-delay: 0.3s; }
+  .blinkie:nth-child(3) { color: #ffff00; border-color: #ffff00; animation-delay: 0.6s; }
+  .blinkie:nth-child(4) { color: #ff6600; border-color: #ff6600; animation-delay: 0.9s; }
+  .blinkie:nth-child(5) { color: #00ff00; border-color: #00ff00; animation-delay: 1.2s; }
+
+  /* HIT COUNTER */
+  .hit-counter {
+    text-align: center;
+    padding: 10px;
+    font-size: 11px;
+    color: #666699;
+  }
+  .counter-num {
+    font-family: 'Courier New', monospace;
+    background: #000;
+    color: #00ff00;
+    border: 2px inset #333;
+    padding: 3px 8px;
+    font-size: 14px;
+    letter-spacing: 2px;
+  }
+
+  /* ANIMATIONS */
+  @keyframes blink {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0.3; }
+  }
+
+  @keyframes rainbow {
+    0% { color: #ff0000; }
+    16% { color: #ff8800; }
+    33% { color: #ffff00; }
+    50% { color: #00ff00; }
+    66% { color: #0088ff; }
+    83% { color: #8800ff; }
+    100% { color: #ff0000; }
+  }
+
+  .rainbow {
+    animation: rainbow 3s linear infinite;
+  }
+
+  /* SCROLLBAR */
+  ::-webkit-scrollbar { width: 12px; }
+  ::-webkit-scrollbar-track { background: #0a0a2e; }
+  ::-webkit-scrollbar-thumb { background: #660099; border: 1px solid #9933ff; }
+
+  /* MOBILE */
+  @media (max-width: 650px) {
+    .profile { flex-direction: column; }
+    .left-col { width: 100%; }
+    .top8-grid { grid-template-columns: repeat(2, 1fr); }
+  }
+</style>
+</head>
+<body>
+
+<div class="container">
+
+  <!-- NAV -->
+  <div class="nav">
+    <span style="color:#fff; font-weight:bold;">MySpace</span>
+    <div>
+      <a href="/">Home</a>
+      <a href="#">Mail</a>
+      <a href="#">Blog</a>
+      <a href="#">Forum</a>
+      <a href="#">Groups</a>
+      <a href="#">Music</a>
+    </div>
+  </div>
+
+  <!-- HEADER -->
+  <div class="header">
+    <marquee behavior="alternate" scrollamount="2">
+      <span class="rainbow">★·.·´¯`·.·★ wElCoMe To My PaGe ★·.·´¯`·.·★</span>
+    </marquee>
+    <h1>~*~ LuKe ~*~</h1>
+    <div class="subtitle">「 ᴍᴀᴅᴇ ɪɴ ɴᴇᴡ ʏᴏʀᴋ 」</div>
+    <marquee behavior="alternate" scrollamount="3" direction="right">
+      <span style="font-size:11px; color:#ff99ff;">♫ ♪ cOdInG iS mY pAsSiOn ♪ ♫</span>
+    </marquee>
+  </div>
+
+  <!-- BLINKIES -->
+  <div class="blinkies">
+    <span class="blinkie">♥ I Love Coding ♥</span>
+    <span class="blinkie">★ Swift 4 Life ★</span>
+    <span class="blinkie">♦ MTG Player ♦</span>
+    <span class="blinkie">✦ NYC ✦</span>
+    <span class="blinkie">♠ Godot Gamer ♠</span>
+  </div>
+
+  <!-- PROFILE -->
+  <div class="profile">
+
+    <!-- LEFT COL -->
+    <div class="left-col">
+
+      <!-- PIC -->
+      <div class="box">
+        <div class="box-header">Luke's Pic</div>
+        <div class="box-body profile-pic-container">
+          <div class="profile-pic">🧑‍💻</div>
+          <div class="mood">Mood: <b style="color:#00ff00;">productive af</b></div>
+          <div class="online-now">● ONLINE NOW!</div>
+        </div>
+      </div>
+
+      <!-- DETAILS -->
+      <div class="box">
+        <div class="box-header">Details</div>
+        <div class="box-body">
+          <table class="details-table">
+            <tr><td>Status:</td><td>Swipe Right 😏</td></tr>
+            <tr><td>Here for:</td><td>Networking, Building Cool Stuff</td></tr>
+            <tr><td>Hometown:</td><td>New York, NY</td></tr>
+            <tr><td>Sign:</td><td>¯\_(ツ)_/¯</td></tr>
+            <tr><td>Occupation:</td><td>Software Engineer</td></tr>
+            <tr><td>Languages:</td><td>Swift, TypeScript, Python, GDScript, Obj-C</td></tr>
+          </table>
+        </div>
+      </div>
+
+      <!-- MUSIC PLAYER -->
+      <div class="box">
+        <div class="box-header">♫ Luke's Music ♫</div>
+        <div class="box-body music-player">
+          <div class="title">▶ NOW PLAYING ▶</div>
+          <audio id="myAudio" loop>
+            <source src="data:audio/wav;base64,UklGRiQAAABXQVZFZm10IBAAAAABAAEARKwAAIhYAQACABAAZGF0YQAAAAA=" type="audio/wav">
+          </audio>
+          <div class="now-playing">♫ Darude - Sandstorm ♫</div>
+          <div class="music-controls">
+            <button onclick="document.getElementById('myAudio').play()">▶ Play</button>
+            <button onclick="document.getElementById('myAudio').pause()">⏸ Pause</button>
+          </div>
+          <div style="color:#666; font-size:9px; margin-top:6px;">(imagine it's playing rn)</div>
+        </div>
+      </div>
+
+      <!-- CONTACT -->
+      <div class="box">
+        <div class="box-header">Contact Luke</div>
+        <div class="box-body" style="text-align:center; font-size:12px;">
+          <a href="mailto:solomora@gmail.com">✉ Send Message</a><br>
+          <a href="https://github.com/nsluke">⚡ Add to Friends</a><br>
+          <a href="https://twitter.com/_luke_warm">💬 Instant Message</a><br>
+          <a href="/">🏠 Back to Real Site</a>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- RIGHT COL -->
+    <div class="right-col">
+
+      <!-- ABOUT ME -->
+      <div class="box">
+        <div class="box-header">About Me</div>
+        <div class="box-body about-text">
+          <p>
+            <b>hEy ThErE!</b> 👋 my name is <b>Luke</b> and i'm a software engineer from <b>NYC</b>!! 🗽
+          </p>
+          <br>
+          <p>
+            i basically live in <b>Xcode</b> lol 😂 been building iOS apps since before it was cool.
+            also into <b>web dev</b>, <b>game dev</b> (godot ftw!!), and <b>Magic: The Gathering</b> 🃏
+          </p>
+          <br>
+          <p>
+            when im not coding im probably at a card shop or trying to convince ppl
+            that <b>Planechase</b> is the best MTG format. (it is. fight me.)
+          </p>
+          <br>
+          <p style="color:#ffff00;">
+            ★ currently building: too many things at once lmao ★
+          </p>
+        </div>
+      </div>
+
+      <!-- WHO I'D LIKE TO MEET -->
+      <div class="box">
+        <div class="box-header">Who I'd Like To Meet</div>
+        <div class="box-body about-text">
+          <p>anyone who thinks <b>Objective-C</b> was actually good. also <b>chris lattner</b> hmu 📞</p>
+        </div>
+      </div>
+
+      <!-- TOP 8 -->
+      <div class="box">
+        <div class="box-header">Luke's Top 8 ☆</div>
+        <div class="box-body">
+          <div class="top8-grid">
+            <div class="friend">
+              <div class="friend-pic">🐉</div>
+              <a href="https://github.com/nsluke/Lazer-Dragon-Workout-Experience">Lazer Dragon</a>
+            </div>
+            <div class="friend">
+              <div class="friend-pic">🗡️</div>
+              <a href="https://github.com/paintedlabs/Treachery-FrontEnd">Treachery</a>
+            </div>
+            <div class="friend">
+              <div class="friend-pic">🤖</div>
+              <a href="https://github.com/nsluke/Claudius">Claudius</a>
+            </div>
+            <div class="friend">
+              <div class="friend-pic">🧙</div>
+              <a href="https://github.com/nsluke/manadrain">Manadrain</a>
+            </div>
+            <div class="friend">
+              <div class="friend-pic">✈️</div>
+              <a href="https://github.com/nsluke/Planechase-Bot">Planechase Bot</a>
+            </div>
+            <div class="friend">
+              <div class="friend-pic">👾</div>
+              <a href="https://github.com/nsluke/PushPush">PushPush</a>
+            </div>
+            <div class="friend">
+              <div class="friend-pic">💎</div>
+              <a href="https://github.com/nsluke/blingmydeck">Bling My Deck</a>
+            </div>
+            <div class="friend">
+              <div class="friend-pic">🍎</div>
+              <a href="https://developer.apple.com/swift/">Swift</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- COMMENTS -->
+      <div class="box">
+        <div class="box-header">Luke's Comments (4)</div>
+        <div class="box-body">
+          <div class="comment">
+            <span class="comment-author">xX_DarkCoder_Xx</span>
+            <span class="comment-date"> - 3/15/2006 2:34 AM</span>
+            <div class="comment-text">yooo ur page is so sick!! how did u get the background like that?? teach me!! 🔥🔥</div>
+          </div>
+          <div class="comment">
+            <span class="comment-author">~*SwiftQueen*~</span>
+            <span class="comment-date"> - 3/12/2006 7:21 PM</span>
+            <div class="comment-text">omg ur apps r amazing!! treachery is sooo fun at game night lol. add me back!! &lt;3 &lt;3</div>
+          </div>
+          <div class="comment">
+            <span class="comment-author">MTG_4_LYF3</span>
+            <span class="comment-date"> - 3/10/2006 11:45 AM</span>
+            <div class="comment-text">planechase IS the best format ur so right. also bling my deck saved me like $200 finding the right printings lmaooo</div>
+          </div>
+          <div class="comment">
+            <span class="comment-author">Tom</span>
+            <span class="comment-date"> - 2/28/2006 9:00 AM</span>
+            <div class="comment-text">Thanks for the add! 😎</div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- HIT COUNTER -->
+  <div class="hit-counter">
+    <marquee behavior="alternate" scrollamount="1" style="color:#9933ff; font-size:10px;">
+      ★ ★ ★ tHaNkS fOr ViSiTiNg ★ ★ ★
+    </marquee>
+    <br>
+    You are visitor #<span class="counter-num" id="hitCount">048,291</span>
+    <br><br>
+    <span style="font-size:10px;">
+      © 2006 Luke's MySpace |
+      <a href="/" style="color:#666699;">view my REAL website →</a>
+    </span>
+  </div>
+
+</div>
+
+<script>
+  // Slowly increment the hit counter for fun
+  const counter = document.getElementById('hitCount');
+  let count = 48291;
+  setInterval(() => {
+    count++;
+    counter.textContent = String(count).padStart(6, '0').replace(/(\d)(?=(\d{3})+$)/g, '$1,');
+  }, 30000);
+</script>
+
+</body>
+</html>
