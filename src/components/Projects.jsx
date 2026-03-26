@@ -16,7 +16,7 @@ const projects = [
   },
   {
     name: 'Claudius',
-    description: 'Track Your Claude usage, right on your menu bar. ',
+    description: 'Track your claude usage right in your menu bar',
     tech: 'Swift',
     url: 'https://github.com/nsluke/Claudius',
   },
