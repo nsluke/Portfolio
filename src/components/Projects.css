@@ -27,7 +27,7 @@
 
 .project-row {
   display: grid;
-  grid-template-columns: 4rem 1fr auto auto;
+  grid-template-columns: 4rem 1fr auto;
   align-items: center;
   gap: 2vw;
   padding: 2.5vw 0;
@@ -78,6 +78,9 @@
   font-size: clamp(0.6rem, 0.9vw, 0.75rem);
   padding: 0.3em 0.8em;
   border: 1px solid var(--border);
+  align-self: flex-start;
+  width: fit-content;
+  margin-top: 0.3em;
 }
 
 .project-links {
@@ -124,10 +127,6 @@
     grid-template-columns: 2.5rem 1fr;
     gap: 3vw;
     padding: 5vw 0;
-  }
-
-  .project-tech {
-    display: none;
   }
 
   .project-links {

@@ -43,6 +43,12 @@ const projects = [
     github: 'https://github.com/nsluke/PushPush',
   },
   {
+    name: 'Mock Starket',
+    description: 'Buy REAL fake stocks and lose real fake money',
+    tech: 'Swift',
+    github: 'https://github.com/nsluke/Mock-Starket-iOS',
+  },
+  {
     name: 'Bling My Deck',
     description: 'Find the most expensive printing of every card in your MTG deck',
     tech: 'TypeScript',
@@ -75,8 +81,8 @@ function Projects() {
             <div className="project-info">
               <h3 className="project-name">{project.name}</h3>
               <p className="project-desc">{project.description}</p>
+              <span className="project-tech">{project.tech}</span>
             </div>
-            <div className="project-tech">{project.tech}</div>
             <div className="project-links">
               <a
                 href={project.github}
