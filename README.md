@@ -1,16 +1,39 @@
-# React + Vite
+# nsluke.org
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Personal portfolio site for Luke Solomon — developer based in New York, working across iOS, web, and game dev.
 
-Currently, two official plugins are available:
+## Tech Stack
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+- React 19 + Vite
+- Deployed to GitHub Pages via GitHub Actions
+- Custom domain: [nsluke.org](https://nsluke.org)
 
-## React Compiler
+## Pages
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+- **`/`** — Main portfolio with featured projects, skills marquee, and social links
+- **`/myspace/`** — Retro MySpace-themed page with sparkle cursors, blinkies, a hit counter, and embedded music
 
-## Expanding the ESLint configuration
+## Projects Featured
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+- Treachery (MTG app)
+- Lazer Dragon Workout
+- Claudius (Claude API monitor)
+- Manadrain
+- Planechase Bot
+- PushPush
+- Bling My Deck
+
+## Development
+
+```bash
+npm install
+npm run dev
+```
+
+## Build & Deploy
+
+Pushes to `main` automatically deploy via GitHub Actions. To build locally:
+
+```bash
+npm run build
+```

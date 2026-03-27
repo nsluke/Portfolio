@@ -7,6 +7,7 @@ const links = [
   { name: 'X / Twitter', url: 'https://twitter.com/_luke_warm' },
   { name: 'LinkedIn', url: 'https://www.linkedin.com/in/luke-solomon-7b846375/' },
   { name: 'Email', url: 'mailto:solomora@gmail.com+portfolio' },
+  { name: 'MySpace', url: '/myspace/' },
 ]
 
 function Socials() {
@@ -20,8 +21,7 @@ function Socials() {
           <a
             key={link.name}
             href={link.url}
-            target="_blank"
-            rel="noopener noreferrer"
+            {...(link.url.startsWith('/') ? {} : { target: '_blank', rel: 'noopener noreferrer' })}
             className="social-link"
           >
             <span className="social-name">{link.name}</span>

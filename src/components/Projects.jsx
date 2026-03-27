@@ -6,43 +6,49 @@ const projects = [
     name: 'Treachery',
     description: 'Multiplayer MTG Variant for iOS',
     tech: 'Swift',
-    url: 'https://github.com/paintedlabs/Treachery-FrontEnd',
+    github: 'https://github.com/paintedlabs/Treachery-FrontEnd',
+    liveUrl: 'https://treachery.games',
+    liveLabel: 'Play',
   },
-    {
+  {
     name: 'The Lazer Dragon Workout Experience',
     description: 'Think you can take on the Lazer Dragon?',
     tech: 'Swift',
-    url: 'https://github.com/nsluke/Lazer-Dragon-Workout-Experience',
+    github: 'https://github.com/nsluke/Lazer-Dragon-Workout-Experience',
   },
   {
     name: 'Claudius',
     description: 'Track your claude usage right in your menu bar',
     tech: 'Swift',
-    url: 'https://github.com/nsluke/Claudius',
+    github: 'https://github.com/nsluke/Claudius',
+    liveUrl: 'https://github.com/nsluke/Claudius/releases',
+    liveLabel: 'Download',
   },
   {
     name: 'Manadrain',
     description: 'Stash your favorite cards for later.',
     tech: 'TypeScript',
-    url: 'https://github.com/nsluke/manadrain',
+    github: 'https://github.com/nsluke/manadrain',
   },
   {
     name: 'Planechase Bot',
     description: 'Discord bot for playing Planechase',
     tech: 'Python',
-    url: 'https://github.com/nsluke/Planechase-Bot',
+    github: 'https://github.com/nsluke/Planechase-Bot',
   },
   {
     name: 'PushPush',
     description: 'The First game I ever made. Aged like fine wine.',
     tech: 'Objective-C',
-    url: 'https://github.com/nsluke/PushPush',
+    github: 'https://github.com/nsluke/PushPush',
   },
   {
     name: 'Bling My Deck',
     description: 'Find the most expensive printing of every card in your MTG deck',
     tech: 'TypeScript',
-    url: 'https://github.com/nsluke/blingmydeck',
+    github: 'https://github.com/nsluke/blingmydeck',
+    liveUrl: 'https://blingoutmydeck.com',
+    liveLabel: 'Visit',
   },
 ]
 
@@ -57,11 +63,8 @@ function Projects() {
       </div>
       <div className="projects-list">
         {projects.map((project, i) => (
-          <a
+          <div
             key={project.name}
-            href={project.url}
-            target="_blank"
-            rel="noopener noreferrer"
             className={`project-row ${hovered !== null && hovered !== i ? 'dimmed' : ''}`}
             onMouseEnter={() => setHovered(i)}
             onMouseLeave={() => setHovered(null)}
@@ -74,8 +77,29 @@ function Projects() {
               <p className="project-desc">{project.description}</p>
             </div>
             <div className="project-tech">{project.tech}</div>
-            <div className="project-arrow">-&gt;</div>
-          </a>
+            <div className="project-links">
+              <a
+                href={project.github}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="project-link"
+              >
+                GitHub
+              </a>
+              {project.liveUrl ? (
+                <a
+                  href={project.liveUrl}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="project-link project-link-live"
+                >
+                  {project.liveLabel} -&gt;
+                </a>
+              ) : (
+                <span className="project-link project-link-soon">Coming Soon</span>
+              )}
+            </div>
+          </div>
         ))}
       </div>
     </section>
