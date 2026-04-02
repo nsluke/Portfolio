@@ -29,6 +29,8 @@ const projects = [
     description: 'Stash your favorite cards for later.',
     tech: 'TypeScript',
     github: 'https://github.com/nsluke/manadrain',
+    liveUrl: 'https://addons.mozilla.org/en-US/firefox/addon/manadrain-mtg-shopping-list/',
+    liveLabel: 'Firefox Add-on',
   },
   {
     name: 'Planechase Bot',
