@@ -15,6 +15,8 @@ const projects = [
     description: 'Think you can take on the Lazer Dragon?',
     tech: 'Swift',
     github: 'https://github.com/nsluke/Lazer-Dragon-Workout-Experience',
+    liveUrl: 'https://testflight.apple.com/join/Uv2Xufqr',
+    liveLabel: 'TestFlight',
   },
   {
     name: 'Claudius',
@@ -43,6 +45,8 @@ const projects = [
     description: 'The First game I ever made. Aged like fine wine.',
     tech: 'Objective-C',
     github: 'https://github.com/nsluke/PushPush',
+    liveUrl: 'https://testflight.apple.com/join/wRBak44b',
+    liveLabel: 'TestFlight',
   },
   {
     name: 'Mock Starket',
