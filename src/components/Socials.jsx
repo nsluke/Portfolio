@@ -2,7 +2,6 @@ import './Socials.css'
 
 const links = [
   { name: 'GitHub', url: 'https://github.com/nsluke' },
-  { name: 'YouTube', url: 'https://www.youtube.com/@LukeSS' },
   { name: 'Instagram', url: 'https://www.instagram.com/luke_solomon/' },
   { name: 'X / Twitter', url: 'https://twitter.com/_luke_warm' },
   { name: 'LinkedIn', url: 'https://www.linkedin.com/in/luke-solomon-7b846375/' },
