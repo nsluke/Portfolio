@@ -1,6 +1,6 @@
 # nsluke.org
 
-Personal portfolio site for Luke Solomon — developer based in New York, working across iOS, web, and game dev.
+My Personal portfolio website.
 
 **Live at [nsluke.org](https://nsluke.org)**
 
