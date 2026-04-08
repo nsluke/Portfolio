@@ -4,46 +4,51 @@ import './Projects.css'
 const projects = [
   {
     name: 'Treachery',
+    slug: 'treachery',
     description: 'Multiplayer MTG Variant for iOS',
     tech: 'Swift',
     github: 'https://github.com/paintedlabs/Treachery-FrontEnd',
     liveUrl: 'https://treachery.games',
     liveLabel: 'Play',
     longDescription: 'A multiplayer Magic: The Gathering variant app for iOS that brings the Treachery format to your phone. Play with friends in real-time with role-based gameplay.',
-    screenshot: null, // TODO: add screenshot path e.g. '/screenshots/treachery.png'
+    screenshot: '/screenshots/treachery.png', // TODO: add screenshot path e.g. '/screenshots/treachery.png'
   },
   {
     name: 'The Lazer Dragon Workout Experience',
+    slug: 'lazer-dragon',
     description: 'Think you can take on the Lazer Dragon?',
     tech: 'Swift',
     github: 'https://github.com/nsluke/Lazer-Dragon-Workout-Experience',
     liveUrl: 'https://testflight.apple.com/join/Uv2Xufqr',
     liveLabel: 'TestFlight',
     longDescription: 'An iOS workout app disguised as a boss battle. Complete exercises to deal damage to the Lazer Dragon — skip reps and face the consequences.',
-    screenshot: null,
+    screenshot: '/screenshots/lazer-dragon.png',
   },
   {
     name: 'Claudius',
+    slug: 'claudius',
     description: 'Track your claude usage right in your menu bar',
     tech: 'Swift',
     github: 'https://github.com/nsluke/Claudius',
     liveUrl: 'https://github.com/nsluke/Claudius/releases',
     liveLabel: 'Download',
     longDescription: 'A macOS menu bar app that tracks your Claude API usage in real-time. See spend, token counts, and usage trends at a glance without leaving your workflow.',
-    screenshot: null,
+    screenshot: '/screenshots/claudius.png',
   },
   {
     name: 'Manadrain',
+    slug: 'manadrain',
     description: 'Stash your favorite cards for later.',
     tech: 'TypeScript',
     github: 'https://github.com/nsluke/manadrain',
     liveUrl: 'https://addons.mozilla.org/en-US/firefox/addon/manadrain-mtg-shopping-list/',
     liveLabel: 'Firefox Add-on',
     longDescription: 'A Firefox browser extension that lets you save Magic: The Gathering cards to a shopping list while browsing. Quickly stash cards you want to buy later.',
-    screenshot: null,
+    screenshot: '/screenshots/manadrain.png',
   },
   {
     name: 'Planechase Bot',
+    slug: 'planechase-bot',
     description: 'Discord bot for playing Planechase',
     tech: 'Python',
     github: 'https://github.com/nsluke/Planechase-Bot',
@@ -52,31 +57,34 @@ const projects = [
   },
   {
     name: 'PushPush',
+    slug: 'pushpush',
     description: 'The First game I ever made. Aged like fine wine.',
     tech: 'Objective-C',
     github: 'https://github.com/nsluke/PushPush',
     liveUrl: 'https://testflight.apple.com/join/wRBak44b',
     liveLabel: 'TestFlight',
     longDescription: 'The very first iOS game I ever built. A simple but addictive pushing game written in Objective-C. Still holds up after all these years.',
-    screenshot: null,
+    screenshot: '/screenshots/pushpush.png',
   },
   {
     name: 'Mock Starket',
+    slug: 'mock-starket',
     description: 'Buy REAL fake stocks and lose real fake money',
     tech: 'Swift',
     github: 'https://github.com/nsluke/Mock-Starket-iOS',
     longDescription: 'A mock stock trading app for iOS. Practice trading with fake money and real-ish market data. Perfect for learning without the financial consequences.',
-    screenshot: null,
+    screenshot: '/screenshots/mock-starket.png',
   },
   {
     name: 'Bling My Deck',
+    slug: 'bling-my-deck',
     description: 'Find the most expensive printing of every card in your MTG deck',
     tech: 'TypeScript',
     github: 'https://github.com/nsluke/blingmydeck',
     liveUrl: 'https://blingoutmydeck.com',
     liveLabel: 'Visit',
     longDescription: 'A web tool that finds the most expensive printing of every card in your Magic: The Gathering deck. Paste your decklist and see just how much it would cost to fully bling it out.',
-    screenshot: null,
+    screenshot: '/screenshots/bling-my-deck.png',
   },
 ]
 
@@ -120,6 +128,13 @@ function Projects() {
                   <span className="project-tech">{project.tech}</span>
                 </div>
                 <div className="project-links">
+                  <a
+                    href={`/${project.slug}/`}
+                    className="project-link project-link-details"
+                    onClick={(e) => e.stopPropagation()}
+                  >
+                    Details
+                  </a>
                   <a
                     href={project.github}
                     target="_blank"
