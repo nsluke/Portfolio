@@ -5,7 +5,7 @@ const links = [
   { name: 'Instagram', url: 'https://www.instagram.com/luke_solomon/' },
   { name: 'X / Twitter', url: 'https://twitter.com/_luke_warm' },
   { name: 'LinkedIn', url: 'https://www.linkedin.com/in/luke-solomon-7b846375/' },
-  { name: 'Email', url: 'mailto:solomora@gmail.com+portfolio' },
+  { name: 'Email', url: 'mailto:solomora+portfolio@gmail.com' },
   { name: 'MySpace', url: '/myspace/' },
 ]
 
