@@ -246,12 +246,13 @@
   </div>
 
   <footer>
-    <div>The Lazer Dragon Workout Experience &copy; 2024.</div>
+    <div>The Lazer Dragon Workout Experience &copy; <span class="copy-year">2024</span>.</div>
     <div class="footer-links">
       <a href="https://github.com/nsluke/Lazer-Dragon-Workout-Experience">GitHub</a>
       <a href="/">Portfolio</a>
     </div>
   </footer>
 
+  <script>document.querySelector(".copy-year").textContent = new Date().getFullYear();</script>
 </body>
 </html>
