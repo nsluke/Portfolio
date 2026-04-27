@@ -82,6 +82,7 @@
   flex-direction: column;
   gap: 2rem;
   padding-top: 0;
+  padding-left: calc(4rem + 2vw + 2rem);
   opacity: 0;
   transition: opacity 0.3s ease, padding-top 0.3s ease;
 }
@@ -153,6 +154,11 @@
 .project-desc {
   font-size: clamp(0.65rem, 1vw, 0.8rem);
   text-transform: uppercase;
+  transition: opacity 0.3s ease;
+}
+
+.project-row.expanded .project-desc {
+  opacity: 0;
 }
 
 .project-tech {
@@ -174,7 +180,7 @@
   font-size: clamp(0.6rem, 0.9vw, 0.75rem);
   padding: 0.4em 0.9em;
   border: 1px solid var(--border);
-  transition: color 0.3s ease, border-color 0.3s ease;
+  transition: color 0.3s ease, border-color 0.3s ease, font-size 0.3s ease, padding 0.3s ease;
   cursor: pointer;
   text-transform: uppercase;
 }
@@ -182,6 +188,12 @@
 .project-link:hover {
   color: var(--accent);
   border-color: var(--accent);
+}
+
+.project-row.expanded .project-link {
+  font-size: clamp(0.8rem, 1.3vw, 1.05rem);
+  padding: 0.65em 1.3em;
+  font-weight: 700;
 }
 
 .project-link-live {
@@ -220,5 +232,9 @@
   .project-links {
     grid-column: 1 / -1;
     justify-content: flex-end;
+  }
+
+  .project-expanded-inner {
+    padding-left: calc(2.5rem + 3vw + 1rem);
   }
 }
