@@ -246,12 +246,13 @@
   </div>
 
   <footer>
-    <div>PushPush &copy; 2024.</div>
+    <div>PushPush &copy; <span class="copy-year">2024</span>.</div>
     <div class="footer-links">
       <a href="https://github.com/nsluke/PushPush">GitHub</a>
       <a href="/">Portfolio</a>
     </div>
   </footer>
 
+  <script>document.querySelector(".copy-year").textContent = new Date().getFullYear();</script>
 </body>
 </html>
