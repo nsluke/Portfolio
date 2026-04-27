@@ -8,8 +8,7 @@ const projects = [
     description: 'Multiplayer MTG Variant for iOS',
     tech: 'Swift',
     github: 'https://github.com/paintedlabs/Treachery-FrontEnd',
-    liveUrl: 'https://treachery.games',
-    liveLabel: 'Play',
+    liveLinks: [{ url: 'https://treachery.games', label: 'Play' }],
     longDescription: 'A multiplayer Magic: The Gathering variant app for iOS that brings the Treachery format to your phone. Play with friends in real-time with role-based gameplay.',
     screenshot: '/screenshots/treachery.png', // TODO: add screenshot path e.g. '/screenshots/treachery.png'
   },
@@ -19,8 +18,7 @@ const projects = [
     description: 'Think you can take on the Lazer Dragon?',
     tech: 'Swift',
     github: 'https://github.com/nsluke/Lazer-Dragon-Workout-Experience',
-    liveUrl: 'https://testflight.apple.com/join/Uv2Xufqr',
-    liveLabel: 'TestFlight',
+    liveLinks: [{ url: 'https://testflight.apple.com/join/Uv2Xufqr', label: 'TestFlight' }],
     longDescription: 'An iOS workout app disguised as a boss battle. Complete exercises to deal damage to the Lazer Dragon — skip reps and face the consequences.',
     screenshot: '/screenshots/lazer-dragon.png',
   },
@@ -30,8 +28,7 @@ const projects = [
     description: 'Track your claude usage right in your menu bar',
     tech: 'Swift',
     github: 'https://github.com/nsluke/Claudius',
-    liveUrl: 'https://github.com/nsluke/Claudius/releases',
-    liveLabel: 'Download',
+    liveLinks: [{ url: 'https://github.com/nsluke/Claudius/releases', label: 'Download' }],
     longDescription: 'A macOS menu bar app that tracks your Claude API usage in real-time. See spend, token counts, and usage trends at a glance without leaving your workflow.',
     screenshot: '/screenshots/claudius.png',
   },
@@ -41,9 +38,11 @@ const projects = [
     description: 'Stash your favorite cards for later.',
     tech: 'TypeScript',
     github: 'https://github.com/nsluke/manadrain',
-    liveUrl: 'https://addons.mozilla.org/en-US/firefox/addon/manadrain-mtg-shopping-list/',
-    liveLabel: 'Firefox Add-on',
-    longDescription: 'A Firefox browser extension that lets you save Magic: The Gathering cards to a shopping list while browsing. Quickly stash cards you want to buy later.',
+    liveLinks: [
+      { url: 'https://chromewebstore.google.com/detail/manadrain-mtg-shopping-li/kiappkeljeebfeaijnooichjpajeocif', label: 'Chrome' },
+      { url: 'https://addons.mozilla.org/en-US/firefox/addon/manadrain-mtg-shopping-list/', label: 'Firefox' },
+    ],
+    longDescription: 'A browser extension for Chrome and Firefox that lets you save Magic: The Gathering cards to a shopping list while browsing. Quickly stash cards you want to buy later.',
     screenshot: '/screenshots/manadrain.png',
   },
   {
@@ -52,8 +51,7 @@ const projects = [
     description: 'The First game I ever made. Aged like fine wine.',
     tech: 'Objective-C',
     github: 'https://github.com/nsluke/PushPush',
-    liveUrl: 'https://testflight.apple.com/join/wRBak44b',
-    liveLabel: 'TestFlight',
+    liveLinks: [{ url: 'https://testflight.apple.com/join/wRBak44b', label: 'TestFlight' }],
     longDescription: 'The very first iOS game I ever built. A simple but addictive pushing game written in Objective-C. Still holds up after all these years.',
     screenshot: '/screenshots/pushpush.png',
   },
@@ -63,8 +61,7 @@ const projects = [
     description: 'Find the most expensive printing of every card in your MTG deck',
     tech: 'TypeScript',
     github: 'https://github.com/nsluke/blingmydeck',
-    liveUrl: 'https://blingoutmydeck.com',
-    liveLabel: 'Visit',
+    liveLinks: [{ url: 'https://blingoutmydeck.com', label: 'Visit' }],
     longDescription: 'A web tool that finds the most expensive printing of every card in your Magic: The Gathering deck. Paste your decklist and see just how much it would cost to fully bling it out.',
     screenshot: '/screenshots/bling-my-deck.png',
   },
@@ -94,6 +91,7 @@ function Projects() {
       <div className="projects-list">
         {projects.map((project, i) => {
           const isOpen = selected === i
+          const liveLinks = project.liveLinks ?? []
 
           return (
             <div
@@ -137,16 +135,19 @@ function Projects() {
                   >
                     GitHub
                   </a>
-                  {project.liveUrl ? (
-                    <a
-                      href={project.liveUrl}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="project-link project-link-live"
-                      onClick={(e) => e.stopPropagation()}
-                    >
-                      {project.liveLabel} -&gt;
-                    </a>
+                  {liveLinks.length > 0 ? (
+                    liveLinks.map((link) => (
+                      <a
+                        key={link.url}
+                        href={link.url}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="project-link project-link-live"
+                        onClick={(e) => e.stopPropagation()}
+                      >
+                        {link.label} -&gt;
+                      </a>
+                    ))
                   ) : (
                     <span className="project-link project-link-soon">Coming Soon</span>
                   )}
