@@ -23,7 +23,6 @@ React 19 + Vite, deployed to GitHub Pages via GitHub Actions.
 | Manadrain | Stash your favorite cards for later | [GitHub](https://github.com/nsluke/manadrain) |
 | Planechase Bot | Discord bot for playing Planechase | [GitHub](https://github.com/nsluke/Planechase-Bot) |
 | PushPush | The first game I ever made. Aged like fine wine. | [GitHub](https://github.com/nsluke/PushPush) |
-| Mock Starket | Buy REAL fake stocks and lose real fake money | [GitHub](https://github.com/nsluke/Mock-Starket-iOS) |
 | Bling My Deck | Find the most expensive printing of every card in your MTG deck | [blingoutmydeck.com](https://blingoutmydeck.com) · [GitHub](https://github.com/nsluke/blingmydeck) |
 
 ## Development
