@@ -246,12 +246,13 @@
   </div>
 
   <footer>
-    <div>Mock Starket &copy; 2024.</div>
+    <div>Mock Starket &copy; <span class="copy-year">2024</span>.</div>
     <div class="footer-links">
       <a href="https://github.com/nsluke/Mock-Starket-iOS">GitHub</a>
       <a href="/">Portfolio</a>
     </div>
   </footer>
 
+  <script>document.querySelector(".copy-year").textContent = new Date().getFullYear();</script>
 </body>
 </html>
