@@ -96,6 +96,13 @@ function Projects() {
     setSelected(selected === i ? null : i)
   }
 
+  const handleKeyDown = (e, i) => {
+    if (e.key === 'Enter' || e.key === ' ') {
+      e.preventDefault()
+      toggleProject(i)
+    }
+  }
+
   return (
     <section className="projects" id="projects">
       <div className="projects-header">
@@ -114,9 +121,13 @@ function Projects() {
                 hovered !== null && hovered !== i && selected === null ? 'dimmed' : '',
                 isOpen ? 'expanded' : '',
               ].filter(Boolean).join(' ')}
+              role="button"
+              tabIndex={0}
+              aria-expanded={isOpen}
               onMouseEnter={() => selected === null && setHovered(i)}
               onMouseLeave={() => setHovered(null)}
               onClick={() => toggleProject(i)}
+              onKeyDown={(e) => handleKeyDown(e, i)}
             >
               <div className="project-row-header">
                 <div className="project-index">
