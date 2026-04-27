@@ -47,15 +47,6 @@ const projects = [
     screenshot: '/screenshots/manadrain.png',
   },
   {
-    name: 'Planechase Bot',
-    slug: 'planechase-bot',
-    description: 'Discord bot for playing Planechase',
-    tech: 'Python',
-    github: 'https://github.com/nsluke/Planechase-Bot',
-    longDescription: 'A Discord bot that manages Planechase games for Magic: The Gathering. Handles plane cards, dice rolls, and game state so your group can play Planechase remotely.',
-    screenshot: null,
-  },
-  {
     name: 'PushPush',
     slug: 'pushpush',
     description: 'The First game I ever made. Aged like fine wine.',
