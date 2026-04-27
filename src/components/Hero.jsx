@@ -7,8 +7,6 @@ function Hero() {
         <h1 className="hero-name">Luke Solomon</h1>
         <p className="hero-tagline">Made In New York.</p>
         <div className="hero-meta">
-          <span></span>
-          <span className="hero-sep">/</span>
           <span>iOS, Web, Godot.</span>
         </div>
       </div>
