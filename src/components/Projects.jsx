@@ -120,13 +120,6 @@ function Projects() {
                 </div>
                 <div className="project-links">
                   <a
-                    href={`/${project.slug}/`}
-                    className="project-link project-link-details"
-                    onClick={(e) => e.stopPropagation()}
-                  >
-                    Details
-                  </a>
-                  <a
                     href={project.github}
                     target="_blank"
                     rel="noopener noreferrer"
@@ -159,15 +152,6 @@ function Projects() {
                   <p className="project-expanded-desc">
                     {project.longDescription || project.description}
                   </p>
-                  <div className="project-expanded-screenshot">
-                    {project.screenshot ? (
-                      <img src={project.screenshot} alt={`${project.name} screenshot`} />
-                    ) : (
-                      <div className="project-screenshot-placeholder">
-                        <span>Screenshot Coming Soon</span>
-                      </div>
-                    )}
-                  </div>
                 </div>
               </div>
             </div>
