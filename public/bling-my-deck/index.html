@@ -177,11 +177,16 @@
 
     .window-content {
       flex: 1;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      color: var(--text-dim);
-      font-size: 14px;
+      overflow: hidden;
+      border-bottom-left-radius: 12px;
+      border-bottom-right-radius: 12px;
+    }
+
+    .window-content img {
+      display: block;
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
     }
 
     footer {
@@ -240,7 +245,7 @@
         <div class="dot green"></div>
       </div>
       <div class="window-content">
-        Screenshot / Demo Content
+        <img src="/screenshots/bling-my-deck.png" alt="Bling My Deck screenshot">
       </div>
     </div>
   </div>
