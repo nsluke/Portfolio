@@ -67,15 +67,6 @@ const projects = [
     screenshot: '/screenshots/pushpush.png',
   },
   {
-    name: 'Mock Starket',
-    slug: 'mock-starket',
-    description: 'Buy REAL fake stocks and lose real fake money',
-    tech: 'Swift',
-    github: 'https://github.com/nsluke/Mock-Starket-iOS',
-    longDescription: 'A mock stock trading app for iOS. Practice trading with fake money and real-ish market data. Perfect for learning without the financial consequences.',
-    screenshot: '/screenshots/mock-starket.png',
-  },
-  {
     name: 'Bling My Deck',
     slug: 'bling-my-deck',
     description: 'Find the most expensive printing of every card in your MTG deck',
