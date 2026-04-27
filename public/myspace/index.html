@@ -137,6 +137,14 @@
     justify-content: center;
     margin: 0 auto 8px;
     font-size: 80px;
+    overflow: hidden;
+  }
+  .profile-pic img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: 70% center;
+    display: block;
   }
   .mood {
     font-size: 12px;
@@ -384,7 +392,7 @@
       <div class="box">
         <div class="box-header">Luke's Pic</div>
         <div class="box-body profile-pic-container">
-          <div class="profile-pic">🧑‍💻</div>
+          <div class="profile-pic"><img src="/myspace/profile.png" alt="Luke"></div>
           <div class="mood">Mood: <b style="color:#00ff00;">productive af</b></div>
           <div class="online-now">● ONLINE NOW!</div>
         </div>
