@@ -1,6 +1,7 @@
 import './Socials.css'
 
 const links = [
+  { name: 'Resume', url: '/resume' },
   { name: 'GitHub', url: 'https://github.com/nsluke' },
   { name: 'Instagram', url: 'https://www.instagram.com/luke_solomon/' },
   { name: 'X / Twitter', url: 'https://twitter.com/_luke_warm' },

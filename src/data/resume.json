@@ -1,0 +1,260 @@
+{
+  "$schema": "https://raw.githubusercontent.com/jsonresume/resume-schema/v1.0.0/schema.json",
+  "basics": {
+    "name": "Luke Solomon",
+    "label": "Senior Software Engineer · iOS & Full-Stack",
+    "email": "solomora@gmail.com",
+    "phone": "",
+    "url": "https://nsluke.org",
+    "summary": "Senior software engineer with 10+ years shipping production iOS applications at Apple, Turo, Yelp, and Epic!, paired with recent full-stack work in TypeScript, Next.js, and React. Track record of A/B tested features that drive measurable boosts to engagement and retention. Currently building independent web tools, developer tooling, and several iOS applications.",
+    "location": {
+      "city": "New York",
+      "region": "NY",
+      "countryCode": "US"
+    },
+    "profiles": [
+      {
+        "network": "GitHub",
+        "username": "nsluke",
+        "url": "https://github.com/nsluke"
+      },
+      {
+        "network": "LinkedIn",
+        "username": "luke-solomon",
+        "url": "https://linkedin.com/in/luke-solomon-7b846375"
+      },
+      {
+        "network": "X",
+        "username": "_luke_warm",
+        "url": "https://x.com/_luke_warm"
+      }
+    ]
+  },
+  "work": [
+    {
+      "name": "Self-directed",
+      "position": "Independent Software Engineer & Founder",
+      "startDate": "2023-09-01",
+      "highlights": [
+        "Co-founded meetmimir.com with a partner; led product and engineering across full-stack web work before winding down operations.",
+        "Maintain side projects used by hundreds across 3 websites, a Chrome Extension, and two iOS applications.",
+        "Built a Swift Compiler Explorer (SwiftSyntax, Vapor, D3.js) that visualizes Swift's compilation pipeline through AST, SIL, LLVM IR, and assembly stages.",
+        "Designed and built ManaDrain, a Chrome and Firefox extension that allows users to store trading cards across disparate websites into a unified cart.",
+        "Shipped Bling Out My Deck (blingoutmydeck.com), a Next.js/TypeScript web app that allows players to see what the most expensive version of their trading card deck would look like.",
+        "Published and maintain treachery.games, a fully featured companion iOS app and website for playing a popular variant of Magic: the Gathering, used by hundreds every week.",
+        "Launched Claudius, an OSX application that allows a user to easily track their Claude Code usage in their menu bar. Also allows users to display this information on their Tidbyt, a popular LED display.",
+        "Built The Lazer Dragon Workout Experience, a fun workout tracking application with an 80s, disco/retro styling."
+      ]
+    },
+    {
+      "name": "Turo",
+      "position": "Senior iOS Engineer",
+      "startDate": "2022-06-01",
+      "endDate": "2023-01-31",
+      "highlights": [
+        "Overhauled the host-to-guest handoff flow, streamlining a critical multi-step user experience and improving reliability through targeted photo caching.",
+        "Redesigned the camera and photo upload flow used for filing insurance claims, lifting the rate of successful claim submissions and directly protecting host revenue."
+      ]
+    },
+    {
+      "name": "Apple",
+      "position": "iOS Developer, Health Strategic Initiatives",
+      "startDate": "2020-11-01",
+      "endDate": "2022-05-31",
+      "highlights": [
+        "Owned the creation and integration of an internal iOS framework built on HealthKit and CoreData, used as foundational infrastructure across multiple unreleased health applications.",
+        "Built unreleased applications using SwiftUI, Swift Concurrency, Combine, CoreData, HealthKit, and CloudKit, working under tight design and privacy constraints typical of Apple's health products."
+      ]
+    },
+    {
+      "name": "Yelp",
+      "position": "iOS Developer",
+      "startDate": "2019-11-01",
+      "endDate": "2020-03-31",
+      "highlights": [
+        "Re-architected carousel views across the Yelp app to elegantly handle single-item states, improving the experience on lower-density content surfaces and reducing visual clutter.",
+        "Redesigned and shipped Business Stories; A/B tests confirmed sustained increases in user engagement."
+      ]
+    },
+    {
+      "name": "Epic! Digital Creations",
+      "position": "iOS Developer",
+      "startDate": "2018-03-01",
+      "endDate": "2019-07-31",
+      "highlights": [
+        "Drove user growth and engagement on a native iOS app serving millions of young readers through a series of A/B-tested features.",
+        "Improved subscription conversion and customer LTV by redesigning the subscription onboarding flow.",
+        "Lifted reading and viewing engagement time by overhauling the book reader and video player experiences.",
+        "Led major content-browsing redesigns, testing multiple layouts and producing sustained engagement gains across cohorts.",
+        "Migrated and refactored substantial portions of the codebase from Objective-C to Swift while extending full iPad support, partnering closely with Design, QA, and PM to hit sprint commitments."
+      ]
+    },
+    {
+      "name": "Make School",
+      "position": "Curriculum Engineer & Lead iOS Instructor",
+      "startDate": "2017-03-01",
+      "endDate": "2018-02-28",
+      "highlights": [
+        "Led a 2-month intermediate iOS course in Oakland for 10 students — every student shipped an app to the App Store.",
+        "Taught three beginner iOS courses in Tokyo and Osaka over a month abroad; managed instructor team, daily operations, and curriculum authorship."
+      ]
+    },
+    {
+      "name": "Yidio",
+      "position": "iOS Developer",
+      "startDate": "2015-12-01",
+      "endDate": "2017-03-31",
+      "highlights": [
+        "Built and maintained a cross-platform iPhone and iPad app in Objective-C and Swift.",
+        "Implemented Yidio's first in-app purchase (Yidio Premium), opening a new recurring revenue stream.",
+        "Shipped the “Watch Next Episode” feature, increasing user retention and re-engagement by drawing users back into the app after sessions ended.",
+        "Redesigned movie and show detail pages, lifting ad click-through rates."
+      ]
+    },
+    {
+      "name": "Make School",
+      "position": "iOS Games Instructor",
+      "startDate": "2015-06-01",
+      "endDate": "2015-08-31",
+      "highlights": [
+        "Taught iOS game development to 16 students aged 13–24; every student published a game to the App Store.",
+        "Authored curriculum covering GameCenter, Analytics, iAd, and the full App Store submission process."
+      ]
+    }
+  ],
+  "education": [
+    {
+      "institution": "Rochester Institute of Technology",
+      "area": "Management Information Systems",
+      "studyType": "Bachelor of Science",
+      "startDate": "2009-09-01",
+      "endDate": "2014-05-31"
+    },
+    {
+      "institution": "Make School",
+      "area": "iOS Development",
+      "studyType": "Program",
+      "startDate": "2014-09-01",
+      "endDate": "2015-05-31"
+    }
+  ],
+  "skills": [
+    {
+      "name": "Languages",
+      "keywords": [
+        "Swift",
+        "TypeScript",
+        "JavaScript",
+        "Objective-C",
+        "HTML",
+        "CSS"
+      ]
+    },
+    {
+      "name": "iOS",
+      "keywords": [
+        "SwiftUI",
+        "UIKit",
+        "Swift Concurrency",
+        "Combine",
+        "CoreData",
+        "HealthKit",
+        "CloudKit",
+        "SwiftSyntax"
+      ]
+    },
+    {
+      "name": "Web",
+      "keywords": ["Next.js", "React", "Node.js", "Chrome Extensions (MV3)"]
+    },
+    {
+      "name": "Data & Infra",
+      "keywords": ["Supabase", "Firebase", "Git"]
+    }
+  ],
+  "projects": [
+    {
+      "name": "Treachery",
+      "description": "A companion app for the multiplayer Magic: The Gathering variant that brings the Treachery format to your phone.",
+      "keywords": ["Swift", "iOS", "Firebase", "React"],
+      "url": "https://treachery.games",
+      "roles": ["Creator"],
+      "type": "iOS app"
+    },
+    {
+      "name": "The Lazer Dragon Workout Experience",
+      "description": "An iOS workout app with a fun 80s retro theme.",
+      "keywords": ["Swift", "iOS"],
+      "url": "https://github.com/nsluke/Lazer-Dragon-Workout-Experience",
+      "roles": ["Creator"],
+      "type": "iOS app"
+    },
+    {
+      "name": "Claudius",
+      "description": "A macOS menu bar app that tracks your Claude API usage in real-time. See spend, token counts, and usage trends at a glance without leaving your workflow.",
+      "keywords": ["Swift", "macOS", "Menu Bar"],
+      "url": "https://github.com/nsluke/Claudius",
+      "roles": ["Creator"],
+      "type": "macOS app"
+    },
+    {
+      "name": "ManaDrain",
+      "description": "A browser extension for Chrome and Firefox that lets you save Magic: The Gathering cards to a shopping list while browsing. Quickly stash cards you want to buy later.",
+      "keywords": [
+        "TypeScript",
+        "Chrome Extension",
+        "Firefox Extension",
+        "Manifest V3"
+      ],
+      "url": "https://chromewebstore.google.com/detail/manadrain-mtg-shopping-li/kiappkeljeebfeaijnooichjpajeocif",
+      "roles": ["Creator"],
+      "type": "Browser extension"
+    },
+    {
+      "name": "Bling out my deck",
+      "description": "Find the most expensive printing of every card in your MTG deck. Integrates the Scryfall API to surface alternate art printings.",
+      "keywords": ["TypeScript", "Next.js", "Scryfall API"],
+      "url": "https://blingoutmydeck.com",
+      "roles": ["Creator"],
+      "type": "Web app"
+    },
+    {
+      "name": "PushPush",
+      "description": "The very first iOS game I ever built. A simple but addictive pushing game written in Objective-C. Still holds up after all these years.",
+      "keywords": ["Objective-C", "iOS"],
+      "url": "https://github.com/nsluke/PushPush",
+      "roles": ["Creator"],
+      "type": "iOS game"
+    },
+    {
+      "name": "Swift Compiler Explorer",
+      "description": "Visualizes Swift's compilation pipeline through AST, SIL, LLVM IR, and assembly stages.",
+      "keywords": ["SwiftSyntax", "Vapor", "D3.js"],
+      "type": "Developer tool"
+    }
+  ],
+  "interests": [
+    {
+      "name": "Cycling",
+      "keywords": ["Bikepacking", "Racing"]
+    },
+    {
+      "name": "Game development",
+      "keywords": ["Godot 4", "Roguelikes", "Deckbuilders"]
+    },
+    {
+      "name": "Weighlifting",
+      "keywords": ["HIIT"]
+    },
+    {
+      "name": "Languages",
+      "keywords": ["French", "German", "Japanese"]
+    }
+  ],
+  "meta": {
+    "theme": "macchiato",
+    "canonical": "https://registry.jsonresume.org/nsluke",
+    "version": "1.0.0",
+    "lastModified": "2026-05-11"
+  }
+}
