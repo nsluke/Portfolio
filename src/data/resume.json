@@ -32,6 +32,7 @@
   "work": [
     {
       "name": "Self-directed",
+      "company": "Self-directed",
       "position": "Independent Software Engineer & Founder",
       "startDate": "2023-09-01",
       "highlights": [
@@ -47,6 +48,7 @@
     },
     {
       "name": "Turo",
+      "company": "Turo",
       "position": "Senior iOS Engineer",
       "startDate": "2022-06-01",
       "endDate": "2023-01-31",
@@ -57,6 +59,7 @@
     },
     {
       "name": "Apple",
+      "company": "Apple",
       "position": "iOS Developer, Health Strategic Initiatives",
       "startDate": "2020-11-01",
       "endDate": "2022-05-31",
@@ -67,6 +70,7 @@
     },
     {
       "name": "Yelp",
+      "company": "Yelp",
       "position": "iOS Developer",
       "startDate": "2019-11-01",
       "endDate": "2020-03-31",
@@ -77,6 +81,7 @@
     },
     {
       "name": "Epic! Digital Creations",
+      "company": "Epic! Digital Creations",
       "position": "iOS Developer",
       "startDate": "2018-03-01",
       "endDate": "2019-07-31",
@@ -90,6 +95,7 @@
     },
     {
       "name": "Make School",
+      "company": "Make School",
       "position": "Curriculum Engineer & Lead iOS Instructor",
       "startDate": "2017-03-01",
       "endDate": "2018-02-28",
@@ -100,6 +106,7 @@
     },
     {
       "name": "Yidio",
+      "company": "Yidio",
       "position": "iOS Developer",
       "startDate": "2015-12-01",
       "endDate": "2017-03-31",
@@ -112,6 +119,7 @@
     },
     {
       "name": "Make School",
+      "company": "Make School",
       "position": "iOS Games Instructor",
       "startDate": "2015-06-01",
       "endDate": "2015-08-31",
